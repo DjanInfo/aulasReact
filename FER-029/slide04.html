@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-029: Fundamentos do React e Virtual DOM - Slide 04</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-029: Fundamentos do React e Virtual DOM</h1>
+            <p>Compreender a arquitetura e funcionamento interno do React</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide4">
+                <h2><i class="fas fa-cogs"></i> Virtual DOM - Como Funciona</h2>
+                
+                <h3>🔄 Processo de Atualização</h3>
+                <p>Quando o estado de um componente muda, o React segue este processo:</p>
+                
+                <div class="example">
+                    <h5>📋 Passo a Passo:</h5>
+                    <ol style="line-height: 2;">
+                        <li><strong>Renderização:</strong> React cria uma nova representação do Virtual DOM</li>
+                        <li><strong>Comparação (Diffing):</strong> Compara o Virtual DOM novo com o anterior</li>
+                        <li><strong>Identificação:</strong> Identifica quais elementos mudaram</li>
+                        <li><strong>Atualização:</strong> Atualiza apenas os elementos que mudaram no DOM real</li>
+                    </ol>
+                </div>
+                
+                <div class="code-block">
+1. Estado muda
+   ↓
+2. React cria novo Virtual DOM
+   ↓
+3. Compara com Virtual DOM anterior (Diffing)
+   ↓
+4. Identifica diferenças
+   ↓
+5. Atualiza apenas o que mudou no DOM real
+                </div>
+                
+                <h3>🔍 Algoritmo de Diffing</h3>
+                <p>O React usa um algoritmo inteligente para comparar árvores:</p>
+                <ul>
+                    <li><strong>Comparação por nível:</strong> Compara elementos do mesmo nível</li>
+                    <li><strong>Keys:</strong> Usa keys para identificar elementos únicos</li>
+                    <li><strong>Otimização:</strong> Para na primeira diferença encontrada</li>
+                    <li><strong>Reutilização:</strong> Reutiliza componentes quando possível</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo Visual</h4>
+                    <div class="code-block">
+Virtual DOM Antigo:
+┌─────────────────────┐
+│ &lt;div&gt;              │
+│   &lt;h1&gt;Título 1&lt;/h1&gt; │
+│   &lt;p&gt;Texto A&lt;/p&gt;   │
+│ &lt;/div&gt;             │
+└─────────────────────┘
+
+Estado muda → Novo Virtual DOM:
+┌─────────────────────┐
+│ &lt;div&gt;              │
+│   &lt;h1&gt;Título 2&lt;/h1&gt; │ ← Mudou!
+│   &lt;p&gt;Texto A&lt;/p&gt;   │ ← Igual
+│ &lt;/div&gt;             │
+└─────────────────────┘
+
+React atualiza: Apenas o &lt;h1&gt;
+                    </div>
+                </div>
+                
+                <h3>⚡ Vantagens do Processo</h3>
+                <ul>
+                    <li><strong>Performance:</strong> Atualizações mínimas e eficientes</li>
+                    <li><strong>Velocidade:</strong> Operações em memória são instantâneas</li>
+                    <li><strong>Otimização Automática:</strong> React decide o que atualizar</li>
+                    <li><strong>Menos Reflow:</strong> Reduz recálculos de layout do navegador</li>
+                </ul>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Importante</h4>
+                    <p>O Virtual DOM não é mais rápido que o DOM real em si. A vantagem está na <strong>otimização inteligente</strong> - React atualiza apenas o necessário, evitando operações custosas e desnecessárias.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+

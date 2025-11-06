@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-029: Fundamentos do React e Virtual DOM - Slide 08</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-029: Fundamentos do React e Virtual DOM</h1>
+            <p>Compreender a arquitetura e funcionamento interno do React</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide8">
+                <h2><i class="fas fa-puzzle-piece"></i> Componentes - Conceitos</h2>
+                
+                <h3>🧩 O que é um Componente?</h3>
+                <p>Um <strong>componente</strong> é uma parte reutilizável e independente da interface. É como um "bloco de construção" que pode ser usado várias vezes.</p>
+                
+                <div class="code-block">
+Componente = Função que retorna JSX
+Componente = Peça reutilizável da UI
+                </div>
+                
+                <h3>🎯 Por que Componentes?</h3>
+                <ul>
+                    <li><strong>Reutilização:</strong> Escreva uma vez, use em qualquer lugar</li>
+                    <li><strong>Organização:</strong> Código mais limpo e organizado</li>
+                    <li><strong>Manutenção:</strong> Fácil de atualizar e corrigir</li>
+                    <li><strong>Colaboração:</strong> Diferentes pessoas podem trabalhar em componentes diferentes</li>
+                    <li><strong>Testabilidade:</strong> Mais fácil de testar componentes isolados</li>
+                </ul>
+                
+                <div class="example">
+                    <h5>💡 Analogia: Componentes como Legos</h5>
+                    <p>Assim como blocos de Lego podem ser combinados para criar diferentes estruturas, componentes React podem ser combinados para criar interfaces complexas:</p>
+                    <div class="code-block">
+&lt;Button&gt;      → Bloco de Lego (botão)
+&lt;Card&gt;         → Bloco de Lego (card)
+&lt;Header&gt;       → Bloco de Lego (cabeçalho)
+
+&lt;App&gt;
+    &lt;Header /&gt;
+    &lt;Card&gt;
+        &lt;Button /&gt;
+    &lt;/Card&gt;
+&lt;/App&gt;
+                    </div>
+                </div>
+                
+                <h3>📐 Tipos de Componentes</h3>
+                
+                <div class="info">
+                    <h4>1. Componentes Funcionais (Recomendado)</h4>
+                    <div class="code-block">
+function Botao() {
+    return &lt;button&gt;Clique aqui&lt;/button&gt;;
+}
+                    </div>
+                    <p>✅ Mais simples, moderno e recomendado</p>
+                </div>
+                
+                <div class="info">
+                    <h4>2. Componentes de Classe (Legado)</h4>
+                    <div class="code-block">
+class Botao extends React.Component {
+    render() {
+        return &lt;button&gt;Clique aqui&lt;/button&gt;;
+    }
+}
+                    </div>
+                    <p>⚠️ Mais complexo, usado em código legado</p>
+                </div>
+                
+                <h3>🔧 Características dos Componentes</h3>
+                <ul>
+                    <li><strong>Isolamento:</strong> Cada componente é independente</li>
+                    <li><strong>Props:</strong> Recebem dados através de props</li>
+                    <li><strong>Estado:</strong> Podem ter estado interno (usando hooks)</li>
+                    <li><strong>Composição:</strong> Componentes podem conter outros componentes</li>
+                    <li><strong>Nome:</strong> Devem começar com letra maiúscula</li>
+                </ul>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Regra de Nomenclatura</h4>
+                    <p>Componentes React devem começar com <strong>letra maiúscula</strong> para diferenciá-los de elementos HTML:</p>
+                    <div class="code-block">
+// ✅ Correto
+function MeuComponente() { ... }
+
+// ❌ Errado
+function meuComponente() { ... }
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+

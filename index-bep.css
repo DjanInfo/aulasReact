@@ -1,0 +1,26 @@
+/* CSS centralizado para os index de cada BEP */
+body { font-family: 'Arial', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; margin: 0; padding: 20px; }
+.container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,.2); }
+.header { background: linear-gradient(135deg, #4B8BBE 0%, #85929d 100%); color: white; padding: 40px; text-align: center; }
+.header h1 { font-size: 2.5rem; margin: 0 0 10px 0; font-weight: 700; }
+.header p { font-size: 1.2rem; margin: 0; opacity: .9; }
+.content { padding: 40px; }
+.objectives-section { background: linear-gradient(135deg, #EBF8FF 0%, #BEE3F8 100%); border: 2px solid #3182CE; border-radius: 10px; padding: 20px; margin: 20px 0; }
+.section h2 { color: #1A365D; font-size: 1.8rem; margin-bottom: 20px; border-bottom: 3px solid #4299E1; padding-bottom: 10px; }
+.slides-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px; }
+.slide-card { background: #F7FAFC; border: 2px solid #E2E8F0; border-radius: 10px; padding: 20px; transition: all .3s ease; cursor: pointer; }
+.slide-card:hover { border-color: #4299E1; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(66,153,225,.2); }
+.slide-number { background: #4299E1; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-bottom: 15px; }
+.slide-title { font-size: 1.1rem; font-weight: 600; color: #1A365D; margin-bottom: 10px; }
+.slide-description { color: #4A5568; font-size: .9rem; line-height: 1.4; }
+.start-button { background: linear-gradient(135deg, #4299E1 0%, #3182CE 100%); color: white; padding: 15px 30px; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all .3s ease; text-decoration: none; display: inline-block; margin-top: 20px; }
+.start-button:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(66,153,225,.3); }
+.footer { background: #1A365D; color: white; text-align: center; padding: 20px; font-size: .9rem; }
+.files-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 30px; }
+.file-card { background: #F7FAFC; border: 2px solid #E2E8F0; border-radius: 10px; padding: 20px; transition: all .3s ease; cursor: pointer; text-align: center; }
+.file-card:hover { border-color: #38B2AC; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(56,178,172,.2); }
+.file-card i { font-size: 2rem; color: #38B2AC; margin-bottom: 15px; }
+.file-card h3 { color: #1A365D; margin-bottom: 10px; font-size: 1.1rem; }
+.file-card p { color: #4A5568; font-size: .9rem; margin: 0; }
+.footer img { display:block; margin:12px auto 0 auto; width: 80%; height: auto; }
+@media (max-width: 768px) { .content { padding: 20px; } .header h1 { font-size: 2rem; } }

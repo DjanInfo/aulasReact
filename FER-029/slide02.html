@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-029: Fundamentos do React e Virtual DOM - Slide 02</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-029: Fundamentos do React e Virtual DOM</h1>
+            <p>Compreender a arquitetura e funcionamento interno do React</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide2">
+                <h2><i class="fas fa-question-circle"></i> O que é React?</h2>
+                
+                <h3>⚛️ Definição</h3>
+                <p>React é uma <strong>biblioteca JavaScript</strong> desenvolvida pelo Facebook (Meta) para construir interfaces de usuário, especialmente para aplicações web.</p>
+                
+                <div class="code-block">
+React é uma biblioteca JavaScript para construir
+interfaces de usuário (UI).
+
+Lançado em 2013 por Facebook
+Versão atual: React 18+ (2022)
+Open Source e mantido pela comunidade
+                </div>
+                
+                <h3>📝 Características Principais</h3>
+                <ul>
+                    <li><strong>Declarativo:</strong> Você descreve como a UI deve ser, não como mudá-la</li>
+                    <li><strong>Baseado em Componentes:</strong> Código reutilizável e modular</li>
+                    <li><strong>Virtual DOM:</strong> Performance otimizada através de reconciliação</li>
+                    <li><strong>Unidirecional:</strong> Fluxo de dados unidirecional (top-down)</li>
+                    <li><strong>JSX:</strong> Sintaxe que combina JavaScript com HTML</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Curiosidade</h4>
+                    <p>React é usado por empresas como Facebook, Instagram, Netflix, Airbnb, WhatsApp Web e muitas outras!</p>
+                </div>
+                
+                <h3>🎯 Vantagens do React</h3>
+                <ul>
+                    <li><strong>Performance:</strong> Virtual DOM permite atualizações eficientes</li>
+                    <li><strong>Reutilização:</strong> Componentes podem ser usados em diferentes partes</li>
+                    <li><strong>Ecosistema:</strong> Grande quantidade de bibliotecas e ferramentas</li>
+                    <li><strong>Comunidade:</strong> Uma das maiores comunidades no desenvolvimento web</li>
+                    <li><strong>Flexibilidade:</strong> Pode ser usado com outras bibliotecas e frameworks</li>
+                </ul>
+                
+                <div class="example">
+                    <h5>💡 Exemplo: React vs JavaScript Vanilla</h5>
+                    <div class="code-block">
+// JavaScript Vanilla (imperativo)
+const button = document.getElementById('btn');
+button.addEventListener('click', function() {
+    const text = document.getElementById('text');
+    text.textContent = 'Clicado!';
+});
+
+// React (declarativo)
+function Button() {
+    const [clicked, setClicked] = useState(false);
+    return (
+        &lt;button onClick={() =&gt; setClicked(true)}&gt;
+            {clicked ? 'Clicado!' : 'Clique aqui'}
+        &lt;/button&gt;
+    );
+}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+

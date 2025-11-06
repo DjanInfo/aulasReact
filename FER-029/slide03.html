@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-029: Fundamentos do React e Virtual DOM - Slide 03</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-029: Fundamentos do React e Virtual DOM</h1>
+            <p>Compreender a arquitetura e funcionamento interno do React</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide3">
+                <h2><i class="fas fa-layer-group"></i> Virtual DOM - Conceito</h2>
+                
+                <h3>🌐 O que é o DOM?</h3>
+                <p>O <strong>DOM (Document Object Model)</strong> é uma representação em árvore dos elementos HTML de uma página web. Manipular o DOM diretamente é <strong>lento e custoso</strong>.</p>
+                
+                <div class="code-block">
+DOM Real (HTML):
+┌─────────────────┐
+│   &lt;div&gt;        │
+│   ├─ &lt;h1&gt;      │
+│   └─ &lt;p&gt;       │
+└─────────────────┘
+
+Manipulação direta: LENTA
+                </div>
+                
+                <h3>⚡ O que é Virtual DOM?</h3>
+                <p>O <strong>Virtual DOM</strong> é uma <strong>cópia em memória</strong> do DOM real. É uma representação JavaScript leve e rápida da estrutura HTML.</p>
+                
+                <div class="code-block">
+Virtual DOM (React):
+{
+  type: 'div',
+  props: {
+    children: [
+      { type: 'h1', props: { children: 'Título' } },
+      { type: 'p', props: { children: 'Parágrafo' } }
+    ]
+  }
+}
+
+Manipulação: RÁPIDA (em memória)
+                </div>
+                
+                <h3>🎯 Por que Virtual DOM?</h3>
+                <ul>
+                    <li><strong>Performance:</strong> Operações em memória são muito mais rápidas</li>
+                    <li><strong>Otimização:</strong> React decide as mudanças mínimas necessárias</li>
+                    <li><strong>Eficiência:</strong> Evita renderizações desnecessárias</li>
+                    <li><strong>Abstração:</strong> Você não precisa manipular o DOM diretamente</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-info-circle"></i> Analogia</h4>
+                    <p>Imagine que você precisa reformar uma casa:</p>
+                    <ul>
+                        <li><strong>DOM Real:</strong> A casa física (mudanças são caras e demoradas)</li>
+                        <li><strong>Virtual DOM:</strong> Um projeto/planta da casa (fácil de modificar)</li>
+                        <li><strong>React:</strong> Compara o projeto antigo com o novo e faz apenas as mudanças necessárias na casa real</li>
+                    </ul>
+                </div>
+                
+                <h3>📊 Comparação: DOM vs Virtual DOM</h3>
+                <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                    <tr style="background: #EBF8FF;">
+                        <th style="padding: 10px; border: 1px solid #3182CE;">Aspecto</th>
+                        <th style="padding: 10px; border: 1px solid #3182CE;">DOM Real</th>
+                        <th style="padding: 10px; border: 1px solid #3182CE;">Virtual DOM</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #E2E8F0;"><strong>Velocidade</strong></td>
+                        <td style="padding: 10px; border: 1px solid #E2E8F0;">Lenta</td>
+                        <td style="padding: 10px; border: 1px solid #E2E8F0;">Rápida</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #E2E8F0;"><strong>Localização</strong></td>
+                        <td style="padding: 10px; border: 1px solid #E2E8F0;">Navegador</td>
+                        <td style="padding: 10px; border: 1px solid #E2E8F0;">Memória JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #E2E8F0;"><strong>Manipulação</strong></td>
+                        <td style="padding: 10px; border: 1px solid #E2E8F0;">Custosa</td>
+                        <td style="padding: 10px; border: 1px solid #E2E8F0;">Barata</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #E2E8F0;"><strong>Otimização</strong></td>
+                        <td style="padding: 10px; border: 1px solid #E2E8F0;">Manual</td>
+                        <td style="padding: 10px; border: 1px solid #E2E8F0;">Automática</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+

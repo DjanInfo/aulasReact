@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-029: Fundamentos do React e Virtual DOM - Slide 09</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-029: Fundamentos do React e Virtual DOM</h1>
+            <p>Compreender a arquitetura e funcionamento interno do React</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide9">
+                <h2><i class="fas fa-code"></i> Criando Componentes Funcionais</h2>
+                
+                <h3>📝 Componente Básico</h3>
+                
+                <div class="example">
+                    <h5>1. Componente Simples</h5>
+                    <div class="code-block">
+function Saudacao() {
+    return &lt;h1&gt;Olá, React!&lt;/h1&gt;;
+}
+
+// Uso
+&lt;Saudacao /&gt;
+                    </div>
+                </div>
+                
+                <div class="example">
+                    <h5>2. Componente com Props</h5>
+                    <div class="code-block">
+function Saudacao({ nome }) {
+    return &lt;h1&gt;Olá, {nome}!&lt;/h1&gt;;
+}
+
+// Uso
+&lt;Saudacao nome="João" /&gt;
+&lt;Saudacao nome="Maria" /&gt;
+                    </div>
+                    <p><strong>Props:</strong> Dados passados para o componente (como parâmetros de função)</p>
+                </div>
+                
+                <div class="example">
+                    <h5>3. Componente com Múltiplas Props</h5>
+                    <div class="code-block">
+function Card({ titulo, descricao, imagem }) {
+    return (
+        &lt;div className="card"&gt;
+            &lt;img src={imagem} alt={titulo} /&gt;
+            &lt;h2&gt;{titulo}&lt;/h2&gt;
+            &lt;p&gt;{descricao}&lt;/p&gt;
+        &lt;/div&gt;
+    );
+}
+
+// Uso
+&lt;Card 
+    titulo="React"
+    descricao="Biblioteca JavaScript"
+    imagem="/react.png"
+/&gt;
+                    </div>
+                </div>
+                
+                <div class="example">
+                    <h5>4. Componente com Estado (useState)</h5>
+                    <div class="code-block">
+import { useState } from 'react';
+
+function Contador() {
+    const [count, setCount] = useState(0);
+    
+    return (
+        &lt;div&gt;
+            &lt;p&gt;Contador: {count}&lt;/p&gt;
+            &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+                Incrementar
+            &lt;/button&gt;
+        &lt;/div&gt;
+    );
+}
+                    </div>
+                    <p><strong>Estado:</strong> Dados que podem mudar e causam re-renderização</p>
+                </div>
+                
+                <h3>🔧 Boas Práticas</h3>
+                <ul>
+                    <li><strong>Nomes Descritivos:</strong> Use nomes claros para componentes</li>
+                    <li><strong>Componentes Pequenos:</strong> Mantenha componentes focados em uma responsabilidade</li>
+                    <li><strong>Props Tipadas:</strong> Use TypeScript ou PropTypes para validar props</li>
+                    <li><strong>Composição:</strong> Combine componentes pequenos para criar grandes</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo Completo</h4>
+                    <div class="code-block">
+function App() {
+    return (
+        &lt;div className="app"&gt;
+            &lt;Header /&gt;
+            &lt;Main /&gt;
+            &lt;Footer /&gt;
+        &lt;/div&gt;
+    );
+}
+
+function Header() {
+    return &lt;header&gt;&lt;h1&gt;Meu App&lt;/h1&gt;&lt;/header&gt;;
+}
+
+function Main() {
+    return &lt;main&gt;&lt;p&gt;Conteúdo principal&lt;/p&gt;&lt;/main&gt;;
+}
+
+function Footer() {
+    return &lt;footer&gt;&lt;p&gt;Rodapé&lt;/p&gt;&lt;/footer&gt;;
+}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+

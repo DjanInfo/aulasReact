@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-029: Fundamentos do React e Virtual DOM - Slide 07</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-029: Fundamentos do React e Virtual DOM</h1>
+            <p>Compreender a arquitetura e funcionamento interno do React</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide7">
+                <h2><i class="fas fa-code"></i> JSX - Sintaxe e Características</h2>
+                
+                <h3>📋 Sintaxe Básica</h3>
+                
+                <div class="example">
+                    <h5>1. Expressões JavaScript</h5>
+                    <div class="code-block">
+const nome = "João";
+const idade = 25;
+
+const elemento = (
+    &lt;div&gt;
+        &lt;h1&gt;Olá, {nome}!&lt;/h1&gt;
+        &lt;p&gt;Você tem {idade} anos&lt;/p&gt;
+        &lt;p&gt;Próximo ano você terá {idade + 1}&lt;/p&gt;
+    &lt;/div&gt;
+);
+                    </div>
+                </div>
+                
+                <div class="example">
+                    <h5>2. Atributos</h5>
+                    <div class="code-block">
+// className (não class)
+&lt;div className="container"&gt;
+
+// htmlFor (não for)
+&lt;label htmlFor="nome"&gt;Nome:&lt;/label&gt;
+
+// style (objeto JavaScript)
+&lt;div style={{ color: 'blue', fontSize: '20px' }}&gt;
+
+// Atributos dinâmicos
+const id = "meu-id";
+&lt;div id={id}&gt;
+                    </div>
+                </div>
+                
+                <div class="example">
+                    <h5>3. Condicionais</h5>
+                    <div class="code-block">
+// Operador ternário
+{isLoggedIn ? &lt;p&gt;Bem-vindo!&lt;/p&gt; : &lt;p&gt;Faça login&lt;/p&gt;}
+
+// Operador &&
+{errors.length > 0 && &lt;p&gt;Há erros!&lt;/p&gt;}
+
+// Função
+{renderizarConteudo()}
+                    </div>
+                </div>
+                
+                <div class="example">
+                    <h5>4. Listas</h5>
+                    <div class="code-block">
+const items = ['React', 'Vue', 'Angular'];
+
+const lista = (
+    &lt;ul&gt;
+        {items.map((item, index) => (
+            &lt;li key={index}&gt;{item}&lt;/li&gt;
+        ))}
+    &lt;/ul&gt;
+);
+                    </div>
+                    <p><strong>Importante:</strong> Sempre use <code>key</code> ao renderizar listas!</p>
+                </div>
+                
+                <h3>⚠️ Regras Importantes</h3>
+                <ul>
+                    <li><strong>Elemento Raiz Único:</strong> JSX deve retornar um único elemento</li>
+                    <li><strong>Fragment:</strong> Use <code>&lt;&gt;...&lt;/&gt;</code> ou <code>&lt;React.Fragment&gt;</code> para múltiplos elementos</li>
+                    <li><strong>Tags Fechadas:</strong> Tags auto-fechantes devem terminar com <code>/&gt;</code></li>
+                    <li><strong>JavaScript:</strong> Use <code>{ }</code> para expressões JavaScript</code></li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo Completo</h4>
+                    <div class="code-block">
+function Saudacao({ nome, idade }) {
+    const maiorIdade = idade >= 18;
+    
+    return (
+        &lt;div className="saudacao"&gt;
+            &lt;h1&gt;Olá, {nome}!&lt;/h1&gt;
+            {maiorIdade ? (
+                &lt;p&gt;Você é maior de idade&lt;/p&gt;
+            ) : (
+                &lt;p&gt;Você é menor de idade&lt;/p&gt;
+            )}
+            &lt;ul&gt;
+                {['React', 'JSX', 'Componentes'].map((item, i) => (
+                    &lt;li key={i}&gt;{item}&lt;/li&gt;
+                ))}
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    );
+}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+

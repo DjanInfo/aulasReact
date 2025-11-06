@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-029: Fundamentos do React e Virtual DOM - Slide 11</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-029: Fundamentos do React e Virtual DOM</h1>
+            <p>Compreender a arquitetura e funcionamento interno do React</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide11">
+                <h2><i class="fas fa-dumbbell"></i> Exercícios Práticos</h2>
+                
+                <h3>🎯 Exercício 1: Componente Básico</h3>
+                <p>Crie um componente <code>BemVindo</code> que recebe um nome via props e exibe "Bem-vindo, [nome]!"</p>
+                
+                <div class="code-block">
+// Sua solução aqui
+function BemVindo({ nome }) {
+    // Complete o código
+}
+
+// Uso esperado:
+&lt;BemVindo nome="Maria" /&gt;
+// Deve exibir: "Bem-vindo, Maria!"
+                </div>
+                
+                <div class="info" style="margin-top: 20px;">
+                    <h4>💡 Solução:</h4>
+                    <div class="code-block">
+function BemVindo({ nome }) {
+    return &lt;h1&gt;Bem-vindo, {nome}!&lt;/h1&gt;;
+}
+                    </div>
+                </div>
+                
+                <h3>🎯 Exercício 2: Componente com Estado</h3>
+                <p>Crie um componente <code>Contador</code> com um botão que incrementa um contador.</p>
+                
+                <div class="code-block">
+// Use useState para criar o estado
+import { useState } from 'react';
+
+function Contador() {
+    // Complete o código
+    // Estado inicial: 0
+    // Botão incrementa +1
+}
+                </div>
+                
+                <div class="info" style="margin-top: 20px;">
+                    <h4>💡 Solução:</h4>
+                    <div class="code-block">
+import { useState } from 'react';
+
+function Contador() {
+    const [count, setCount] = useState(0);
+    
+    return (
+        &lt;div&gt;
+            &lt;p&gt;Contador: {count}&lt;/p&gt;
+            &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+                Incrementar
+            &lt;/button&gt;
+        &lt;/div&gt;
+    );
+}
+                    </div>
+                </div>
+                
+                <h3>🎯 Exercício 3: Lista de Itens</h3>
+                <p>Crie um componente <code>Lista</code> que recebe um array de itens e os exibe em uma lista.</p>
+                
+                <div class="code-block">
+// Recebe array de strings
+const items = ['React', 'JSX', 'Componentes'];
+
+// Deve renderizar:
+// • React
+// • JSX
+// • Componentes
+                </div>
+                
+                <div class="info" style="margin-top: 20px;">
+                    <h4>💡 Solução:</h4>
+                    <div class="code-block">
+function Lista({ items }) {
+    return (
+        &lt;ul&gt;
+            {items.map((item, index) => (
+                &lt;li key={index}&gt;{item}&lt;/li&gt;
+            ))}
+        &lt;/ul&gt;
+    );
+}
+                    </div>
+                </div>
+                
+                <h3>🎯 Exercício 4: Componente Condicional</h3>
+                <p>Crie um componente <code>Mensagem</code> que exibe diferentes mensagens baseado em uma prop booleana.</p>
+                
+                <div class="code-block">
+// Se isLoggedIn = true: "Bem-vindo de volta!"
+// Se isLoggedIn = false: "Por favor, faça login"
+                </div>
+                
+                <div class="info" style="margin-top: 20px;">
+                    <h4>💡 Solução:</h4>
+                    <div class="code-block">
+function Mensagem({ isLoggedIn }) {
+    return (
+        &lt;div&gt;
+            {isLoggedIn ? (
+                &lt;p&gt;Bem-vindo de volta!&lt;/p&gt;
+            ) : (
+                &lt;p&gt;Por favor, faça login&lt;/p&gt;
+            )}
+        &lt;/div&gt;
+    );
+}
+                    </div>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Dicas para os Exercícios</h4>
+                    <ul>
+                        <li>Use JSX para criar a estrutura HTML</li>
+                        <li>Lembre-se de usar <code>key</code> ao renderizar listas</li>
+                        <li>Use <code>className</code> ao invés de <code>class</code></li>
+                        <li>Teste seus componentes com diferentes props</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+
