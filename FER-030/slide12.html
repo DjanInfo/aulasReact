@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-029: Fundamentos do React e Virtual DOM - Slide 12</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-029: Fundamentos do React e Virtual DOM</h1>
+            <p>Compreender a arquitetura e funcionamento interno do React</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide12">
+                <h2><i class="fas fa-check-circle"></i> Resumo e próximos passos</h2>
+
+                <div class="highlight">
+                    <h4>✅ O que você leva</h4>
+                    <ul>
+                        <li>Fluxo unidirecional: dados descem, eventos sobem</li>
+                        <li><code>useState</code> como ponto de verdade local</li>
+                        <li>Props claras + imutabilidade = UI previsível</li>
+                        <li>Composição para criar componentes flexíveis</li>
+                    </ul>
+                </div>
+
+                <div class="info">
+                    <h4>🧭 Checklist antes de codar</h4>
+                    <ul>
+                        <li>Defina onde o estado mora</li>
+                        <li>Mapeie props necessárias e tipos</li>
+                        <li>Planeje callbacks para comunicação com o pai</li>
+                        <li>Desenhe como dados são derivados (evite duplicação)</li>
+                    </ul>
+                </div>
+
+                <h3>🚀 Continuação sugerida</h3>
+                <ul>
+                    <li>Aprofunde em <code>useReducer</code>, <code>useContext</code>, <code>useMemo</code></li>
+                    <li>Experimente bibliotecas de formulários e validação</li>
+                    <li>Estude padrões de estado global (Context, Zustand, Redux Toolkit)</li>
+                    <li>Use React DevTools Profiler para entender renderizações</li>
+                </ul>
+
+                <div class="example">
+                    <h5>📅 Plano de treino</h5>
+                    <ol>
+                        <li>Revise um componente real identificando props e estados</li>
+                        <li>Refatore uma lista para usar imutabilidade corretamente</li>
+                        <li>Suba o estado compartilhado entre dois componentes</li>
+                        <li>Implemente um componente composto com <code>props.children</code></li>
+                    </ol>
+                </div>
+
+                <div class="warning">
+                    <h4><i class="fas fa-lightbulb"></i> Dica final</h4>
+                    <p>Fluxo de dados claro é documentação viva. Escreva comentários curtos sobre quem controla cada estado e mantenha contratos de props atualizados.</p>
+                </div>
+
+                <div class="highlight" style="margin-top: 30px;">
+                    <h4>🌟 Próxima missão</h4>
+                    <p>Escolha uma tela do seu projeto, redesenhe o fluxo de estado/props e compartilhe com o time para feedback.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-030: Estado e Props em React - Slide 10</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-030: Estado e Props em React</h1>
+            <p>Entender e aplicar o fluxo de dados no React</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide10">
+                <h2><i class="fas fa-clipboard-check"></i> Boas práticas de fluxo de dados</h2>
+
+                <h3>🏔️ Single Source of Truth</h3>
+                <ul>
+                    <li>Escolha um componente para guardar o estado “oficial”</li>
+                    <li>Compartilhe valores com filhos via props ou contexto</li>
+                    <li>Evite duplicar o mesmo dado em níveis diferentes</li>
+                </ul>
+
+                <h3>🪜 Levantando estado (Lifting State Up)</h3>
+                <div class="code-block">
+// Se dois componentes precisam do mesmo dado:
+// 1. Suba o estado para o ancestral comum
+// 2. Passe valores e callbacks por props
+                </div>
+
+                <div class="example">
+                    <h5>🚦 Checklist rápido</h5>
+                    <ul>
+                        <li>O estado pode ser calculado a partir de props? Se sim, não crie um novo</li>
+                        <li>Quem deve ser notificado quando o estado muda?</li>
+                        <li>Posso transformar esse padrão em hook ou componente reutilizável?</li>
+                    </ul>
+                </div>
+
+                <div class="info">
+                    <h4><i class="fas fa-route"></i> Comunicação pai ↔ filho</h4>
+                    <p>
+                        <strong>Pai → Filho:</strong> props com dados<br>
+                        <strong>Filho → Pai:</strong> callbacks ou eventos personalizados
+                    </p>
+                    <p>Considere Context apenas quando várias camadas precisam do mesmo dado.</p>
+                </div>
+
+                <h3>🧰 Ferramentas auxiliares</h3>
+                <ul>
+                    <li><strong>Custom hooks</strong> para encapsular estado e regras (ex.: <code>useCounter</code>)</li>
+                    <li><strong>Reducer</strong> (<code>useReducer</code>) quando o estado tem muitas transições</li>
+                    <li><strong>Bibliotecas de estado global</strong> apenas quando o contexto não for suficiente</li>
+                </ul>
+
+                <div class="warning">
+                    <h4><i class="fas fa-triangle-exclamation"></i> Sinais de alerta</h4>
+                    <ul>
+                        <li>Props em cascata passando por vários níveis sem uso intermediário (prop drilling)</li>
+                        <li>Funções passando responsabilidade demais (ex.: atualizar vários estados em lugares diferentes)</li>
+                        <li>Componentes que sabem “coisas demais” (violam Single Responsibility)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+

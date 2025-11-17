@@ -413,6 +413,22 @@
                                 <i class="fas fa-play"></i> Acessar FER-029
                             </a>
                         </div>
+
+                        <!-- FER-030: Estado e Props em React -->
+                        <div class="carousel-card">
+                            <h3><i class="fab fa-react"></i> FER-030: Estado e Props em React</h3>
+                            <p>Entenda o fluxo de dados no React, use props para comunicação, gerencie estado com <code>useState</code> e aplique imutabilidade.</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> 12 slides com exemplos guiados</li>
+                                <li><i class="fas fa-check"></i> Metodologia expositiva + exercícios</li>
+                                <li><i class="fas fa-check"></i> Props, callbacks e composição</li>
+                                <li><i class="fas fa-check"></i> Estado local e imutabilidade</li>
+                                <li><i class="fas fa-check"></i> Checklist de boas práticas</li>
+                            </ul>
+                            <a href="FER-030/index.html" class="access-button">
+                                <i class="fas fa-play"></i> Acessar FER-030
+                            </a>
+                        </div>
                     </div>
                     <div class="carousel-nav">
                         <button class="carousel-btn" id="prevBtn1" onclick="moveCarousel1(-1)">
@@ -463,12 +479,13 @@
     <script>
         // Carrossel do Módulo 1
         let currentSlide1 = 0;
-        const totalSlides1 = 1;
+        const totalSlides1 = 2;
+        const visibleSlides1 = 3;
         const slideWidth = 320; // 300px + 20px gap
         
         function moveCarousel1(direction) {
             const wrapper = document.getElementById('carouselWrapper1');
-            const maxSlide = totalSlides1 - 3; // Mostra 3 cards por vez
+            const maxSlide = Math.max(totalSlides1 - visibleSlides1, 0); // Mostra até 3 cards por vez
             
             currentSlide1 += direction;
             
@@ -489,7 +506,7 @@
         function updateCarouselButtons1() {
             const prevBtn = document.getElementById('prevBtn1');
             const nextBtn = document.getElementById('nextBtn1');
-            const maxSlide = totalSlides1 - 3;
+            const maxSlide = Math.max(totalSlides1 - visibleSlides1, 0);
             
             if (prevBtn) prevBtn.disabled = currentSlide1 === 0;
             if (nextBtn) nextBtn.disabled = currentSlide1 >= maxSlide;
@@ -500,7 +517,7 @@
             if (!indicators) return;
             indicators.innerHTML = '';
             
-            const maxSlide = totalSlides1 - 3;
+            const maxSlide = Math.max(totalSlides1 - visibleSlides1, 0);
             for (let i = 0; i <= maxSlide; i++) {
                 const indicator = document.createElement('div');
                 indicator.className = `carousel-indicator ${i === currentSlide1 ? 'active' : ''}`;

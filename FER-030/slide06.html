@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-030: Estado e Props em React - Slide 06</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-030: Estado e Props em React</h1>
+            <p>Entender e aplicar o fluxo de dados no React</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide6">
+                <h2><i class="fas fa-database"></i> Estado local e <code>useState</code></h2>
+
+                <h3>📦 O que é estado?</h3>
+                <p>Estado é informação que muda ao longo do tempo e afeta a renderização do componente. Cada componente pode ter seu <strong>estado local</strong> com <code>useState</code>.</p>
+
+                <div class="code-block">
+const [value, setValue] = useState(initialValue);
+                </div>
+
+                <h3>⚙️ Regras para <code>useState</code></h3>
+                <ul>
+                    <li>Chamado no topo do componente (ou hooks customizados)</li>
+                    <li>Recebe um valor inicial ou uma função que retorna o valor inicial</li>
+                    <li>Retorna array [valorAtual, funçãoDeAtualização]</li>
+                </ul>
+
+                <div class="example">
+                    <h5>💡 Exemplo</h5>
+                    <div class="code-block">
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Você clicou {count} vezes&lt;/p&gt;
+      &lt;button onClick={() => setCount(count + 1)}&gt;Somar&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+                    </div>
+                </div>
+
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Inicialização preguiçosa</h4>
+                    <p>Quando o valor inicial exige cálculo pesado, passe uma função:</p>
+                    <div class="code-block">
+const [filter, setFilter] = useState(() => readFilterFromStorage());
+                    </div>
+                </div>
+
+                <div class="warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Armadilhas comuns</h4>
+                    <ul>
+                        <li>Usar <code>useState</code> para dados que poderiam ser derivados de props</li>
+                        <li>Criar múltiplos estados dependentes entre si (prefira objetos ou reducers)</li>
+                        <li>Esquecer que atualizações são assíncronas e baseadas no próximo render</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+

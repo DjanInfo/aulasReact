@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-030: Estado e Props em React - Slide 03</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-030: Estado e Props em React</h1>
+            <p>Entender e aplicar o fluxo de dados no React</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide3">
+                <h2><i class="fas fa-plug"></i> Anatomia das props</h2>
+
+                <h3>🧩 O que são props?</h3>
+                <p><strong>Props</strong> (properties) são parâmetros de funções. Elas chegam como um único objeto e representam tudo que um componente precisa saber sobre seu contexto.</p>
+
+                <div class="code-block">
+function Badge(props) {
+  return &lt;span className={`badge badge-${props.status}`}&gt;
+    {props.label}
+  &lt;/span&gt;;
+}
+                </div>
+
+                <h3>✂️ Desestruturando para clareza</h3>
+                <div class="code-block">
+function Badge({ status = 'info', label }) {
+  return &lt;span className={`badge badge-${status}`}&gt;{label}&lt;/span&gt;;
+}
+                </div>
+                <ul>
+                    <li><strong>Padrões</strong>: garanta defaults para evitar valores <code>undefined</code></li>
+                    <li><strong>Renomeação</strong>: <code>{'{ user: owner }'}</code> ajuda a dar contexto</li>
+                </ul>
+
+                <div class="info">
+                    <h4><i class="fas fa-tags"></i> Tipando props</h4>
+                    <p>Use TypeScript ou <code>PropTypes</code> para documentar contratos:</p>
+                    <div class="code-block">
+type BadgeProps = {
+  status?: 'info' | 'success' | 'warning';
+  label: string;
+};
+                    </div>
+                </div>
+
+                <div class="warning">
+                    <h4><i class="fas fa-ban"></i> Nunca faça</h4>
+                    <ul>
+                        <li>Modificar diretamente uma prop recebida</li>
+                        <li>Enviar objetos enormes sem necessidade (prefira props específicas)</li>
+                        <li>Iniciar estado local copiando props sem sincronização</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+

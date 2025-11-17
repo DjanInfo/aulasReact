@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-030: Estado e Props em React - Slide 04</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-030: Estado e Props em React</h1>
+            <p>Entender e aplicar o fluxo de dados no React</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide4">
+                <h2><i class="fas fa-share-square"></i> Passando dados com props</h2>
+
+                <h3>🧠 Perguntas para definir props</h3>
+                <ul>
+                    <li>Qual componente conhece este dado?</li>
+                    <li>Quem precisa apenas exibir e quem precisa atualizar?</li>
+                    <li>Existe algum dado derivado que pode ser calculado no pai?</li>
+                </ul>
+
+                <div class="code-block">
+function Dashboard() {
+  const [user, setUser] = useState({ name: 'Ana', role: 'Admin' });
+
+  return (
+    &lt;Header user={user} onLogout={() => setUser(null)} /&gt;
+  );
+}
+                </div>
+
+                <div class="example">
+                    <h5>🧭 Boas práticas</h5>
+                    <ol>
+                        <li>Use nomes descritivos: <code>onToggleTheme</code> em vez de <code>onClick</code></li>
+                        <li>Evite passar objetos gigantes; prefira o que cada filho realmente usa</li>
+                        <li>Normalize dados no nível onde eles são buscados</li>
+                    </ol>
+                </div>
+
+                <div class="info">
+                    <h4><i class="fas fa-code-branch"></i> Callbacks como props</h4>
+                    <div class="code-block">
+function TodoItem({ todo, onToggle }) {
+  return (
+    &lt;label&gt;
+      &lt;input
+        type="checkbox"
+        checked={todo.done}
+        onChange={() => onToggle(todo.id)}
+      /&gt;
+      {todo.title}
+    &lt;/label&gt;
+  );
+}
+                    </div>
+                    <p>Callbacks permitem que o filho notifique o pai sem conhecer detalhes da implementação.</p>
+                </div>
+
+                <div class="warning">
+                    <h4><i class="fas fa-balance-scale"></i> Equilíbrio</h4>
+                    <p>Nem tudo precisa virar prop: componentes podem ter estados internos específicos (ex.: controles visuais). O segredo é descobrir onde cada informação deveria viver.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-030: Estado e Props em React - Slide 09</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-030: Estado e Props em React</h1>
+            <p>Entender e aplicar o fluxo de dados no React</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide9">
+                <h2><i class="fas fa-seedling"></i> Imutabilidade na prática</h2>
+
+                <h3>🧊 Por que ser imutável?</h3>
+                <ul>
+                    <li>Permite que o React detecte mudanças comparando referências</li>
+                    <li>Evita efeitos colaterais inesperados em componentes filhos</li>
+                    <li>Facilita desfazer/refazer e depuração</li>
+                </ul>
+
+                <div class="example">
+                    <h5>✂️ Arrays</h5>
+                    <div class="code-block">
+// adicionar
+setTodos(prev => [...prev, newTodo]);
+
+// remover
+setTodos(prev => prev.filter(todo => todo.id !== id));
+
+// atualizar
+setTodos(prev =>
+  prev.map(todo =>
+    todo.id === id ? { ...todo, done: !todo.done } : todo
+  )
+);
+                    </div>
+                </div>
+
+                <div class="example">
+                    <h5>🧱 Objetos</h5>
+                    <div class="code-block">
+setUser(prev => ({
+  ...prev,
+  profile: {
+    ...prev.profile,
+    avatar: newAvatar
+  }
+}));
+                    </div>
+                </div>
+
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Ferramentas úteis</h4>
+                    <ul>
+                        <li><code>structuredClone</code> para clonar objetos profundos (quando suportado)</li>
+                        <li>Bibliotecas como Immer simplificam atualizações complexas</li>
+                        <li>Linters podem alertar sobre mutações diretas</li>
+                    </ul>
+                </div>
+
+                <div class="warning">
+                    <h4><i class="fas fa-bug"></i> Mutação acidental acontece quando:</h4>
+                    <ul>
+                        <li>Você usa métodos que alteram o array original (<code>push</code>, <code>splice</code>, <code>sort</code>)</li>
+                        <li>Passa objetos por referência e os modifica fora do componente</li>
+                        <li>Atualiza estado aninhado sem clonar todos os níveis necessários</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+

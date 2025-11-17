@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-029: Fundamentos do React e Virtual DOM - Slide 11</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-029: Fundamentos do React e Virtual DOM</h1>
+            <p>Compreender a arquitetura e funcionamento interno do React</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide11">
+                <h2><i class="fas fa-dumbbell"></i> Exercícios aplicados</h2>
+
+                <h3>1️⃣ Painel de indicadores</h3>
+                <p>Crie um componente <code>Dashboard</code> que recebe via props um array de indicadores <code>{'{ label, value }'}</code> e renderiza cards.</p>
+                <ul>
+                    <li>Permita inserir um botão “ver tudo” usando <code>props.children</code></li>
+                    <li>Destaque valores acima de um limite também recebido por props</li>
+                </ul>
+
+                <h3>2️⃣ Formulário controlado</h3>
+                <p>Implemente <code>ProfileForm</code> recebendo um objeto <code>user</code> e um callback <code>onSubmit</code>.</p>
+                <div class="code-block">
+function ProfileForm({ user, onSubmit }) {
+  const [form, setForm] = useState(user);
+  // ...
+}
+                </div>
+                <p>Quando <code>user</code> mudar, sincronize o estado local com <code>useEffect</code>.</p>
+
+                <h3>3️⃣ Controle de tarefas</h3>
+                <p>Faça um componente <code>TodoList</code> que:</p>
+                <ul>
+                    <li>Recebe <code>todos</code> e <code>onToggle(id)</code> via props</li>
+                    <li>Possui estado local apenas para o filtro (<code>all</code>, <code>done</code>, <code>pending</code>)</li>
+                    <li>Deriva a lista filtrada dinamicamente sem criar outro <code>useState</code></li>
+                </ul>
+
+                <h3>4️⃣ Exercício bônus</h3>
+                <p>Transforme uma seção repetitiva em componente composto (<code>Section.Header</code>, <code>Section.Body</code>, <code>Section.Footer</code>) expondo slots nomeados.</p>
+
+                <div class="warning">
+                    <h4><i class="fas fa-lightbulb"></i> Dicas</h4>
+                    <ul>
+                        <li>Desenhe o fluxo de dados antes de codar</li>
+                        <li>Valide props com TypeScript ou PropTypes</li>
+                        <li>Teste callbacks com <code>console.log</code> para garantir a direção correta dos dados</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+

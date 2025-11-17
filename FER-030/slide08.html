@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-030: Estado e Props em React - Slide 08</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-030: Estado e Props em React</h1>
+            <p>Entender e aplicar o fluxo de dados no React</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide8">
+                <h2><i class="fas fa-link"></i> Estado derivado e sincronização</h2>
+
+                <h3>🎯 Objetivo</h3>
+                <p>Evitar duplicar informações. Se algo pode ser calculado a partir de props ou outro estado, não crie mais um <code>useState</code> para isso.</p>
+
+                <div class="example">
+                    <h5>😬 Estado duplicado</h5>
+                    <div class="code-block">
+const [products, setProducts] = useState([]);
+const [filtered, setFiltered] = useState([]);
+
+// Sempre que products muda você precisa sincronizar filtered manualmente.
+                    </div>
+                </div>
+
+                <div class="info">
+                    <h4><i class="fas fa-check-circle"></i> Estado derivado correto</h4>
+                    <div class="code-block">
+const filtered = products.filter(p => p.category === category);
+                    </div>
+                    <p>Calcule valores derivados durante o render ou com <code>useMemo</code> quando caro.</p>
+                </div>
+
+                <h3>🔁 Sincronizando com props</h3>
+                <ul>
+                    <li>Quando um componente precisa reagir a prop externa, prefira usar a própria prop durante o render</li>
+                    <li>Se for necessário “copiar” para estado (ex.: formulário com valor inicial), sincronize com <code>useEffect</code></li>
+                </ul>
+
+                <div class="code-block">
+const [form, setForm] = useState(user);
+
+useEffect(() => {
+  setForm(user);
+}, [user]);
+                </div>
+
+                <div class="warning">
+                    <h4><i class="fas fa-triangle-exclamation"></i> Quando criar novo estado?</h4>
+                    <ul>
+                        <li>Quando o usuário pode editar os dados independentemente das props</li>
+                        <li>Quando você precisa controlar etapas locais (ex.: modal aberto/fechado)</li>
+                        <li>Não crie por conveniência; pense no fluxo completo!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+

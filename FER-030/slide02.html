@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-030: Estado e Props em React - Slide 02</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-030: Estado e Props em React</h1>
+            <p>Entender e aplicar o fluxo de dados no React</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide2">
+                <h2><i class="fas fa-random"></i> Fluxo de dados unidirecional</h2>
+
+                <h3>🔄 Como os dados se movem</h3>
+                <ul>
+                    <li>O estado vive em um componente (fonte da verdade)</li>
+                    <li>Os dados descem através de <strong>props</strong> para componentes filhos</li>
+                    <li>Eventos disparam callbacks que “sobem” para pedir atualizações</li>
+                    <li>O componente raiz decide quando e como atualizar o estado</li>
+                </ul>
+
+                <div class="example">
+                    <h5>📈 Cadeia típica</h5>
+                    <ol>
+                        <li><strong>Pai</strong> mantém estado <code>const [count, setCount] = useState(0)</code></li>
+                        <li><strong>Pai → Filho</strong>: passa <code>count</code> e <code>onIncrement</code> como props</li>
+                        <li><strong>Filho</strong> dispara <code>onIncrement()</code> quando usuário clica</li>
+                        <li><strong>Pai</strong> atualiza estado e toda a árvore necessária re-renderiza</li>
+                    </ol>
+                </div>
+
+                <div class="info">
+                    <h4><i class="fas fa-stream"></i> Por que top-down?</h4>
+                    <ul>
+                        <li>Facilita rastrear a origem dos dados</li>
+                        <li>Evita “estado fantasma” duplicado em vários lugares</li>
+                        <li>Permite ferramentas como React DevTools reconstruírem o fluxo</li>
+                    </ul>
+                </div>
+
+                <div class="warning">
+                    <h4><i class="fas fa-exclamation-circle"></i> Antipadrões comuns</h4>
+                    <ul>
+                        <li>Alterar props diretamente dentro do filho</li>
+                        <li>Criar múltiplas fontes de verdade para o mesmo dado</li>
+                        <li>Passar callbacks com efeitos colaterais inesperados</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+

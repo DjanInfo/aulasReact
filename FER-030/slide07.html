@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-030: Estado e Props em React - Slide 07</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-030: Estado e Props em React</h1>
+            <p>Entender e aplicar o fluxo de dados no React</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide7">
+                <h2><i class="fas fa-sync"></i> Atualizando o estado com segurança</h2>
+
+                <h3>🧠 Lembretes importantes</h3>
+                <ul>
+                    <li>Atualizações são assíncronas e agrupadas</li>
+                    <li>Nunca modifique o estado diretamente, sempre use a função retornada pelo hook</li>
+                    <li>Quando o novo valor depende do anterior, use a forma de função</li>
+                </ul>
+
+                <div class="code-block">
+setCount(prevCount => prevCount + 1);
+                </div>
+
+                <div class="example">
+                    <h5>🕹️ Eventos disparam mudanças</h5>
+                    <div class="code-block">
+function VoteButton() {
+  const [votes, setVotes] = useState(0);
+
+  function handleClick() {
+    setVotes(prev => prev + 1);
+  }
+
+  return &lt;button onClick={handleClick}&gt;Votos: {votes}&lt;/button&gt;;
+}
+                    </div>
+                </div>
+
+                <h3>🔁 Múltiplas atualizações</h3>
+                <p>Chamadas consecutivas com valores fixos substituem umas às outras. Use a versão com função para acumular:</p>
+                <div class="code-block">
+setCount(count + 1);      // pode perder atualizações
+setCount(prev => prev + 1); // garante consistência
+                </div>
+
+                <div class="info">
+                    <h4><i class="fas fa-tachometer-alt"></i> Sincronizando com efeitos</h4>
+                    <p>Se você precisa reagir a uma mudança de estado (ex.: salvar em storage), use <code>useEffect</code>:</p>
+                    <div class="code-block">
+useEffect(() => {
+  localStorage.setItem('theme', theme);
+}, [theme]);
+                    </div>
+                </div>
+
+                <div class="warning">
+                    <h4><i class="fas fa-bug"></i> Bugs frequentes</h4>
+                    <ul>
+                        <li>Ler o estado logo após chamar <code>setState</code> esperando que esteja atualizado</li>
+                        <li>Criar dependências cíclicas: estado A atualiza B, que atualiza A</li>
+                        <li>Adicionar objetos/arrays sem copiar (imutabilidade é essencial!)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+
