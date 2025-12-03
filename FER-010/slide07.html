@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-010: Heurísticas de Usabilidade - Slide 07</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-check-circle"></i> FER-010: Heurísticas de Usabilidade</h1>
+            <p>Ensinar as principais regras para criar interfaces intuitivas</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide7">
+                <h2><i class="fas fa-shield-alt"></i> Heurística 5: Prevenção de Erros</h2>
+                
+                <h3>📋 Definição</h3>
+                <p><strong>"Melhor do que boas mensagens de erro é um design cuidadoso que previne que um problema ocorra em primeiro lugar."</strong></p>
+                
+                <div class="code-block">
+Prevenir é melhor que corrigir:
+- Desabilitar ações inválidas
+- Validação em tempo real
+- Confirmações para ações destrutivas
+- Padrões seguros por padrão
+                </div>
+                
+                <h3>✅ Boas Práticas</h3>
+                <ul>
+                    <li><strong>Validação:</strong> Validar antes de permitir envio</li>
+                    <li><strong>Desabilitar:</strong> Desabilitar botões quando ação não é válida</li>
+                    <li><strong>Confirmação:</strong> Confirmar ações destrutivas</li>
+                    <li><strong>Padrões Seguros:</strong> Usar valores seguros por padrão</li>
+                    <li><strong>Feedback Imediato:</strong> Mostrar erros antes de enviar</li>
+                </ul>
+                
+                <div class="example">
+                    <h5>💡 Exemplos</h5>
+                    <ul>
+                        <li><strong>✅ Bom:</strong> Validação de email em tempo real</li>
+                        <li><strong>✅ Bom:</strong> Botão "Enviar" desabilitado até formulário válido</li>
+                        <li><strong>✅ Bom:</strong> "Tem certeza?" antes de deletar</li>
+                        <li><strong>❌ Ruim:</strong> Permitir enviar formulário inválido</li>
+                        <li><strong>❌ Ruim:</strong> Deletar sem confirmação</li>
+                    </ul>
+                </div>
+                
+                <h3>❌ Problemas Comuns</h3>
+                <ul>
+                    <li>Permitir ações que resultarão em erro</li>
+                    <li>Validação apenas após envio</li>
+                    <li>Ações destrutivas sem confirmação</li>
+                    <li>Valores padrão perigosos</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>Pense em todos os erros possíveis e previna-os no design. É melhor prevenir do que tratar depois.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+

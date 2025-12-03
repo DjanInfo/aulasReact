@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-010: Heurísticas de Usabilidade - Slide 03</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-check-circle"></i> FER-010: Heurísticas de Usabilidade</h1>
+            <p>Ensinar as principais regras para criar interfaces intuitivas</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide3">
+                <h2><i class="fas fa-info-circle"></i> Heurística 1: Visibilidade do Status</h2>
+                
+                <h3>📋 Definição</h3>
+                <p><strong>"O sistema deve sempre manter os usuários informados sobre o que está acontecendo, através de feedback apropriado em tempo razoável."</strong></p>
+                
+                <div class="code-block">
+Usuários devem sempre saber:
+- Onde estão
+- O que está acontecendo
+- O que aconteceu
+- O que vai acontecer
+                </div>
+                
+                <h3>✅ Boas Práticas</h3>
+                <ul>
+                    <li><strong>Indicadores de Carregamento:</strong> Mostrar quando algo está processando</li>
+                    <li><strong>Breadcrumbs:</strong> Mostrar localização atual</li>
+                    <li><strong>Mensagens de Confirmação:</strong> Confirmar ações importantes</li>
+                    <li><strong>Progresso:</strong> Mostrar progresso de tarefas longas</li>
+                    <li><strong>Estados Visuais:</strong> Diferentes estados (ativo, desabilitado, hover)</li>
+                </ul>
+                
+                <div class="example">
+                    <h5>💡 Exemplos</h5>
+                    <ul>
+                        <li><strong>✅ Bom:</strong> Barra de progresso ao fazer upload</li>
+                        <li><strong>✅ Bom:</strong> "Enviando..." ao enviar formulário</li>
+                        <li><strong>✅ Bom:</strong> Indicador de página atual no menu</li>
+                        <li><strong>❌ Ruim:</strong> Botão que não responde ao clicar</li>
+                        <li><strong>❌ Ruim:</strong> Processo longo sem feedback</li>
+                    </ul>
+                </div>
+                
+                <h3>❌ Problemas Comuns</h3>
+                <ul>
+                    <li>Ações sem feedback visual</li>
+                    <li>Processos longos sem indicador de progresso</li>
+                    <li>Usuário não sabe onde está no sistema</li>
+                    <li>Mudanças de estado não visíveis</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>Feedback deve ser imediato (menos de 100ms) para ações simples, e progressivo para tarefas mais longas.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+

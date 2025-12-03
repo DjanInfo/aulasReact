@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-010: Heurísticas de Usabilidade - Slide 05</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-check-circle"></i> FER-010: Heurísticas de Usabilidade</h1>
+            <p>Ensinar as principais regras para criar interfaces intuitivas</p>
+        </div>
+        
+        <div class="nav">
+            <!-- Navegação será inserida via JavaScript -->
+        </div>
+        
+        <div class="content">
+            <div class="slide active" id="slide5">
+                <h2><i class="fas fa-undo"></i> Heurística 3: Controle do Usuário</h2>
+                
+                <h3>📋 Definição</h3>
+                <p><strong>"Os usuários frequentemente escolhem funções do sistema por engano e precisam de uma 'saída de emergência' claramente marcada para deixar o estado indesejado sem ter que passar por um diálogo extenso."</strong></p>
+                
+                <div class="code-block">
+Dê controle ao usuário:
+- Desfazer ações
+- Cancelar operações
+- Sair facilmente
+- Reverter mudanças
+                </div>
+                
+                <h3>✅ Boas Práticas</h3>
+                <ul>
+                    <li><strong>Botão Desfazer:</strong> Permitir desfazer ações</li>
+                    <li><strong>Cancelar:</strong> Opção clara de cancelar</li>
+                    <li><strong>Sair Fácil:</strong> Fechar diálogos e modais facilmente</li>
+                    <li><strong>Confirmação:</strong> Confirmar ações destrutivas</li>
+                    <li><strong>Reversível:</strong> Tornar ações reversíveis quando possível</li>
+                </ul>
+                
+                <div class="example">
+                    <h5>💡 Exemplos</h5>
+                    <ul>
+                        <li><strong>✅ Bom:</strong> Botão "X" para fechar modal</li>
+                        <li><strong>✅ Bom:</strong> "Desfazer" após deletar email</li>
+                        <li><strong>✅ Bom:</strong> "Cancelar" em formulários</li>
+                        <li><strong>❌ Ruim:</strong> Ação destrutiva sem confirmação</li>
+                        <li><strong>❌ Ruim:</strong> Modal sem forma de fechar</li>
+                    </ul>
+                </div>
+                
+                <h3>❌ Problemas Comuns</h3>
+                <ul>
+                    <li>Ações irreversíveis sem confirmação</li>
+                    <li>Sem opção de desfazer</li>
+                    <li>Difícil sair de estados indesejados</li>
+                    <li>Diálogos que não podem ser cancelados</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>Nunca remova controle do usuário. Sempre forneça uma saída, mesmo para ações que parecem simples.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
+
