@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-018: Herança e Polimorfismo</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../index-bep.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-sitemap"></i> FER-018: Herança e Polimorfismo</h1>
+            <p>Explicar os conceitos de herança e polimorfismo para reutilização e extensão de código em JavaScript</p>
+        </div>
+
+        <div style="margin: 15px 0; text-align: right; padding: 0 40px;">
+            <a href="../index.html" style="background:#2D3748;color:#fff;text-decoration:none;padding:10px 16px;border-radius:6px;">🏠 Índice geral</a>
+        </div>
+        
+        <div class="content">
+            <div class="objectives-section">
+                <h2><i class="fas fa-bullseye"></i> Objetivos da Aula</h2>
+                <p>Explicar os conceitos de herança e polimorfismo para reutilização e extensão de código em JavaScript, explorando conceito de herança e suas vantagens, criando classes pai e subclasses, sobrescrita de métodos (override) e polimorfismo.</p>
+                <ul>
+                    <li>Compreender o conceito de herança e suas vantagens</li>
+                    <li>Criar classes pai e subclasses</li>
+                    <li>Implementar sobrescrita de métodos (override)</li>
+                    <li>Aplicar polimorfismo em JavaScript</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2><i class="fas fa-chalkboard-teacher"></i> Metodologia da Aula</h2>
+                <p>Aula expositiva com demonstrações práticas e aplicação de exercícios. Cada conceito será ilustrado com exemplos reais e casos de uso.</p>
+            </div>
+            
+            <div class="section">
+                <h2><i class="fas fa-presentation"></i> Slides da Aula</h2>
+                <div class="slides-grid">
+                    
+                    <div class="slide-card" onclick="window.open('slide01.html','_blank')">
+                        <div class="slide-number">01</div>
+                        <div class="slide-title">Título e Introdução</div>
+                        <div class="slide-description">Clique para abrir o slide 01</div>
+                    </div>
+
+                    <div class="slide-card" onclick="window.open('slide02.html','_blank')">
+                        <div class="slide-number">02</div>
+                        <div class="slide-title">O que é Herança?</div>
+                        <div class="slide-description">Clique para abrir o slide 02</div>
+                    </div>
+
+                    <div class="slide-card" onclick="window.open('slide03.html','_blank')">
+                        <div class="slide-number">03</div>
+                        <div class="slide-title">Vantagens da Herança</div>
+                        <div class="slide-description">Clique para abrir o slide 03</div>
+                    </div>
+
+                    <div class="slide-card" onclick="window.open('slide04.html','_blank')">
+                        <div class="slide-number">04</div>
+                        <div class="slide-title">Classes Pai e Subclasses</div>
+                        <div class="slide-description">Clique para abrir o slide 04</div>
+                    </div>
+
+                    <div class="slide-card" onclick="window.open('slide05.html','_blank')">
+                        <div class="slide-number">05</div>
+                        <div class="slide-title">extends em JavaScript</div>
+                        <div class="slide-description">Clique para abrir o slide 05</div>
+                    </div>
+
+                    <div class="slide-card" onclick="window.open('slide06.html','_blank')">
+                        <div class="slide-number">06</div>
+                        <div class="slide-title">Sobrescrita de Métodos (override)</div>
+                        <div class="slide-description">Clique para abrir o slide 06</div>
+                    </div>
+
+                    <div class="slide-card" onclick="window.open('slide07.html','_blank')">
+                        <div class="slide-number">07</div>
+                        <div class="slide-title">super em JavaScript</div>
+                        <div class="slide-description">Clique para abrir o slide 07</div>
+                    </div>
+
+                    <div class="slide-card" onclick="window.open('slide08.html','_blank')">
+                        <div class="slide-number">08</div>
+                        <div class="slide-title">O que é Polimorfismo?</div>
+                        <div class="slide-description">Clique para abrir o slide 08</div>
+                    </div>
+
+                    <div class="slide-card" onclick="window.open('slide09.html','_blank')">
+                        <div class="slide-number">09</div>
+                        <div class="slide-title">Polimorfismo em JavaScript</div>
+                        <div class="slide-description">Clique para abrir o slide 09</div>
+                    </div>
+
+                    <div class="slide-card" onclick="window.open('slide10.html','_blank')">
+                        <div class="slide-number">10</div>
+                        <div class="slide-title">Exemplos Práticos</div>
+                        <div class="slide-description">Clique para abrir o slide 10</div>
+                    </div>
+
+                    <div class="slide-card" onclick="window.open('slide11.html','_blank')">
+                        <div class="slide-number">11</div>
+                        <div class="slide-title">Exercícios Práticos</div>
+                        <div class="slide-description">Clique para abrir o slide 11</div>
+                    </div>
+
+                    <div class="slide-card" onclick="window.open('slide12.html','_blank')">
+                        <div class="slide-number">12</div>
+                        <div class="slide-title">Resumo e Próximos Passos</div>
+                        <div class="slide-description">Clique para abrir o slide 12</div>
+                    </div>
+                </div>
+                <a href="slide01.html" class="start-button">
+                    <i class="fas fa-play"></i> Iniciar Apresentação
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 - Conteúdo Educacional</p>
+            <p>IFBA CEPEDI</p>
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+</body>
+</html>
