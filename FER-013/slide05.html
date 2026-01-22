@@ -13,15 +13,76 @@
             <h1><i class="fas fa-mobile-alt"></i> FER-013: Design Responsivo</h1>
             <p>Desenvolver interfaces que se adaptam a múltiplos dispositivos</p>
         </div>
+        
         <div class="nav"></div>
         <div class="content">
             <div class="slide active" id="slide5">
-                <h2><i class="fas fa-code"></i> Media Queries - Aplicação</h2>
-                <h3>📝 Conteúdo</h3>
-                <p>Este slide será desenvolvido com conteúdo detalhado sobre aplicação de media queries.</p>
+                <h2><i class="fas fa-th"></i> Grids Fluidos</h2>
+                
+                <h3>📝 O que são Grids Fluidos?</h3>
+                <p><strong>Grids Fluidos</strong> são sistemas de layout que usam unidades relativas (%, em, rem) em vez de unidades fixas (px), permitindo que o layout se adapte ao tamanho da tela.</p>
+                
+                <div class="code-block">
+Grid Fluido = Layout Adaptável
+
+Usa unidades relativas (%)
+para se adaptar a qualquer
+tamanho de tela.
+                </div>
+                
+                <h3>📊 Sistema de Grid 12 Colunas</h3>
+                <p>Grids comuns dividem o layout em 12 colunas:</p>
+                
+                <div class="info">
+                    <h4><i class="fas fa-columns"></i> Exemplo de Grid</h4>
+                    <pre>
+.col-12 { width: 100%; }    /* 12/12 */
+.col-6  { width: 50%; }     /* 6/12 */
+.col-4  { width: 33.333%; } /* 4/12 */
+.col-3  { width: 25%; }     /* 3/12 */
+                    </pre>
+                </div>
+                
+                <h3>🎯 Princípios de Grids Fluidos</h3>
+                <ul>
+                    <li><strong>Unidades relativas:</strong> Use % em vez de px</li>
+                    <li><strong>Max-width:</strong> Limite largura máxima</li>
+                    <li><strong>Padding responsivo:</strong> Espaçamento adaptável</li>
+                    <li><strong>Breakpoints:</strong> Mude layout em pontos específicos</li>
+                </ul>
+                
+                <div class="code-block">
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.col {
+  float: left;
+  width: 100%;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .col-md-6 { width: 50%; }
+  .col-md-4 { width: 33.333%; }
+}
+                </div>
+                
+                <h3>🔧 Frameworks de Grid</h3>
+                <ul>
+                    <li><strong>Bootstrap:</strong> Sistema de grid 12 colunas</li>
+                    <li><strong>CSS Grid:</strong> Grid nativo do CSS</li>
+                    <li><strong>Flexbox:</strong> Layout flexível</li>
+                    <li><strong>Foundation:</strong> Grid responsivo</li>
+                </ul>
             </div>
         </div>
-        <div class="footer"><img src="../Rodape.png" alt="Rodapé"></div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
     </div>
     <script src="../script.js"></script>
 </body>

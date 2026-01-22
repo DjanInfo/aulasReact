@@ -13,15 +13,74 @@
             <h1><i class="fas fa-universal-access"></i> FER-012: Acessibilidade na Web</h1>
             <p>Sensibilizar e capacitar para o desenvolvimento de interfaces acessíveis</p>
         </div>
+        
         <div class="nav"></div>
         <div class="content">
             <div class="slide active" id="slide4">
-                <h2><i class="fas fa-book"></i> Diretrizes WCAG - Introdução</h2>
-                <h3>📝 Conteúdo</h3>
-                <p>Este slide será desenvolvido com conteúdo detalhado sobre diretrizes WCAG.</p>
+                <h2><i class="fas fa-code"></i> HTML Semântico e Acessível</h2>
+                
+                <h3>📝 Por que HTML Semântico?</h3>
+                <p>HTML semântico usa elementos que descrevem o significado do conteúdo, não apenas sua aparência. Isso ajuda leitores de tela e outras tecnologias assistivas a entender a estrutura da página.</p>
+                
+                <div class="code-block">
+❌ Ruim:
+&lt;div class="header"&gt;...&lt;/div&gt;
+&lt;div class="nav"&gt;...&lt;/div&gt;
+
+✅ Bom:
+&lt;header&gt;...&lt;/header&gt;
+&lt;nav&gt;...&lt;/nav&gt;
+                </div>
+                
+                <h3>🎯 Elementos Semânticos Importantes</h3>
+                <ul>
+                    <li><strong>&lt;header&gt;:</strong> Cabeçalho da página</li>
+                    <li><strong>&lt;nav&gt;:</strong> Navegação principal</li>
+                    <li><strong>&lt;main&gt;:</strong> Conteúdo principal</li>
+                    <li><strong>&lt;article&gt;:</strong> Conteúdo independente</li>
+                    <li><strong>&lt;section&gt;:</strong> Seção temática</li>
+                    <li><strong>&lt;aside&gt;:</strong> Conteúdo complementar</li>
+                    <li><strong>&lt;footer&gt;:</strong> Rodapé</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-tags"></i> Atributos de Acessibilidade</h4>
+                    <ul>
+                        <li><strong>alt:</strong> Texto alternativo para imagens</li>
+                        <li><strong>aria-label:</strong> Rótulo descritivo</li>
+                        <li><strong>aria-labelledby:</strong> Referência a elemento que rotula</li>
+                        <li><strong>aria-describedby:</strong> Descrição adicional</li>
+                        <li><strong>role:</strong> Papel do elemento</li>
+                        <li><strong>tabindex:</strong> Ordem de navegação</li>
+                    </ul>
+                </div>
+                
+                <h3>🔧 Boas Práticas</h3>
+                <ul>
+                    <li>Use elementos semânticos apropriados</li>
+                    <li>Forneça texto alternativo para imagens</li>
+                    <li>Use cabeçalhos hierárquicos (h1, h2, h3...)</li>
+                    <li>Associe labels a inputs</li>
+                    <li>Use landmarks (header, nav, main, etc.)</li>
+                </ul>
+                
+                <div class="example">
+                    <h5>💡 Exemplo: Formulário Acessível</h5>
+                    <pre>
+&lt;form&gt;
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" 
+         aria-required="true"&gt;
+  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
+                    </pre>
+                </div>
             </div>
         </div>
-        <div class="footer"><img src="../Rodape.png" alt="Rodapé"></div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
     </div>
     <script src="../script.js"></script>
 </body>

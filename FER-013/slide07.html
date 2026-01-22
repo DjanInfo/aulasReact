@@ -13,15 +13,85 @@
             <h1><i class="fas fa-mobile-alt"></i> FER-013: Design Responsivo</h1>
             <p>Desenvolver interfaces que se adaptam a múltiplos dispositivos</p>
         </div>
+        
         <div class="nav"></div>
         <div class="content">
             <div class="slide active" id="slide7">
-                <h2><i class="fas fa-th-large"></i> Flexbox e Grid Layout</h2>
-                <h3>📝 Conteúdo</h3>
-                <p>Este slide será desenvolvido com conteúdo detalhado sobre Flexbox e Grid Layout.</p>
+                <h2><i class="fab fa-react"></i> Responsividade em React</h2>
+                
+                <h3>📝 Abordagens em React</h3>
+                <p>Existem várias formas de implementar design responsivo em aplicações React:</p>
+                
+                <div class="info">
+                    <h4><i class="fas fa-code"></i> CSS Modules / Styled Components</h4>
+                    <pre>
+// CSS Module
+.container {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+                    </pre>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-code"></i> Hooks para Media Queries</h4>
+                    <pre>
+function useMediaQuery(query) {
+  const [matches, setMatches] = useState(false);
+  
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    if (media.matches !== matches) {
+      setMatches(media.matches);
+    }
+    const listener = () => setMatches(media.matches);
+    media.addListener(listener);
+    return () => media.removeListener(listener);
+  }, [matches, query]);
+  
+  return matches;
+}
+
+// Uso
+const isMobile = useMediaQuery('(max-width: 767px)');
+                    </pre>
+                </div>
+                
+                <h3>🎯 Bibliotecas Úteis</h3>
+                <ul>
+                    <li><strong>react-responsive:</strong> Hooks para media queries</li>
+                    <li><strong>react-breakpoints:</strong> Sistema de breakpoints</li>
+                    <li><strong>styled-components:</strong> CSS-in-JS com media queries</li>
+                    <li><strong>Material-UI:</strong> Grid system responsivo</li>
+                </ul>
+                
+                <h3>🔧 Componentes Condicionais</h3>
+                <pre>
+function ResponsiveComponent() {
+  const isMobile = useMediaQuery('(max-width: 767px)');
+  
+  return (
+    &lt;div&gt;
+      {isMobile ? (
+        &lt;MobileMenu /&gt;
+      ) : (
+        &lt;DesktopMenu /&gt;
+      )}
+    &lt;/div&gt;
+  );
+}
+                </pre>
             </div>
         </div>
-        <div class="footer"><img src="../Rodape.png" alt="Rodapé"></div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
     </div>
     <script src="../script.js"></script>
 </body>

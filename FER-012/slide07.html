@@ -13,15 +13,70 @@
             <h1><i class="fas fa-universal-access"></i> FER-012: Acessibilidade na Web</h1>
             <p>Sensibilizar e capacitar para o desenvolvimento de interfaces acessíveis</p>
         </div>
+        
         <div class="nav"></div>
         <div class="content">
             <div class="slide active" id="slide7">
-                <h2><i class="fas fa-brain"></i> WCAG - Compreensível e Robusto</h2>
-                <h3>📝 Conteúdo</h3>
-                <p>Este slide será desenvolvido com conteúdo detalhado sobre WCAG - Compreensível e Robusto.</p>
+                <h2><i class="fas fa-image"></i> Imagens e Textos Alternativos</h2>
+                
+                <h3>📝 Por que Texto Alternativo?</h3>
+                <p>Pessoas que usam leitores de tela dependem de textos alternativos para entender o conteúdo de imagens. O atributo <code>alt</code> é essencial para acessibilidade.</p>
+                
+                <div class="code-block">
+✅ Imagem Informativa:
+&lt;img src="grafico.png" 
+     alt="Gráfico mostrando aumento de 
+          30% nas vendas em 2024"&gt;
+
+✅ Imagem Decorativa:
+&lt;img src="decoracao.png" alt=""&gt;
+                </div>
+                
+                <h3>🎯 Quando Usar Texto Alternativo</h3>
+                
+                <div class="info">
+                    <h4><i class="fas fa-check-circle"></i> Use alt descritivo quando:</h4>
+                    <ul>
+                        <li>Imagem transmite informação importante</li>
+                        <li>Imagem é parte de um link</li>
+                        <li>Imagem é um gráfico ou diagrama</li>
+                        <li>Imagem contém texto</li>
+                    </ul>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-times-circle"></i> Use alt vazio quando:</h4>
+                    <ul>
+                        <li>Imagem é puramente decorativa</li>
+                        <li>Informação já está no texto próximo</li>
+                        <li>Imagem é redundante</li>
+                    </ul>
+                </div>
+                
+                <h3>🔧 Boas Práticas para alt</h3>
+                <ul>
+                    <li><strong>Seja específico:</strong> Descreva o conteúdo, não apenas "imagem"</li>
+                    <li><strong>Seja conciso:</strong> Geralmente menos de 125 caracteres</li>
+                    <li><strong>Evite "imagem de":</strong> Leitores já anunciam isso</li>
+                    <li><strong>Inclua contexto:</strong> O que a imagem significa no contexto?</li>
+                    <li><strong>Para gráficos:</strong> Descreva os dados principais</li>
+                </ul>
+                
+                <div class="example">
+                    <h5>💡 Exemplos</h5>
+                    <ul>
+                        <li><strong>Ruim:</strong> alt="imagem"</li>
+                        <li><strong>Ruim:</strong> alt="foto"</li>
+                        <li><strong>Bom:</strong> alt="Mulher usando óculos de realidade virtual"</li>
+                        <li><strong>Bom:</strong> alt="Gráfico de barras: vendas aumentaram 30% em Q1"</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="footer"><img src="../Rodape.png" alt="Rodapé"></div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
     </div>
     <script src="../script.js"></script>
 </body>

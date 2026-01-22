@@ -13,15 +13,88 @@
             <h1><i class="fas fa-mobile-alt"></i> FER-013: Design Responsivo</h1>
             <p>Desenvolver interfaces que se adaptam a múltiplos dispositivos</p>
         </div>
+        
         <div class="nav"></div>
         <div class="content">
             <div class="slide active" id="slide3">
-                <h2><i class="fas fa-mobile"></i> Conceito de Mobile First</h2>
-                <h3>📝 Conteúdo</h3>
-                <p>Este slide será desenvolvido com conteúdo detalhado sobre Mobile First.</p>
+                <h2><i class="fas fa-ruler-combined"></i> Media Queries</h2>
+                
+                <h3>📝 O que são Media Queries?</h3>
+                <p><strong>Media Queries</strong> são regras CSS que permitem aplicar estilos diferentes baseados em características do dispositivo, como largura da tela, orientação e resolução.</p>
+                
+                <div class="code-block">
+@media (min-width: 768px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+                </div>
+                
+                <h3>📊 Sintaxe Básica</h3>
+                <pre>
+@media (condição) {
+  /* estilos aqui */
+}
+                </pre>
+                
+                <h3>🎯 Tipos de Media Features</h3>
+                <ul>
+                    <li><strong>width/min-width/max-width:</strong> Largura da viewport</li>
+                    <li><strong>height/min-height/max-height:</strong> Altura da viewport</li>
+                    <li><strong>orientation:</strong> portrait ou landscape</li>
+                    <li><strong>resolution:</strong> Resolução do dispositivo</li>
+                    <li><strong>aspect-ratio:</strong> Proporção da tela</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-code"></i> Exemplos Comuns</h4>
+                    <pre>
+/* Mobile */
+@media (max-width: 767px) { }
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) { }
+
+/* Desktop */
+@media (min-width: 1024px) { }
+
+/* Orientação */
+@media (orientation: landscape) { }
+                    </pre>
+                </div>
+                
+                <h3>🔧 Breakpoints Comuns</h3>
+                <ul>
+                    <li><strong>Mobile:</strong> até 767px</li>
+                    <li><strong>Tablet:</strong> 768px - 1023px</li>
+                    <li><strong>Desktop:</strong> 1024px+</li>
+                    <li><strong>Large Desktop:</strong> 1440px+</li>
+                </ul>
+                
+                <div class="example">
+                    <h5>💡 Dica: Use min-width (Mobile First)</h5>
+                    <p>Comece com estilos mobile e use <code>min-width</code> para adicionar estilos para telas maiores:</p>
+                    <pre>
+/* Base (mobile) */
+.container { width: 100%; }
+
+/* Tablet e acima */
+@media (min-width: 768px) {
+  .container { max-width: 750px; }
+}
+
+/* Desktop e acima */
+@media (min-width: 1024px) {
+  .container { max-width: 1200px; }
+}
+                    </pre>
+                </div>
             </div>
         </div>
-        <div class="footer"><img src="../Rodape.png" alt="Rodapé"></div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
     </div>
     <script src="../script.js"></script>
 </body>

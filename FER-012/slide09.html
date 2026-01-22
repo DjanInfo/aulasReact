@@ -13,15 +13,68 @@
             <h1><i class="fas fa-universal-access"></i> FER-012: Acessibilidade na Web</h1>
             <p>Sensibilizar e capacitar para o desenvolvimento de interfaces acessíveis</p>
         </div>
+        
         <div class="nav"></div>
         <div class="content">
             <div class="slide active" id="slide9">
-                <h2><i class="fas fa-tools"></i> Ferramentas de Avaliação</h2>
-                <h3>📝 Conteúdo</h3>
-                <p>Este slide será desenvolvido com conteúdo detalhado sobre ferramentas de avaliação.</p>
+                <h2><i class="fas fa-video"></i> Mídia Acessível</h2>
+                
+                <h3>📝 Vídeos Acessíveis</h3>
+                <p>Vídeos devem incluir legendas, transcrições e, quando necessário, descrições de áudio.</p>
+                
+                <div class="info">
+                    <h4><i class="fas fa-closed-captioning"></i> Legendas (Captions)</h4>
+                    <ul>
+                        <li>Texto sincronizado com áudio</li>
+                        <li>Inclui diálogos e sons importantes</li>
+                        <li>Essencial para surdos e deficientes auditivos</li>
+                        <li>Útil em ambientes silenciosos</li>
+                    </ul>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-file-alt"></i> Transcrições</h4>
+                    <ul>
+                        <li>Texto completo do conteúdo do vídeo</li>
+                        <li>Inclui descrições visuais quando relevante</li>
+                        <li>Acessível para leitores de tela</li>
+                        <li>Melhora SEO</li>
+                    </ul>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-audio-description"></i> Descrições de Áudio</h4>
+                    <ul>
+                        <li>Narração de elementos visuais importantes</li>
+                        <li>Para pessoas cegas ou com baixa visão</li>
+                        <li>Descreve ações, cenários, textos na tela</li>
+                    </ul>
+                </div>
+                
+                <h3>🎯 Áudio Acessível</h3>
+                <ul>
+                    <li><strong>Transcrições:</strong> Forneça texto completo</li>
+                    <li><strong>Controles:</strong> Play, pause, volume acessíveis</li>
+                    <li><strong>Sem autoplay:</strong> Evite reprodução automática</li>
+                </ul>
+                
+                <div class="code-block">
+✅ Vídeo Acessível:
+&lt;video controls&gt;
+  &lt;source src="video.mp4"&gt;
+  &lt;track kind="captions" 
+         src="legendas.vtt" 
+         srclang="pt" 
+         label="Português"&gt;
+  &lt;p&gt;Transcrição disponível abaixo&lt;/p&gt;
+&lt;/video&gt;
+                </div>
             </div>
         </div>
-        <div class="footer"><img src="../Rodape.png" alt="Rodapé"></div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
     </div>
     <script src="../script.js"></script>
 </body>

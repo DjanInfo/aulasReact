@@ -13,15 +13,84 @@
             <h1><i class="fas fa-mobile-alt"></i> FER-013: Design Responsivo</h1>
             <p>Desenvolver interfaces que se adaptam a múltiplos dispositivos</p>
         </div>
+        
         <div class="nav"></div>
         <div class="content">
             <div class="slide active" id="slide4">
-                <h2><i class="fas fa-code"></i> Media Queries - Fundamentos</h2>
-                <h3>📝 Conteúdo</h3>
-                <p>Este slide será desenvolvido com conteúdo detalhado sobre media queries.</p>
+                <h2><i class="fas fa-expand-arrows-alt"></i> Viewport e Meta Tags</h2>
+                
+                <h3>📝 O que é Viewport?</h3>
+                <p><strong>Viewport</strong> é a área visível do navegador onde o conteúdo é exibido. Em dispositivos móveis, o viewport pode ser menor que a resolução real da tela.</p>
+                
+                <div class="code-block">
+Viewport = Área Visível do Navegador
+
+Sem viewport configurado,
+sites desktop aparecem
+muito pequenos no mobile.
+                </div>
+                
+                <h3>📝 Meta Tag Viewport</h3>
+                <p>A meta tag viewport é essencial para design responsivo:</p>
+                
+                <div class="code-block">
+&lt;meta name="viewport" 
+      content="width=device-width, 
+               initial-scale=1.0"&gt;
+                </div>
+                
+                <h3>🎯 Propriedades do Viewport</h3>
+                <ul>
+                    <li><strong>width=device-width:</strong> Largura igual à do dispositivo</li>
+                    <li><strong>initial-scale=1.0:</strong> Zoom inicial de 100%</li>
+                    <li><strong>maximum-scale:</strong> Zoom máximo permitido</li>
+                    <li><strong>minimum-scale:</strong> Zoom mínimo permitido</li>
+                    <li><strong>user-scalable:</strong> Permite zoom do usuário (yes/no)</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-code"></i> Exemplos</h4>
+                    <pre>
+/* Padrão recomendado */
+&lt;meta name="viewport" 
+      content="width=device-width, 
+               initial-scale=1.0"&gt;
+
+/* Sem zoom */
+&lt;meta name="viewport" 
+      content="width=device-width, 
+               initial-scale=1.0, 
+               maximum-scale=1.0, 
+               user-scalable=no"&gt;
+                    </pre>
+                </div>
+                
+                <h3>🔧 Unidades Responsivas</h3>
+                <ul>
+                    <li><strong>%:</strong> Percentual do elemento pai</li>
+                    <li><strong>vw/vh:</strong> Viewport width/height (1vw = 1% da largura)</li>
+                    <li><strong>rem:</strong> Relativo ao root (html)</li>
+                    <li><strong>em:</strong> Relativo ao elemento pai</li>
+                    <li><strong>max-width:</strong> Largura máxima</li>
+                </ul>
+                
+                <div class="example">
+                    <h5>💡 Exemplo Prático</h5>
+                    <pre>
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+                    </pre>
+                </div>
             </div>
         </div>
-        <div class="footer"><img src="../Rodape.png" alt="Rodapé"></div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
     </div>
     <script src="../script.js"></script>
 </body>

@@ -13,15 +13,72 @@
             <h1><i class="fas fa-mobile-alt"></i> FER-013: Design Responsivo</h1>
             <p>Desenvolver interfaces que se adaptam a múltiplos dispositivos</p>
         </div>
+        
         <div class="nav"></div>
         <div class="content">
             <div class="slide active" id="slide6">
-                <h2><i class="fas fa-th"></i> Grids Fluidos</h2>
-                <h3>📝 Conteúdo</h3>
-                <p>Este slide será desenvolvido com conteúdo detalhado sobre grids fluidos.</p>
+                <h2><i class="fas fa-images"></i> Imagens Responsivas</h2>
+                
+                <h3>📝 Desafio das Imagens</h3>
+                <p>Imagens fixas podem quebrar layouts responsivos. É necessário fazer imagens se adaptarem ao tamanho da tela.</p>
+                
+                <h3>🎯 Soluções para Imagens Responsivas</h3>
+                
+                <div class="info">
+                    <h4><i class="fas fa-code"></i> CSS: max-width: 100%</h4>
+                    <pre>
+img {
+  max-width: 100%;
+  height: auto;
+}
+                    </pre>
+                    <p>Imagem nunca excede o container, mantém proporção.</p>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-code"></i> HTML: srcset</h4>
+                    <pre>
+&lt;img src="imagem.jpg"
+     srcset="imagem-small.jpg 480w,
+             imagem-medium.jpg 768w,
+             imagem-large.jpg 1200w"
+     sizes="(max-width: 768px) 100vw,
+            (max-width: 1200px) 50vw,
+            33vw"
+     alt="Descrição"&gt;
+                    </pre>
+                    <p>Navegador escolhe melhor imagem baseado no tamanho da tela.</p>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-code"></i> HTML: picture</h4>
+                    <pre>
+&lt;picture&gt;
+  &lt;source media="(min-width: 768px)" 
+          srcset="imagem-desktop.jpg"&gt;
+  &lt;source media="(min-width: 480px)" 
+          srcset="imagem-tablet.jpg"&gt;
+  &lt;img src="imagem-mobile.jpg" 
+       alt="Descrição"&gt;
+&lt;/picture&gt;
+                    </pre>
+                    <p>Controle total sobre qual imagem carregar.</p>
+                </div>
+                
+                <h3>🔧 Boas Práticas</h3>
+                <ul>
+                    <li>Use formatos modernos (WebP, AVIF)</li>
+                    <li>Otimize imagens para web</li>
+                    <li>Considere lazy loading</li>
+                    <li>Forneça alt text descritivo</li>
+                    <li>Teste em diferentes dispositivos</li>
+                </ul>
             </div>
         </div>
-        <div class="footer"><img src="../Rodape.png" alt="Rodapé"></div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
     </div>
     <script src="../script.js"></script>
 </body>

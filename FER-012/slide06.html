@@ -13,15 +13,67 @@
             <h1><i class="fas fa-universal-access"></i> FER-012: Acessibilidade na Web</h1>
             <p>Sensibilizar e capacitar para o desenvolvimento de interfaces acessíveis</p>
         </div>
+        
         <div class="nav"></div>
         <div class="content">
             <div class="slide active" id="slide6">
-                <h2><i class="fas fa-hand-pointer"></i> WCAG - Operável</h2>
-                <h3>📝 Conteúdo</h3>
-                <p>Este slide será desenvolvido com conteúdo detalhado sobre WCAG - Operável.</p>
+                <h2><i class="fas fa-keyboard"></i> Navegação por Teclado</h2>
+                
+                <h3>📝 Por que Navegação por Teclado?</h3>
+                <p>Muitos usuários não podem usar mouse ou preferem navegar por teclado. Todos os elementos interativos devem ser acessíveis via teclado.</p>
+                
+                <div class="info">
+                    <h4><i class="fas fa-key"></i> Teclas de Navegação</h4>
+                    <ul>
+                        <li><strong>Tab:</strong> Avançar para próximo elemento</li>
+                        <li><strong>Shift + Tab:</strong> Voltar para elemento anterior</li>
+                        <li><strong>Enter/Space:</strong> Ativar botões e links</li>
+                        <li><strong>Setas:</strong> Navegar em menus e listas</li>
+                        <li><strong>Esc:</strong> Fechar modais e menus</li>
+                    </ul>
+                </div>
+                
+                <h3>🎯 Requisitos de Acessibilidade</h3>
+                <ul>
+                    <li><strong>Ordem lógica:</strong> Tab segue ordem visual lógica</li>
+                    <li><strong>Indicador de foco:</strong> Elemento focado deve ser visível</li>
+                    <li><strong>Sem armadilhas:</strong> Usuário não fica preso em um elemento</li>
+                    <li><strong>Atalhos de teclado:</strong> Evitar conflitos com navegador</li>
+                    <li><strong>Skip links:</strong> Pular para conteúdo principal</li>
+                </ul>
+                
+                <div class="code-block">
+✅ Skip Link:
+&lt;a href="#main" class="skip-link"&gt;
+  Pular para conteúdo principal
+&lt;/a&gt;
+
+✅ Indicador de Foco:
+button:focus {
+  outline: 2px solid blue;
+  outline-offset: 2px;
+}
+                </div>
+                
+                <h3>🔧 Boas Práticas</h3>
+                <ul>
+                    <li>Teste navegação apenas com teclado</li>
+                    <li>Mantenha ordem de tab lógica</li>
+                    <li>Use tabindex apropriadamente (evite tabindex > 0)</li>
+                    <li>Forneça skip links</li>
+                    <li>Garanta que modais capturem foco</li>
+                </ul>
+                
+                <div class="example">
+                    <h5>💡 Teste Rápido</h5>
+                    <p>Desconecte seu mouse e tente navegar pelo seu site apenas com o teclado. Você consegue acessar todas as funcionalidades?</p>
+                </div>
             </div>
         </div>
-        <div class="footer"><img src="../Rodape.png" alt="Rodapé"></div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
     </div>
     <script src="../script.js"></script>
 </body>

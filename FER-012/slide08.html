@@ -13,15 +13,75 @@
             <h1><i class="fas fa-universal-access"></i> FER-012: Acessibilidade na Web</h1>
             <p>Sensibilizar e capacitar para o desenvolvimento de interfaces acessíveis</p>
         </div>
+        
         <div class="nav"></div>
         <div class="content">
             <div class="slide active" id="slide8">
-                <h2><i class="fas fa-code"></i> Práticas de Codificação Acessível</h2>
-                <h3>📝 Conteúdo</h3>
-                <p>Este slide será desenvolvido com conteúdo detalhado sobre práticas de codificação acessível.</p>
+                <h2><i class="fas fa-edit"></i> Formulários Acessíveis</h2>
+                
+                <h3>📝 Elementos Essenciais</h3>
+                <p>Formulários acessíveis requerem labels associados, mensagens de erro claras e validação adequada.</p>
+                
+                <div class="code-block">
+✅ Formulário Acessível:
+&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input type="email" id="email" 
+       aria-required="true"
+       aria-describedby="email-error"&gt;
+&lt;span id="email-error" 
+      role="alert"&gt;Erro aqui&lt;/span&gt;
+                </div>
+                
+                <h3>🎯 Requisitos de Acessibilidade</h3>
+                <ul>
+                    <li><strong>Labels associados:</strong> Use &lt;label for="id"&gt; ou envolva input</li>
+                    <li><strong>Campos obrigatórios:</strong> Indique claramente (aria-required)</li>
+                    <li><strong>Mensagens de erro:</strong> Claras e próximas ao campo</li>
+                    <li><strong>Validação:</strong> Em tempo real quando possível</li>
+                    <li><strong>Instruções:</strong> Forneça ajuda quando necessário</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Mensagens de Erro</h4>
+                    <ul>
+                        <li>Use <code>role="alert"</code> para erros</li>
+                        <li>Associe erro ao campo com <code>aria-describedby</code></li>
+                        <li>Seja específico: "Email inválido" não "Erro"</li>
+                        <li>Sugira correções quando possível</li>
+                    </ul>
+                </div>
+                
+                <h3>🔧 Padrões de Formulário</h3>
+                <ul>
+                    <li>Agrupe campos relacionados com &lt;fieldset&gt;</li>
+                    <li>Use &lt;legend&gt; para descrever grupos</li>
+                    <li>Forneça instruções antes de campos complexos</li>
+                    <li>Mantenha ordem lógica de tab</li>
+                    <li>Use tipos de input apropriados (email, tel, etc.)</li>
+                </ul>
+                
+                <div class="example">
+                    <h5>💡 Exemplo: Campo com Erro</h5>
+                    <pre>
+&lt;label for="senha"&gt;Senha:&lt;/label&gt;
+&lt;input type="password" id="senha"
+       aria-required="true"
+       aria-invalid="true"
+       aria-describedby="senha-error senha-help"&gt;
+&lt;span id="senha-help"&gt;
+  Mínimo 8 caracteres
+&lt;/span&gt;
+&lt;span id="senha-error" role="alert"&gt;
+  Senha muito curta
+&lt;/span&gt;
+                    </pre>
+                </div>
             </div>
         </div>
-        <div class="footer"><img src="../Rodape.png" alt="Rodapé"></div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
     </div>
     <script src="../script.js"></script>
 </body>
