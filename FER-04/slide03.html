@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-04: Estruturas de Repetição - Slide 03</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-redo"></i> FER-04: Estruturas de Repetição</h1>
+            <p>Ensinar como realizar tarefas repetitivas através de laços de repetição</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide3">
+                <h2><i class="fas fa-sync"></i> Estrutura while</h2>
+                
+                <h3>📝 Sintaxe</h3>
+                <p>A estrutura <code>while</code> repete um bloco de código enquanto uma condição for verdadeira.</p>
+                
+                <div class="code-block">
+while (condição) {
+    // código executado enquanto condição for true
+    // IMPORTANTE: modificar condição para evitar loop infinito
+}
+                </div>
+                
+                <h3>📊 Exemplos Práticos</h3>
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 1: Contador</h4>
+                    <div class="code-block">
+let contador = 1;
+
+while (contador <= 5) {
+    console.log(contador);
+    contador++;  // Incrementa para evitar loop infinito
+}
+// Saída: 1, 2, 3, 4, 5
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 2: Soma Acumulativa</h4>
+                    <div class="code-block">
+let soma = 0;
+let numero = 1;
+
+while (numero <= 10) {
+    soma += numero;
+    numero++;
+}
+
+console.log("Soma:", soma);  // 55
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 3: Validação de Entrada</h4>
+                    <div class="code-block">
+let resposta = "";
+
+while (resposta !== "sim" && resposta !== "não") {
+    resposta = prompt("Digite 'sim' ou 'não':");
+}
+
+console.log("Resposta válida:", resposta);
+                    </div>
+                </div>
+                
+                <h3>🎯 Características</h3>
+                <ul>
+                    <li>Verifica condição antes de executar</li>
+                    <li>Pode não executar nenhuma vez (se condição for false)</li>
+                    <li>Precisa modificar condição dentro do loop</li>
+                    <li>Cuidado com loops infinitos!</li>
+                </ul>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Cuidado: Loop Infinito</h4>
+                    <p>Se a condição nunca se tornar false, o loop executa infinitamente. Sempre modifique a variável da condição dentro do loop!</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-04: Estruturas de Repetição - Slide 09</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-redo"></i> FER-04: Estruturas de Repetição</h1>
+            <p>Ensinar como realizar tarefas repetitivas através de laços de repetição</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide9">
+                <h2><i class="fas fa-sitemap"></i> Loops Aninhados</h2>
+                
+                <h3>📝 O que são Loops Aninhados?</h3>
+                <p><strong>Loops Aninhados</strong> são loops dentro de outros loops, úteis para trabalhar com estruturas bidimensionais como tabelas.</p>
+                
+                <div class="code-block">
+// Loop aninhado
+for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+        console.log(`i=${i}, j=${j}`);
+    }
+}
+                </div>
+                
+                <h3>📊 Exemplo: Tabela de Multiplicação</h3>
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Tabuada</h4>
+                    <div class="code-block">
+for (let i = 1; i <= 5; i++) {
+    console.log(`Tabuada do ${i}:`);
+    for (let j = 1; j <= 10; j++) {
+        console.log(`${i} x ${j} = ${i * j}`);
+    }
+    console.log("---");
+}
+                    </div>
+                </div>
+                
+                <h3>📊 Exemplo: Padrão de Estrelas</h3>
+                <div class="code-block">
+for (let i = 1; i <= 5; i++) {
+    let linha = "";
+    for (let j = 1; j <= i; j++) {
+        linha += "*";
+    }
+    console.log(linha);
+}
+// Saída:
+// *
+// **
+// ***
+// ****
+// *****
+                </div>
+                
+                <h3>🎯 Características</h3>
+                <ul>
+                    <li>Loop externo controla linhas</li>
+                    <li>Loop interno controla colunas</li>
+                    <li>Pode ter múltiplos níveis</li>
+                    <li>Cuidado com complexidade (O(n²))</li>
+                </ul>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Performance</h4>
+                    <p>Loops aninhados podem ser lentos com grandes volumes de dados. Use com cuidado!</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-06: Arrays e Objetos - Slide 03</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-database"></i> FER-06: Arrays e Objetos como Estruturas de Dados</h1>
+            <p>Apresentar arrays e objetos para armazenar e manipular coleções de dados em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide3">
+                <h2><i class="fas fa-plus-circle"></i> Método push()</h2>
+                
+                <h3>📝 O que faz?</h3>
+                <p><strong>push()</strong> adiciona um ou mais elementos ao final do array e retorna o novo tamanho.</p>
+                
+                <div class="code-block">
+let frutas = ["maçã", "banana"];
+
+frutas.push("laranja");
+console.log(frutas);  // ["maçã", "banana", "laranja"]
+
+frutas.push("uva", "manga");
+console.log(frutas);  // ["maçã", "banana", "laranja", "uva", "manga"]
+                </div>
+                
+                <h3>📊 Exemplos Práticos</h3>
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 1: Lista de Tarefas</h4>
+                    <div class="code-block">
+let tarefas = [];
+
+tarefas.push("Estudar JavaScript");
+tarefas.push("Fazer exercícios");
+tarefas.push("Revisar conteúdo");
+
+console.log(tarefas);
+// ["Estudar JavaScript", "Fazer exercícios", "Revisar conteúdo"]
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 2: Adicionar Múltiplos</h4>
+                    <div class="code-block">
+let numeros = [1, 2, 3];
+
+numeros.push(4, 5, 6);
+console.log(numeros);  // [1, 2, 3, 4, 5, 6]
+                    </div>
+                </div>
+                
+                <h3>🎯 Características</h3>
+                <ul>
+                    <li>Modifica o array original</li>
+                    <li>Adiciona ao final</li>
+                    <li>Retorna o novo tamanho</li>
+                    <li>Pode adicionar múltiplos elementos</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-02: Variáveis, Tipos de Dados e Operadores - Slide 04</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-02: Variáveis, Tipos de Dados e Operadores</h1>
+            <p>Ensinar como armazenar e manipular informações usando variáveis, tipos de dados primitivos e operadores em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide4">
+                <h2><i class="fas fa-quote-left"></i> Tipos de Texto (String)</h2>
+                
+                <h3>📝 O que são Strings?</h3>
+                <p><strong>String</strong> é uma sequência de caracteres usada para representar texto. Em JavaScript, strings podem ser criadas com aspas simples, duplas ou template literals.</p>
+                
+                <div class="code-block">
+// Aspas simples
+let nome1 = 'João';
+
+// Aspas duplas
+let nome2 = "Maria";
+
+// Template literals (backticks)
+let nome3 = `Pedro`;
+let mensagem = `Olá, ${nome3}!`;
+                </div>
+                
+                <h3>📊 Operações com Strings</h3>
+                <ul>
+                    <li><strong>Concatenação:</strong> + ou template literals</li>
+                    <li><strong>Comprimento:</strong> .length</li>
+                    <li><strong>Acesso a caracteres:</strong> [índice]</li>
+                    <li><strong>Métodos:</strong> .toUpperCase(), .toLowerCase(), etc.</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplos</h4>
+                    <div class="code-block">
+let nome = "João";
+let sobrenome = "Silva";
+
+// Concatenação
+let completo = nome + " " + sobrenome;
+// ou
+let completo2 = `${nome} ${sobrenome}`;
+
+// Comprimento
+console.log(nome.length);  // 4
+
+// Acesso
+console.log(nome[0]);  // "J"
+
+// Métodos
+console.log(nome.toUpperCase());  // "JOÃO"
+                    </div>
+                </div>
+                
+                <h3>🎯 Caracteres Especiais</h3>
+                <ul>
+                    <li><strong>\n:</strong> Nova linha</li>
+                    <li><strong>\t:</strong> Tab</li>
+                    <li><strong>\\:</strong> Barra invertida</li>
+                    <li><strong>\":</strong> Aspas duplas</li>
+                    <li><strong>\':</strong> Aspas simples</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

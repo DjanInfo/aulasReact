@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-08: Introdução ao JSX e Componentes - Slide 08</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-08: Introdução ao JSX e Componentes no React</h1>
+            <p>Apresentar o JSX como extensão de sintaxe JavaScript para definir componentes React</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide8">
+                <h2><i class="fas fa-puzzle-piece"></i> Componentes Reutilizáveis</h2>
+                
+                <h3>📝 Vantagens da Reutilização</h3>
+                <ul>
+                    <li><strong>DRY:</strong> Don't Repeat Yourself</li>
+                    <li><strong>Manutenção:</strong> Corrigir em um lugar</li>
+                    <li><strong>Consistência:</strong> Mesmo comportamento</li>
+                    <li><strong>Eficiência:</strong> Menos código</li>
+                </ul>
+                
+                <h3>📊 Exemplo: Botão Reutilizável</h3>
+                <div class="code-block">
+function Botao(props) {
+    return (
+        <button className="btn" onClick={props.onClick}>
+            {props.texto}
+        </button>
+    );
+}
+
+// Usar várias vezes
+function App() {
+    return (
+        <div>
+            <Botao texto="Salvar" onClick={salvar} />
+            <Botao texto="Cancelar" onClick={cancelar} />
+            <Botao texto="Deletar" onClick={deletar} />
+        </div>
+    );
+}
+                </div>
+                
+                <h3>📊 Exemplo: Card Reutilizável</h3>
+                <div class="code-block">
+function Card(props) {
+    return (
+        <div className="card">
+            <img src={props.imagem} alt={props.titulo} />
+            <h3>{props.titulo}</h3>
+            <p>{props.descricao}</p>
+        </div>
+    );
+}
+
+// Lista de cards
+function ListaCards() {
+    return (
+        <div>
+            <Card 
+                imagem="img1.jpg" 
+                titulo="Card 1" 
+                descricao="Descrição 1" 
+            />
+            <Card 
+                imagem="img2.jpg" 
+                titulo="Card 2" 
+                descricao="Descrição 2" 
+            />
+        </div>
+    );
+}
+                </div>
+                
+                <h3>🎯 Boas Práticas</h3>
+                <ul>
+                    <li>Crie componentes genéricos</li>
+                    <li>Use props para personalizar</li>
+                    <li>Mantenha componentes pequenos</li>
+                    <li>Um componente, uma responsabilidade</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

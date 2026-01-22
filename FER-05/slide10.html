@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-05: Funções e Modularização - Slide 10</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-puzzle-piece"></i> FER-05: Funções e Modularização</h1>
+            <p>Introduzir o conceito de funções para modularização e reutilização de código</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide10">
+                <h2><i class="fas fa-lightbulb"></i> Exemplos Práticos</h2>
+                
+                <h3>📝 Exemplo 1: Calculadora</h3>
+                <div class="code-block">
+function calcular(operacao, a, b) {
+    switch(operacao) {
+        case "+":
+            return a + b;
+        case "-":
+            return a - b;
+        case "*":
+            return a * b;
+        case "/":
+            return b !== 0 ? a / b : "Erro: divisão por zero";
+        default:
+            return "Operação inválida";
+    }
+}
+
+console.log(calcular("+", 10, 5));  // 15
+console.log(calcular("*", 4, 3));   // 12
+                </div>
+                
+                <h3>📝 Exemplo 2: Validação</h3>
+                <div class="code-block">
+function validarEmail(email) {
+    if (email.includes("@") && email.includes(".")) {
+        return true;
+    }
+    return false;
+}
+
+function validarSenha(senha) {
+    if (senha.length >= 8) {
+        return true;
+    }
+    return false;
+}
+
+let email = "usuario@email.com";
+let senha = "senha123";
+
+if (validarEmail(email) && validarSenha(senha)) {
+    console.log("Dados válidos!");
+}
+                </div>
+                
+                <h3>📝 Exemplo 3: Função Modular</h3>
+                <div class="code-block">
+function calcularMedia(notas) {
+    let soma = 0;
+    for (let nota of notas) {
+        soma += nota;
+    }
+    return soma / notas.length;
+}
+
+function verificarAprovacao(media) {
+    return media >= 7;
+}
+
+let notas = [8, 7, 9, 6];
+let media = calcularMedia(notas);
+let aprovado = verificarAprovacao(media);
+
+console.log(`Média: ${media}, Aprovado: ${aprovado}`);
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

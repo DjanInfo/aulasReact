@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-05: Funções e Modularização - Slide 04</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-puzzle-piece"></i> FER-05: Funções e Modularização</h1>
+            <p>Introduzir o conceito de funções para modularização e reutilização de código</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide4">
+                <h2><i class="fas fa-phone"></i> Chamada de Funções</h2>
+                
+                <h3>📝 Como Chamar uma Função?</h3>
+                <p>Para executar uma função, você a "chama" usando seu nome seguido de parênteses.</p>
+                
+                <div class="code-block">
+// Declarar função
+function saudar() {
+    console.log("Olá!");
+}
+
+// Chamar função
+saudar();  // Executa o código da função
+                </div>
+                
+                <h3>📊 Exemplos Práticos</h3>
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 1: Função Simples</h4>
+                    <div class="code-block">
+function exibirMensagem() {
+    console.log("Função executada!");
+}
+
+exibirMensagem();  // "Função executada!"
+exibirMensagem();  // "Função executada!" (pode chamar várias vezes)
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 2: Função com Parâmetros</h4>
+                    <div class="code-block">
+function saudar(nome) {
+    console.log(`Olá, ${nome}!`);
+}
+
+saudar("Maria");   // "Olá, Maria!"
+saudar("João");    // "Olá, João!"
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 3: Função com Retorno</h4>
+                    <div class="code-block">
+function somar(a, b) {
+    return a + b;
+}
+
+let resultado = somar(5, 3);
+console.log(resultado);  // 8
+
+// Pode usar diretamente
+console.log(somar(10, 20));  // 30
+                    </div>
+                </div>
+                
+                <h3>🎯 Características</h3>
+                <ul>
+                    <li>Função pode ser chamada múltiplas vezes</li>
+                    <li>Pode passar argumentos diferentes a cada chamada</li>
+                    <li>Resultado pode ser armazenado em variável</li>
+                    <li>Pode usar resultado em expressões</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

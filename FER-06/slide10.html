@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-06: Arrays e Objetos - Slide 10</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-database"></i> FER-06: Arrays e Objetos como Estruturas de Dados</h1>
+            <p>Apresentar arrays e objetos para armazenar e manipular coleções de dados em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide10">
+                <h2><i class="fas fa-lightbulb"></i> Exemplos Práticos</h2>
+                
+                <h3>📝 Exemplo 1: Lista de Produtos</h3>
+                <div class="code-block">
+let produtos = [
+    { nome: "Notebook", preco: 2500, estoque: 5 },
+    { nome: "Mouse", preco: 50, estoque: 20 },
+    { nome: "Teclado", preco: 150, estoque: 15 }
+];
+
+// Filtrar produtos com estoque baixo
+let estoqueBaixo = produtos.filter(p => p.estoque < 10);
+
+// Calcular valor total do estoque
+let valorTotal = produtos.reduce((total, p) => {
+    return total + (p.preco * p.estoque);
+}, 0);
+                </div>
+                
+                <h3>📝 Exemplo 2: Lista de Alunos</h3>
+                <div class="code-block">
+let alunos = [
+    { nome: "João", nota: 8 },
+    { nome: "Maria", nota: 9 },
+    { nome: "Pedro", nota: 7 }
+];
+
+// Aprovados (nota >= 7)
+let aprovados = alunos.filter(a => a.nota >= 7);
+
+// Média das notas
+let media = alunos.reduce((soma, a) => soma + a.nota, 0) / alunos.length;
+                </div>
+                
+                <h3>📝 Exemplo 3: Carrinho de Compras</h3>
+                <div class="code-block">
+let carrinho = [];
+
+// Adicionar produtos
+carrinho.push({ produto: "Notebook", preco: 2500 });
+carrinho.push({ produto: "Mouse", preco: 50 });
+
+// Calcular total
+let total = carrinho.reduce((soma, item) => soma + item.preco, 0);
+console.log("Total:", total);
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-08: Introdução ao JSX e Componentes - Slide 09</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-08: Introdução ao JSX e Componentes no React</h1>
+            <p>Apresentar o JSX como extensão de sintaxe JavaScript para definir componentes React</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide9">
+                <h2><i class="fas fa-lightbulb"></i> Exemplos Práticos</h2>
+                
+                <h3>📝 Exemplo 1: Componente de Saudação</h3>
+                <div class="code-block">
+function Saudacao(props) {
+    return (
+        <div>
+            <h1>Olá, {props.nome}!</h1>
+            <p>Bem-vindo ao React</p>
+        </div>
+    );
+}
+
+// Usar
+<Saudacao nome="João" />
+                </div>
+                
+                <h3>📝 Exemplo 2: Lista de Itens</h3>
+                <div class="code-block">
+function ItemLista(props) {
+    return <li>{props.texto}</li>;
+}
+
+function Lista() {
+    const itens = ["Item 1", "Item 2", "Item 3"];
+    
+    return (
+        <ul>
+            {itens.map((item, index) => (
+                <ItemLista key={index} texto={item} />
+            ))}
+        </ul>
+    );
+}
+                </div>
+                
+                <h3>📝 Exemplo 3: Card de Produto</h3>
+                <div class="code-block">
+function ProdutoCard(props) {
+    return (
+        <div className="produto-card">
+            <h3>{props.nome}</h3>
+            <p>R$ {props.preco}</p>
+            <button>Comprar</button>
+        </div>
+    );
+}
+
+// Usar
+<ProdutoCard nome="Notebook" preco="2500" />
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

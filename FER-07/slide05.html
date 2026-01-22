@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-07: Eventos e Interatividade - Slide 05</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-mouse-pointer"></i> FER-07: Eventos e Interatividade em JavaScript</h1>
+            <p>Demonstrar como capturar e responder a eventos do usuário em páginas web</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide5">
+                <h2><i class="fas fa-keyboard"></i> Evento input</h2>
+                
+                <h3>📝 O que é?</h3>
+                <p><strong>input</strong> é disparado quando o valor de um campo de entrada (input, textarea) é alterado, em tempo real enquanto o usuário digita.</p>
+                
+                <div class="code-block">
+let campo = document.querySelector('#meuInput');
+
+campo.addEventListener('input', function(evento) {
+    console.log('Valor digitado:', evento.target.value);
+});
+                </div>
+                
+                <h3>📊 Exemplos Práticos</h3>
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 1: Contador de Caracteres</h4>
+                    <div class="code-block">
+let campo = document.querySelector('#texto');
+let contador = document.querySelector('#contador');
+
+campo.addEventListener('input', function(e) {
+    let tamanho = e.target.value.length;
+    contador.textContent = `${tamanho} caracteres`;
+});
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 2: Busca em Tempo Real</h4>
+                    <div class="code-block">
+let busca = document.querySelector('#busca');
+let resultados = document.querySelector('#resultados');
+
+busca.addEventListener('input', function(e) {
+    let termo = e.target.value;
+    // Filtrar e exibir resultados
+    filtrarResultados(termo);
+});
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 3: Validação em Tempo Real</h4>
+                    <div class="code-block">
+let email = document.querySelector('#email');
+let mensagem = document.querySelector('#mensagem');
+
+email.addEventListener('input', function(e) {
+    if (e.target.value.includes('@')) {
+        mensagem.textContent = 'Email válido';
+        mensagem.style.color = 'green';
+    } else {
+        mensagem.textContent = 'Email inválido';
+        mensagem.style.color = 'red';
+    }
+});
+                    </div>
+                </div>
+                
+                <h3>🎯 Diferença: input vs change</h3>
+                <ul>
+                    <li><strong>input:</strong> Dispara enquanto digita (tempo real)</li>
+                    <li><strong>change:</strong> Dispara quando campo perde foco e valor mudou</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

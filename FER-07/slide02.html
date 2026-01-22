@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-07: Eventos e Interatividade - Slide 02</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-mouse-pointer"></i> FER-07: Eventos e Interatividade em JavaScript</h1>
+            <p>Demonstrar como capturar e responder a eventos do usuário em páginas web</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide2">
+                <h2><i class="fas fa-question-circle"></i> O que são Eventos?</h2>
+                
+                <h3>📝 Definição</h3>
+                <p><strong>Evento</strong> é uma ação ou ocorrência que acontece no navegador, como clique do mouse, digitação no teclado, ou carregamento da página. JavaScript pode "escutar" esses eventos e executar código em resposta.</p>
+                
+                <div class="code-block">
+Evento = Ação do Usuário ou Navegador
+
+Usuário faz algo → Evento dispara → JavaScript responde
+                </div>
+                
+                <h3>📊 Tipos de Eventos</h3>
+                <ul>
+                    <li><strong>Eventos de Mouse:</strong> click, dblclick, mouseover, mouseout</li>
+                    <li><strong>Eventos de Teclado:</strong> keydown, keyup, keypress</li>
+                    <li><strong>Eventos de Formulário:</strong> submit, input, change, focus</li>
+                    <li><strong>Eventos de Página:</strong> load, unload, resize</li>
+                    <li><strong>Eventos de Toque:</strong> touchstart, touchend (mobile)</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo do Dia a Dia</h4>
+                    <p>Quando você clica em um botão "Enviar", isso dispara um evento. O JavaScript pode capturar esse evento e executar uma ação, como validar um formulário ou enviar dados.</p>
+                </div>
+                
+                <h3>🎯 Modelo de Eventos</h3>
+                <p>JavaScript usa o modelo de eventos do DOM (Document Object Model) para detectar e responder a eventos.</p>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

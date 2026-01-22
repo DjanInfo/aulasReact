@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-06: Arrays e Objetos - Slide 07</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-database"></i> FER-06: Arrays e Objetos como Estruturas de Dados</h1>
+            <p>Apresentar arrays e objetos para armazenar e manipular coleções de dados em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide7">
+                <h2><i class="fas fa-cube"></i> O que são Objetos?</h2>
+                
+                <h3>📝 Definição</h3>
+                <p><strong>Objeto</strong> é uma estrutura de dados que armazena pares chave-valor (propriedades). Permite agrupar dados relacionados.</p>
+                
+                <div class="code-block">
+// Objeto é uma coleção de propriedades
+let pessoa = {
+    nome: "João",
+    idade: 30,
+    cidade: "Salvador"
+};
+                </div>
+                
+                <h3>📊 Características</h3>
+                <ul>
+                    <li><strong>Chave-Valor:</strong> Cada propriedade tem nome e valor</li>
+                    <li><strong>Não Ordenado:</strong> Propriedades não têm ordem específica</li>
+                    <li><strong>Dinâmico:</strong> Pode adicionar/remover propriedades</li>
+                    <li><strong>Flexível:</strong> Valores podem ser de qualquer tipo</li>
+                </ul>
+                
+                <h3>📊 Criação de Objetos</h3>
+                <div class="code-block">
+// Forma 1: Literal
+let pessoa = {
+    nome: "Maria",
+    idade: 25
+};
+
+// Forma 2: Construtor
+let carro = new Object();
+carro.marca = "Toyota";
+carro.modelo = "Corolla";
+
+// Objeto vazio
+let vazio = {};
+                </div>
+                
+                <h3>🎯 Acesso a Propriedades</h3>
+                <div class="code-block">
+let pessoa = {
+    nome: "João",
+    idade: 30
+};
+
+// Notação de ponto
+console.log(pessoa.nome);   // "João"
+
+// Notação de colchetes
+console.log(pessoa["idade"]);  // 30
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

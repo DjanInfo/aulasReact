@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-05: Funções e Modularização - Slide 06</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-puzzle-piece"></i> FER-05: Funções e Modularização</h1>
+            <p>Introduzir o conceito de funções para modularização e reutilização de código</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide6">
+                <h2><i class="fas fa-undo"></i> Retorno (return)</h2>
+                
+                <h3>📝 O que é return?</h3>
+                <p><strong>return</strong> encerra a execução da função e retorna um valor para quem a chamou.</p>
+                
+                <div class="code-block">
+function somar(a, b) {
+    return a + b;  // Retorna o resultado
+}
+
+let resultado = somar(5, 3);  // resultado recebe 8
+                </div>
+                
+                <h3>📊 Características do return</h3>
+                <ul>
+                    <li>Encerra a função imediatamente</li>
+                    <li>Retorna um valor (ou undefined se não especificado)</li>
+                    <li>Pode retornar qualquer tipo de dado</li>
+                    <li>Pode ter múltiplos returns (com condições)</li>
+                </ul>
+                
+                <h3>📊 Exemplos Práticos</h3>
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 1: Retorno Simples</h4>
+                    <div class="code-block">
+function dobrar(numero) {
+    return numero * 2;
+}
+
+let resultado = dobrar(5);
+console.log(resultado);  // 10
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 2: Retorno Condicional</h4>
+                    <div class="code-block">
+function maior(a, b) {
+    if (a > b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+
+console.log(maior(10, 5));  // 10
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 3: Sem Retorno</h4>
+                    <div class="code-block">
+function exibirMensagem(texto) {
+    console.log(texto);
+    // Sem return - retorna undefined
+}
+
+let resultado = exibirMensagem("Olá");
+console.log(resultado);  // undefined
+                    </div>
+                </div>
+                
+                <h3>🎯 Return vs Console.log</h3>
+                <ul>
+                    <li><strong>return:</strong> Retorna valor para uso no código</li>
+                    <li><strong>console.log:</strong> Apenas exibe no console</li>
+                    <li>Use return quando precisar do valor</li>
+                    <li>Use console.log apenas para debug</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-04: Estruturas de Repetição - Slide 02</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-redo"></i> FER-04: Estruturas de Repetição</h1>
+            <p>Ensinar como realizar tarefas repetitivas através de laços de repetição</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide2">
+                <h2><i class="fas fa-question-circle"></i> O que são Estruturas de Repetição?</h2>
+                
+                <h3>📝 Definição</h3>
+                <p><strong>Estruturas de Repetição</strong> (loops) permitem executar um bloco de código múltiplas vezes, enquanto uma condição for verdadeira ou um número específico de vezes.</p>
+                
+                <div class="code-block">
+Loop = Repetir Código
+
+ENQUANTO condição for verdadeira:
+    execute este código
+    (condição é verificada novamente)
+                </div>
+                
+                <h3>📊 Por que Usar Loops?</h3>
+                <ul>
+                    <li><strong>Evitar Repetição:</strong> Não precisa escrever código várias vezes</li>
+                    <li><strong>Processar Listas:</strong> Iterar sobre arrays e coleções</li>
+                    <li><strong>Contadores:</strong> Executar ação um número de vezes</li>
+                    <li><strong>Eficiência:</strong> Código mais limpo e manutenível</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo: Contar até 10</h4>
+                    <p><strong>Sem loop:</strong></p>
+                    <div class="code-block">
+console.log(1);
+console.log(2);
+console.log(3);
+// ... até 10 (10 linhas!)
+                    </div>
+                    <p><strong>Com loop:</strong></p>
+                    <div class="code-block">
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
+                    </div>
+                    <p>Muito mais eficiente!</p>
+                </div>
+                
+                <h3>🎯 Tipos de Loops em JavaScript</h3>
+                <ul>
+                    <li><strong>while:</strong> Enquanto condição for verdadeira</li>
+                    <li><strong>for:</strong> Número específico de vezes</li>
+                    <li><strong>do-while:</strong> Executa pelo menos uma vez</li>
+                    <li><strong>for...in:</strong> Iterar sobre propriedades</li>
+                    <li><strong>for...of:</strong> Iterar sobre valores</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

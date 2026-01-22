@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-08: Introdução ao JSX e Componentes - Slide 05</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-08: Introdução ao JSX e Componentes no React</h1>
+            <p>Apresentar o JSX como extensão de sintaxe JavaScript para definir componentes React</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide5">
+                <h2><i class="fas fa-brackets-curly"></i> Embedding Expressions</h2>
+                
+                <h3>📝 O que é?</h3>
+                <p><strong>Embedding Expressions</strong> permite usar JavaScript dentro do JSX usando chaves <code>{}</code>. Qualquer expressão JavaScript válida pode ser usada.</p>
+                
+                <div class="code-block">
+const nome = "João";
+const elemento = <h1>Olá, {nome}!</h1>;
+                </div>
+                
+                <h3>📊 Exemplos Práticos</h3>
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 1: Variáveis</h4>
+                    <div class="code-block">
+const nome = "Maria";
+const idade = 25;
+
+const elemento = (
+    <div>
+        <p>Nome: {nome}</p>
+        <p>Idade: {idade}</p>
+    </div>
+);
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 2: Expressões</h4>
+                    <div class="code-block">
+const a = 10;
+const b = 5;
+
+const elemento = (
+    <p>
+        {a} + {b} = {a + b}
+    </p>
+);
+// Resultado: "10 + 5 = 15"
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 3: Funções</h4>
+                    <div class="code-block">
+function formatarNome(nome) {
+    return nome.toUpperCase();
+}
+
+const elemento = <h1>{formatarNome("joão")}</h1>;
+// Resultado: "JOÃO"
+                    </div>
+                </div>
+                
+                <h3>🎯 O que Pode Ir Dentro de {}</h3>
+                <ul>
+                    <li>Variáveis</li>
+                    <li>Expressões matemáticas</li>
+                    <li>Chamadas de função</li>
+                    <li>Arrays (renderiza elementos)</li>
+                    <li>Condicionais (ternário)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

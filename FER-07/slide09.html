@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-07: Eventos e Interatividade - Slide 09</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-mouse-pointer"></i> FER-07: Eventos e Interatividade em JavaScript</h1>
+            <p>Demonstrar como capturar e responder a eventos do usuário em páginas web</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide9">
+                <h2><i class="fas fa-lightbulb"></i> Exemplos Práticos</h2>
+                
+                <h3>📝 Exemplo 1: Contador Interativo</h3>
+                <div class="code-block">
+let botaoMais = document.querySelector('#mais');
+let botaoMenos = document.querySelector('#menos');
+let contador = document.querySelector('#contador');
+let valor = 0;
+
+botaoMais.addEventListener('click', function() {
+    valor++;
+    contador.textContent = valor;
+});
+
+botaoMenos.addEventListener('click', function() {
+    valor--;
+    contador.textContent = valor;
+});
+                </div>
+                
+                <h3>📝 Exemplo 2: Validação de Formulário</h3>
+                <div class="code-block">
+let form = document.querySelector('#formulario');
+let email = document.querySelector('#email');
+let mensagem = document.querySelector('#mensagem');
+
+email.addEventListener('input', function(e) {
+    if (e.target.value.includes('@')) {
+        mensagem.textContent = 'Email válido';
+        mensagem.style.color = 'green';
+    } else {
+        mensagem.textContent = 'Email inválido';
+        mensagem.style.color = 'red';
+    }
+});
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (email.value.includes('@')) {
+        alert('Formulário enviado!');
+    }
+});
+                </div>
+                
+                <h3>📝 Exemplo 3: Toggle de Tema</h3>
+                <div class="code-block">
+let botaoTema = document.querySelector('#tema');
+let body = document.body;
+
+botaoTema.addEventListener('click', function() {
+    if (body.classList.contains('dark')) {
+        body.classList.remove('dark');
+        botaoTema.textContent = 'Modo Escuro';
+    } else {
+        body.classList.add('dark');
+        botaoTema.textContent = 'Modo Claro';
+    }
+});
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

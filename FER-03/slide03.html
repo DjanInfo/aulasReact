@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-03: Estruturas Condicionais - Slide 03</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code-branch"></i> FER-03: Estruturas Condicionais</h1>
+            <p>Capacitar os alunos a implementar decisões lógicas usando estruturas condicionais em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide3">
+                <h2><i class="fas fa-check"></i> Estrutura if (SE)</h2>
+                
+                <h3>📝 Sintaxe Básica</h3>
+                <p>A estrutura <code>if</code> executa um bloco de código apenas se a condição for verdadeira.</p>
+                
+                <div class="code-block">
+if (condição) {
+    // código executado se condição for true
+}
+                </div>
+                
+                <h3>📊 Exemplos Práticos</h3>
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 1: Verificar Idade</h4>
+                    <div class="code-block">
+let idade = 20;
+
+if (idade >= 18) {
+    console.log("Maior de idade");
+}
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 2: Verificar Nota</h4>
+                    <div class="code-block">
+let nota = 8;
+
+if (nota >= 7) {
+    console.log("Aprovado!");
+}
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 3: Verificar Variável</h4>
+                    <div class="code-block">
+let usuarioLogado = true;
+
+if (usuarioLogado) {
+    console.log("Bem-vindo de volta!");
+}
+                    </div>
+                </div>
+                
+                <h3>🎯 Características</h3>
+                <ul>
+                    <li>Executa código apenas se condição for <code>true</code></li>
+                    <li>Se condição for <code>false</code>, código é ignorado</li>
+                    <li>Condição deve retornar um valor booleano</li>
+                    <li>Chaves {} são obrigatórias para múltiplas linhas</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

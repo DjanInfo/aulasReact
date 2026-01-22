@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-05: Funções e Modularização - Slide 05</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-puzzle-piece"></i> FER-05: Funções e Modularização</h1>
+            <p>Introduzir o conceito de funções para modularização e reutilização de código</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide5">
+                <h2><i class="fas fa-inbox"></i> Parâmetros e Argumentos</h2>
+                
+                <h3>📝 Diferença: Parâmetros vs Argumentos</h3>
+                <ul>
+                    <li><strong>Parâmetros:</strong> Variáveis na declaração da função</li>
+                    <li><strong>Argumentos:</strong> Valores passados na chamada da função</li>
+                </ul>
+                
+                <div class="code-block">
+// Parâmetros (na declaração)
+function somar(a, b) {  // a e b são parâmetros
+    return a + b;
+}
+
+// Argumentos (na chamada)
+somar(5, 3);  // 5 e 3 são argumentos
+                </div>
+                
+                <h3>📊 Exemplos Práticos</h3>
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 1: Múltiplos Parâmetros</h4>
+                    <div class="code-block">
+function calcularMedia(nota1, nota2, nota3) {
+    let soma = nota1 + nota2 + nota3;
+    return soma / 3;
+}
+
+let media = calcularMedia(8, 7, 9);
+console.log(media);  // 8
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 2: Parâmetros Opcionais</h4>
+                    <div class="code-block">
+function saudar(nome, sobrenome = "") {
+    if (sobrenome) {
+        return `Olá, ${nome} ${sobrenome}!`;
+    }
+    return `Olá, ${nome}!`;
+}
+
+console.log(saudar("João"));              // "Olá, João!"
+console.log(saudar("João", "Silva"));     // "Olá, João Silva!"
+                    </div>
+                </div>
+                
+                <h3>🎯 Valores Padrão</h3>
+                <div class="code-block">
+function multiplicar(a, b = 1) {
+    return a * b;
+}
+
+multiplicar(5);      // 5 (b usa valor padrão 1)
+multiplicar(5, 3);   // 15 (b recebe 3)
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-04: Estruturas de Repetição - Slide 08</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-redo"></i> FER-04: Estruturas de Repetição</h1>
+            <p>Ensinar como realizar tarefas repetitivas através de laços de repetição</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide8">
+                <h2><i class="fas fa-calculator"></i> Contadores e Loops Acumuladores</h2>
+                
+                <h3>📝 Contadores</h3>
+                <p>Contadores são variáveis que incrementam ou decrementam a cada iteração do loop.</p>
+                
+                <div class="code-block">
+// Contador simples
+let contador = 0;
+
+for (let i = 1; i <= 10; i++) {
+    contador++;  // Incrementa contador
+}
+
+console.log("Total de iterações:", contador);  // 10
+                </div>
+                
+                <h3>📊 Loops Acumuladores</h3>
+                <p>Acumuladores são variáveis que somam valores durante o loop.</p>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 1: Soma de Números</h4>
+                    <div class="code-block">
+let soma = 0;
+
+for (let i = 1; i <= 10; i++) {
+    soma += i;  // Acumula valores
+}
+
+console.log("Soma de 1 a 10:", soma);  // 55
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 2: Média</h4>
+                    <div class="code-block">
+let notas = [8, 7, 9, 6, 8];
+let soma = 0;
+
+for (let i = 0; i < notas.length; i++) {
+    soma += notas[i];
+}
+
+let media = soma / notas.length;
+console.log("Média:", media);  // 7.6
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 3: Produtório</h4>
+                    <div class="code-block">
+let produto = 1;
+
+for (let i = 1; i <= 5; i++) {
+    produto *= i;  // Multiplica valores
+}
+
+console.log("5! =", produto);  // 120 (fatorial de 5)
+                    </div>
+                </div>
+                
+                <h3>🎯 Padrões Comuns</h3>
+                <ul>
+                    <li><strong>Soma:</strong> acumulador += valor</li>
+                    <li><strong>Produto:</strong> acumulador *= valor</li>
+                    <li><strong>Contagem:</strong> contador++</li>
+                    <li><strong>Máximo/Mínimo:</strong> comparar e atualizar</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

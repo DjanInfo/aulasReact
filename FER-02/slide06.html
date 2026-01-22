@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-02: Variáveis, Tipos de Dados e Operadores - Slide 06</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-02: Variáveis, Tipos de Dados e Operadores</h1>
+            <p>Ensinar como armazenar e manipular informações usando variáveis, tipos de dados primitivos e operadores em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide6">
+                <h2><i class="fas fa-plus-minus"></i> Operadores Aritméticos</h2>
+                
+                <h3>📝 Operadores Básicos</h3>
+                <p>Operadores aritméticos realizam operações matemáticas com números.</p>
+                
+                <div class="code-block">
+// Operadores aritméticos
+let a = 10;
+let b = 3;
+
+a + b   // 13  (adição)
+a - b   // 7   (subtração)
+a * b   // 30  (multiplicação)
+a / b   // 3.33... (divisão)
+a % b   // 1   (resto/módulo)
+a ** b  // 1000 (potência/exponenciação)
+                </div>
+                
+                <h3>📊 Operadores de Atribuição Aritmética</h3>
+                <div class="code-block">
+let x = 10;
+
+x += 5;  // x = x + 5  → 15
+x -= 3;  // x = x - 3  → 12
+x *= 2;  // x = x * 2  → 24
+x /= 4;  // x = x / 4  → 6
+x %= 4;  // x = x % 4  → 2
+                </div>
+                
+                <h3>🎯 Operadores de Incremento/Decremento</h3>
+                <div class="code-block">
+let contador = 5;
+
+contador++;  // Incrementa depois (retorna 5, depois vira 6)
+++contador;  // Incrementa antes (vira 7, retorna 7)
+contador--;  // Decrementa depois (retorna 7, depois vira 6)
+--contador;  // Decrementa antes (vira 5, retorna 5)
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Precedência</h4>
+                    <p>Ordem de execução: parênteses → potência → multiplicação/divisão → adição/subtração</p>
+                    <div class="code-block">
+let resultado = 2 + 3 * 4;      // 14 (não 20!)
+let correto = (2 + 3) * 4;      // 20
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

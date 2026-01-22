@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-07: Eventos e Interatividade - Slide 06</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-mouse-pointer"></i> FER-07: Eventos e Interatividade em JavaScript</h1>
+            <p>Demonstrar como capturar e responder a eventos do usuário em páginas web</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide6">
+                <h2><i class="fas fa-paper-plane"></i> Evento submit</h2>
+                
+                <h3>📝 O que é?</h3>
+                <p><strong>submit</strong> é disparado quando um formulário é enviado. É importante prevenir o comportamento padrão (recarregar página) para processar o formulário com JavaScript.</p>
+                
+                <div class="code-block">
+let formulario = document.querySelector('#meuForm');
+
+formulario.addEventListener('submit', function(evento) {
+    evento.preventDefault(); // Previne recarregar página
+    
+    // Processar formulário
+    console.log('Formulário enviado!');
+});
+                </div>
+                
+                <h3>📊 Exemplos Práticos</h3>
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 1: Validação de Formulário</h4>
+                    <div class="code-block">
+let form = document.querySelector('#formulario');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    let nome = document.querySelector('#nome').value;
+    let email = document.querySelector('#email').value;
+    
+    if (nome && email) {
+        console.log('Dados válidos:', { nome, email });
+        // Enviar dados
+    } else {
+        alert('Preencha todos os campos!');
+    }
+});
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 2: Coletar Dados</h4>
+                    <div class="code-block">
+let form = document.querySelector('#cadastro');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    let dados = {
+        nome: form.nome.value,
+        email: form.email.value,
+        senha: form.senha.value
+    };
+    
+    console.log('Dados coletados:', dados);
+    // Processar ou enviar dados
+});
+                    </div>
+                </div>
+                
+                <h3>🎯 Importante</h3>
+                <ul>
+                    <li>Sempre use <code>preventDefault()</code> para evitar recarregar</li>
+                    <li>Valide dados antes de processar</li>
+                    <li>Forneça feedback ao usuário</li>
+                    <li>Use para formulários interativos</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

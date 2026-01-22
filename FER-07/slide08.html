@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-07: Eventos e Interatividade - Slide 08</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-mouse-pointer"></i> FER-07: Eventos e Interatividade em JavaScript</h1>
+            <p>Demonstrar como capturar e responder a eventos do usuário em páginas web</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide8">
+                <h2><i class="fas fa-info-circle"></i> Objeto Event</h2>
+                
+                <h3>📝 O que é?</h3>
+                <p>Quando um evento é disparado, uma função recebe um objeto <strong>Event</strong> como parâmetro, contendo informações sobre o evento.</p>
+                
+                <div class="code-block">
+elemento.addEventListener('click', function(evento) {
+    // evento contém informações sobre o clique
+    console.log(evento);
+});
+                </div>
+                
+                <h3>📊 Propriedades Úteis</h3>
+                <div class="code-block">
+elemento.addEventListener('click', function(e) {
+    e.target;        // Elemento que disparou o evento
+    e.type;          // Tipo do evento ('click')
+    e.preventDefault(); // Previne comportamento padrão
+    e.stopPropagation(); // Para propagação do evento
+});
+                </div>
+                
+                <h3>📊 Exemplos Práticos</h3>
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 1: Identificar Elemento Clicado</h4>
+                    <div class="code-block">
+let botoes = document.querySelectorAll('.botao');
+
+botoes.forEach(function(botao) {
+    botao.addEventListener('click', function(e) {
+        console.log('Clicou em:', e.target.textContent);
+    });
+});
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 2: Prevenir Link</h4>
+                    <div class="code-block">
+let link = document.querySelector('#meuLink');
+
+link.addEventListener('click', function(e) {
+    e.preventDefault(); // Não navega para o link
+    console.log('Link clicado, mas não navegou');
+});
+                    </div>
+                </div>
+                
+                <h3>🎯 Uso Comum</h3>
+                <ul>
+                    <li>Acessar elemento que disparou evento</li>
+                    <li>Prevenir comportamento padrão</li>
+                    <li>Obter informações do evento</li>
+                    <li>Controlar propagação</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

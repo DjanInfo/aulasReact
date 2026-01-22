@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-07: Eventos e Interatividade - Slide 07</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-mouse-pointer"></i> FER-07: Eventos e Interatividade em JavaScript</h1>
+            <p>Demonstrar como capturar e responder a eventos do usuário em páginas web</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide7">
+                <h2><i class="fas fa-mouse"></i> Outros Eventos Comuns</h2>
+                
+                <h3>📊 Eventos de Mouse</h3>
+                <div class="code-block">
+let elemento = document.querySelector('#elemento');
+
+// mouseover - quando mouse entra
+elemento.addEventListener('mouseover', function() {
+    console.log('Mouse sobre elemento');
+});
+
+// mouseout - quando mouse sai
+elemento.addEventListener('mouseout', function() {
+    console.log('Mouse saiu do elemento');
+});
+
+// dblclick - duplo clique
+elemento.addEventListener('dblclick', function() {
+    console.log('Duplo clique!');
+});
+                </div>
+                
+                <h3>📊 Eventos de Teclado</h3>
+                <div class="code-block">
+let campo = document.querySelector('#campo');
+
+// keydown - quando tecla é pressionada
+campo.addEventListener('keydown', function(e) {
+    console.log('Tecla pressionada:', e.key);
+});
+
+// keyup - quando tecla é solta
+campo.addEventListener('keyup', function(e) {
+    console.log('Tecla solta:', e.key);
+});
+                </div>
+                
+                <h3>📊 Eventos de Página</h3>
+                <div class="code-block">
+// load - quando página carrega
+window.addEventListener('load', function() {
+    console.log('Página carregada!');
+});
+
+// resize - quando janela redimensiona
+window.addEventListener('resize', function() {
+    console.log('Janela redimensionada');
+});
+                </div>
+                
+                <h3>🎯 Resumo de Eventos</h3>
+                <ul>
+                    <li><strong>click:</strong> Clique do mouse</li>
+                    <li><strong>input:</strong> Digitação em campo</li>
+                    <li><strong>submit:</strong> Envio de formulário</li>
+                    <li><strong>mouseover/mouseout:</strong> Movimento do mouse</li>
+                    <li><strong>keydown/keyup:</strong> Teclas pressionadas</li>
+                    <li><strong>load:</strong> Carregamento da página</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

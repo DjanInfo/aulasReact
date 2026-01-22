@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-05: Funções e Modularização - Slide 08</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-puzzle-piece"></i> FER-05: Funções e Modularização</h1>
+            <p>Introduzir o conceito de funções para modularização e reutilização de código</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide8">
+                <h2><i class="fas fa-sparkles"></i> Funções Puras</h2>
+                
+                <h3>📝 O que são Funções Puras?</h3>
+                <p><strong>Função Pura</strong> é uma função que sempre retorna o mesmo resultado para os mesmos argumentos e não tem efeitos colaterais (não modifica variáveis externas).</p>
+                
+                <div class="code-block">
+Função Pura:
+- Mesma entrada → Sempre mesma saída
+- Sem efeitos colaterais
+- Não modifica variáveis externas
+                </div>
+                
+                <h3>📊 Exemplo: Função Pura</h3>
+                <div class="info">
+                    <h4><i class="fas fa-check-circle"></i> Função Pura</h4>
+                    <div class="code-block">
+function somar(a, b) {
+    return a + b;  // Sempre retorna a + b
+}
+
+somar(5, 3);  // Sempre retorna 8
+somar(5, 3);  // Sempre retorna 8 (mesmo resultado)
+                    </div>
+                </div>
+                
+                <h3>📊 Exemplo: Função com Efeito Colateral</h3>
+                <div class="info">
+                    <h4><i class="fas fa-times-circle"></i> Função Impura</h4>
+                    <div class="code-block">
+let contador = 0;
+
+function incrementar() {
+    contador++;  // Modifica variável externa
+    return contador;
+}
+
+incrementar();  // Retorna 1
+incrementar();  // Retorna 2 (resultado diferente!)
+                    </div>
+                </div>
+                
+                <h3>🎯 Vantagens de Funções Puras</h3>
+                <ul>
+                    <li><strong>Previsibilidade:</strong> Sempre mesmo resultado</li>
+                    <li><strong>Testabilidade:</strong> Fácil de testar</li>
+                    <li><strong>Reutilização:</strong> Pode usar em qualquer contexto</li>
+                    <li><strong>Debugging:</strong> Mais fácil de debugar</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

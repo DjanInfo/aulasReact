@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-03: Estruturas Condicionais - Slide 09</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code-branch"></i> FER-03: Estruturas Condicionais</h1>
+            <p>Capacitar os alunos a implementar decisões lógicas usando estruturas condicionais em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide9">
+                <h2><i class="fas fa-list"></i> Estrutura switch</h2>
+                
+                <h3>📝 O que é switch?</h3>
+                <p><strong>switch</strong> é uma estrutura condicional que permite testar uma variável contra múltiplos valores de forma mais limpa que múltiplos if-else.</p>
+                
+                <div class="code-block">
+switch (expressao) {
+    case valor1:
+        // código se expressao === valor1
+        break;
+    case valor2:
+        // código se expressao === valor2
+        break;
+    default:
+        // código se nenhum case corresponder
+}
+                </div>
+                
+                <h3>📊 Exemplo: Dia da Semana</h3>
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Switch com Números</h4>
+                    <div class="code-block">
+let dia = 3;
+let nomeDia;
+
+switch (dia) {
+    case 1:
+        nomeDia = "Domingo";
+        break;
+    case 2:
+        nomeDia = "Segunda";
+        break;
+    case 3:
+        nomeDia = "Terça";
+        break;
+    case 4:
+        nomeDia = "Quarta";
+        break;
+    case 5:
+        nomeDia = "Quinta";
+        break;
+    case 6:
+        nomeDia = "Sexta";
+        break;
+    case 7:
+        nomeDia = "Sábado";
+        break;
+    default:
+        nomeDia = "Dia inválido";
+}
+
+console.log(nomeDia);
+                    </div>
+                </div>
+                
+                <h3>📊 Exemplo: Operações</h3>
+                <div class="code-block">
+let operacao = "+";
+let a = 10;
+let b = 5;
+let resultado;
+
+switch (operacao) {
+    case "+":
+        resultado = a + b;
+        break;
+    case "-":
+        resultado = a - b;
+        break;
+    case "*":
+        resultado = a * b;
+        break;
+    case "/":
+        resultado = a / b;
+        break;
+    default:
+        resultado = "Operação inválida";
+}
+
+console.log(resultado);
+                </div>
+                
+                <h3>🎯 Características</h3>
+                <ul>
+                    <li><strong>break:</strong> Impede execução dos cases seguintes</li>
+                    <li><strong>default:</strong> Executado se nenhum case corresponder</li>
+                    <li><strong>Comparação estrita:</strong> Usa ===</li>
+                    <li><strong>Múltiplos valores:</strong> Pode ter vários cases</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

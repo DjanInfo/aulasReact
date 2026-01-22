@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-04: Estruturas de Repetição - Slide 06</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-redo"></i> FER-04: Estruturas de Repetição</h1>
+            <p>Ensinar como realizar tarefas repetitivas através de laços de repetição</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide6">
+                <h2><i class="fas fa-stop"></i> Controle de Fluxo: break</h2>
+                
+                <h3>📝 O que é break?</h3>
+                <p><strong>break</strong> interrompe completamente a execução do loop, saindo imediatamente.</p>
+                
+                <div class="code-block">
+for (let i = 1; i <= 10; i++) {
+    if (i === 5) {
+        break;  // Para o loop quando i for 5
+    }
+    console.log(i);
+}
+// Saída: 1, 2, 3, 4 (para no 5)
+                </div>
+                
+                <h3>📊 Exemplos Práticos</h3>
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 1: Buscar Número</h4>
+                    <div class="code-block">
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let numeroProcurado = 7;
+let encontrado = false;
+
+for (let i = 0; i < numeros.length; i++) {
+    if (numeros[i] === numeroProcurado) {
+        encontrado = true;
+        console.log("Encontrado na posição:", i);
+        break;  // Para quando encontrar
+    }
+}
+
+if (!encontrado) {
+    console.log("Número não encontrado");
+}
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 2: Validação com Limite</h4>
+                    <div class="code-block">
+let tentativas = 0;
+let resposta = "";
+
+while (tentativas < 5) {
+    resposta = prompt("Digite 'sim':");
+    if (resposta === "sim") {
+        console.log("Resposta correta!");
+        break;  // Para quando acertar
+    }
+    tentativas++;
+}
+                    </div>
+                </div>
+                
+                <h3>🎯 Características</h3>
+                <ul>
+                    <li>Interrompe o loop completamente</li>
+                    <li>Executa código após o loop normalmente</li>
+                    <li>Útil para sair antecipadamente</li>
+                    <li>Funciona com for, while e do-while</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

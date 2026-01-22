@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-04: Estruturas de Repetição - Slide 05</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-redo"></i> FER-04: Estruturas de Repetição</h1>
+            <p>Ensinar como realizar tarefas repetitivas através de laços de repetição</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide5">
+                <h2><i class="fas fa-redo-alt"></i> Estrutura do-while</h2>
+                
+                <h3>📝 Sintaxe</h3>
+                <p>A estrutura <code>do-while</code> executa o código pelo menos uma vez, depois verifica a condição.</p>
+                
+                <div class="code-block">
+do {
+    // código executado pelo menos uma vez
+} while (condição);
+                </div>
+                
+                <h3>📊 Diferença: while vs do-while</h3>
+                <div class="info">
+                    <h4><i class="fas fa-arrow-right"></i> while</h4>
+                    <p>Verifica condição ANTES de executar:</p>
+                    <div class="code-block">
+let i = 10;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+// Não executa nenhuma vez (i já é 10)
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-arrow-right"></i> do-while</h4>
+                    <p>Executa PRIMEIRO, depois verifica condição:</p>
+                    <div class="code-block">
+let i = 10;
+do {
+    console.log(i);
+    i++;
+} while (i < 5);
+// Executa uma vez (imprime 10), depois para
+                    </div>
+                </div>
+                
+                <h3>🎯 Quando Usar do-while?</h3>
+                <ul>
+                    <li>Quando precisa executar pelo menos uma vez</li>
+                    <li>Validação de entrada do usuário</li>
+                    <li>Menus interativos</li>
+                    <li>Situações onde ação deve acontecer antes da verificação</li>
+                </ul>
+                
+                <div class="example">
+                    <h5>💡 Exemplo: Menu Interativo</h5>
+                    <div class="code-block">
+let opcao;
+
+do {
+    opcao = prompt("Escolha uma opção (1-3):");
+    console.log("Opção escolhida:", opcao);
+} while (opcao < 1 || opcao > 3);
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

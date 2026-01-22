@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-02: Variáveis, Tipos de Dados e Operadores - Slide 07</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-02: Variáveis, Tipos de Dados e Operadores</h1>
+            <p>Ensinar como armazenar e manipular informações usando variáveis, tipos de dados primitivos e operadores em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide7">
+                <h2><i class="fas fa-equals"></i> Operadores Relacionais</h2>
+                
+                <h3>📝 O que são Operadores Relacionais?</h3>
+                <p>Operadores relacionais comparam dois valores e retornam um valor booleano (<code>true</code> ou <code>false</code>).</p>
+                
+                <div class="code-block">
+// Operadores de comparação
+let a = 10;
+let b = 5;
+
+a > b   // true  (maior que)
+a < b   // false (menor que)
+a >= b  // true  (maior ou igual)
+a <= b  // false (menor ou igual)
+a == b  // false (igual - não recomendado)
+a === b // false (igual e mesmo tipo - recomendado)
+a != b  // true  (diferente - não recomendado)
+a !== b // true  (diferente ou tipo diferente - recomendado)
+                </div>
+                
+                <h3>📊 == vs === (Igualdade)</h3>
+                <div class="info">
+                    <h4><i class="fas fa-exclamation-triangle"></i> == (Igualdade Solta)</h4>
+                    <p>Compara valores, fazendo conversão de tipo se necessário:</p>
+                    <div class="code-block">
+5 == "5"    // true (converte string para número)
+0 == false  // true (converte boolean para número)
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-check-circle"></i> === (Igualdade Estrita)</h4>
+                    <p>Compara valores E tipos, sem conversão:</p>
+                    <div class="code-block">
+5 === "5"    // false (tipos diferentes)
+5 === 5      // true (mesmo valor e tipo)
+                    </div>
+                    <p><strong>Recomendação:</strong> Sempre use <code>===</code> e <code>!==</code>!</p>
+                </div>
+                
+                <h3>🎯 Comparação de Strings</h3>
+                <div class="code-block">
+"a" < "b"      // true (ordem alfabética)
+"abc" < "abd"  // true
+"10" > "2"     // false! (comparação lexicográfica)
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

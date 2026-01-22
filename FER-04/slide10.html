@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-04: Estruturas de Repetição - Slide 10</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-redo"></i> FER-04: Estruturas de Repetição</h1>
+            <p>Ensinar como realizar tarefas repetitivas através de laços de repetição</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide10">
+                <h2><i class="fas fa-lightbulb"></i> Exemplos Práticos</h2>
+                
+                <h3>📝 Exemplo 1: Fatorial</h3>
+                <div class="code-block">
+let numero = 5;
+let fatorial = 1;
+
+for (let i = 1; i <= numero; i++) {
+    fatorial *= i;
+}
+
+console.log(`${numero}! = ${fatorial}`);  // 120
+                </div>
+                
+                <h3>📝 Exemplo 2: Verificar Número Primo</h3>
+                <div class="code-block">
+let numero = 17;
+let ehPrimo = true;
+
+for (let i = 2; i < numero; i++) {
+    if (numero % i === 0) {
+        ehPrimo = false;
+        break;
+    }
+}
+
+if (ehPrimo) {
+    console.log(`${numero} é primo`);
+} else {
+    console.log(`${numero} não é primo`);
+}
+                </div>
+                
+                <h3>📝 Exemplo 3: Sequência de Fibonacci</h3>
+                <div class="code-block">
+let n = 10;
+let a = 0, b = 1;
+
+console.log(a);
+console.log(b);
+
+for (let i = 2; i < n; i++) {
+    let proximo = a + b;
+    console.log(proximo);
+    a = b;
+    b = proximo;
+}
+                </div>
+                
+                <h3>📝 Exemplo 4: Tabuada Completa</h3>
+                <div class="code-block">
+for (let i = 1; i <= 10; i++) {
+    let linha = "";
+    for (let j = 1; j <= 10; j++) {
+        linha += `${i * j}\t`;
+    }
+    console.log(linha);
+}
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

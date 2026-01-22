@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-07: Eventos e Interatividade - Slide 03</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-mouse-pointer"></i> FER-07: Eventos e Interatividade em JavaScript</h1>
+            <p>Demonstrar como capturar e responder a eventos do usuário em páginas web</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide3">
+                <h2><i class="fas fa-headphones"></i> addEventListener</h2>
+                
+                <h3>📝 O que é addEventListener?</h3>
+                <p><strong>addEventListener</strong> é o método recomendado para adicionar um "ouvinte" de eventos a um elemento. Permite que múltiplos ouvintes sejam adicionados ao mesmo elemento.</p>
+                
+                <div class="code-block">
+elemento.addEventListener('tipoEvento', funcaoCallback);
+
+// Exemplo
+let botao = document.getElementById('meuBotao');
+botao.addEventListener('click', function() {
+    console.log('Botão clicado!');
+});
+                </div>
+                
+                <h3>📊 Sintaxe</h3>
+                <ul>
+                    <li><strong>elemento:</strong> Elemento HTML que vai escutar</li>
+                    <li><strong>tipoEvento:</strong> Tipo do evento (ex: 'click', 'input')</li>
+                    <li><strong>funcaoCallback:</strong> Função executada quando evento ocorre</li>
+                </ul>
+                
+                <h3>📊 Exemplos Práticos</h3>
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 1: Clique em Botão</h4>
+                    <div class="code-block">
+let botao = document.querySelector('#meuBotao');
+
+botao.addEventListener('click', function() {
+    alert('Botão foi clicado!');
+});
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 2: Função Nomeada</h4>
+                    <div class="code-block">
+function aoClicar() {
+    console.log('Clicou!');
+}
+
+let botao = document.querySelector('#meuBotao');
+botao.addEventListener('click', aoClicar);
+                    </div>
+                </div>
+                
+                <h3>🎯 Vantagens</h3>
+                <ul>
+                    <li>Permite múltiplos ouvintes</li>
+                    <li>Mais flexível que atributos HTML</li>
+                    <li>Fácil de remover (removeEventListener)</li>
+                    <li>Padrão moderno e recomendado</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

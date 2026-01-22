@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-03: Estruturas Condicionais - Slide 10</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code-branch"></i> FER-03: Estruturas Condicionais</h1>
+            <p>Capacitar os alunos a implementar decisões lógicas usando estruturas condicionais em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide10">
+                <h2><i class="fas fa-lightbulb"></i> Exemplos Aplicados</h2>
+                
+                <h3>📝 Exemplo 1: Calculadora de Desconto</h3>
+                <div class="code-block">
+let preco = 100;
+let tipoCliente = "premium";
+let desconto = 0;
+
+if (tipoCliente === "premium") {
+    desconto = 0.2;  // 20%
+} else if (tipoCliente === "vip") {
+    desconto = 0.15; // 15%
+} else {
+    desconto = 0.1;  // 10%
+}
+
+let precoFinal = preco * (1 - desconto);
+console.log(`Preço final: R$ ${precoFinal.toFixed(2)}`);
+                </div>
+                
+                <h3>📝 Exemplo 2: Validação de Senha</h3>
+                <div class="code-block">
+let senha = "MinhaSenha123";
+let senhaConfirmacao = "MinhaSenha123";
+
+if (senha.length < 8) {
+    console.log("Senha muito curta (mínimo 8 caracteres)");
+} else if (senha !== senhaConfirmacao) {
+    console.log("Senhas não coincidem");
+} else {
+    console.log("Senha válida!");
+}
+                </div>
+                
+                <h3>📝 Exemplo 3: Sistema de Notas</h3>
+                <div class="code-block">
+let nota = 8.5;
+let conceito;
+
+if (nota >= 9) {
+    conceito = "A";
+} else if (nota >= 8) {
+    conceito = "B";
+} else if (nota >= 7) {
+    conceito = "C";
+} else if (nota >= 5) {
+    conceito = "D";
+} else {
+    conceito = "F";
+}
+
+console.log(`Nota: ${nota} - Conceito: ${conceito}`);
+                </div>
+                
+                <h3>📝 Exemplo 4: Verificação de Acesso</h3>
+                <div class="code-block">
+let idade = 20;
+let temPermissao = true;
+let estaBloqueado = false;
+
+if (estaBloqueado) {
+    console.log("Acesso negado - conta bloqueada");
+} else if (idade < 18) {
+    console.log("Acesso negado - menor de idade");
+} else if (!temPermissao) {
+    console.log("Acesso negado - sem permissão");
+} else {
+    console.log("Acesso permitido!");
+}
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

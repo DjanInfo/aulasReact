@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-06: Arrays e Objetos - Slide 06</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-database"></i> FER-06: Arrays e Objetos como Estruturas de Dados</h1>
+            <p>Apresentar arrays e objetos para armazenar e manipular coleções de dados em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide6">
+                <h2><i class="fas fa-map"></i> Método map()</h2>
+                
+                <h3>📝 O que faz?</h3>
+                <p><strong>map()</strong> cria um novo array aplicando uma função a cada elemento. Transforma cada elemento do array original.</p>
+                
+                <div class="code-block">
+let numeros = [1, 2, 3, 4, 5];
+
+let dobrados = numeros.map(function(numero) {
+    return numero * 2;
+});
+
+console.log(dobrados);  // [2, 4, 6, 8, 10]
+                </div>
+                
+                <h3>📊 Exemplos Práticos</h3>
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 1: Converter para Maiúsculas</h4>
+                    <div class="code-block">
+let nomes = ["joão", "maria", "pedro"];
+
+let maiusculas = nomes.map(function(nome) {
+    return nome.toUpperCase();
+});
+
+console.log(maiusculas);  // ["JOÃO", "MARIA", "PEDRO"]
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 2: Arrow Function</h4>
+                    <div class="code-block">
+let precos = [10, 20, 30];
+
+let comDesconto = precos.map(preco => preco * 0.9);
+console.log(comDesconto);  // [9, 18, 27]
+                    </div>
+                </div>
+                
+                <h3>🎯 Características</h3>
+                <ul>
+                    <li>Cria novo array (não modifica original)</li>
+                    <li>Transforma cada elemento</li>
+                    <li>Retorna array do mesmo tamanho</li>
+                    <li>Muito útil para transformar dados</li>
+                </ul>
+                
+                <h3>📊 Diferença: map vs filter</h3>
+                <ul>
+                    <li><strong>map:</strong> Transforma todos os elementos</li>
+                    <li><strong>filter:</strong> Seleciona elementos que passam no teste</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

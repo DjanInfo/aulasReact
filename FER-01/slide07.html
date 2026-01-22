@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-01: Pensamento Computacional e Algoritmos - Slide 07</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-brain"></i> FER-01: Pensamento Computacional e Algoritmos</h1>
+            <p>Introduzir os conceitos de pensamento computacional, algoritmos e resolução de problemas como base para a programação</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide7">
+                <h2><i class="fas fa-code-branch"></i> Seleção (Condicionais)</h2>
+                
+                <h3>📝 O que é Seleção?</h3>
+                <p><strong>Seleção</strong> (ou condicional) permite que o algoritmo tome decisões baseadas em condições, executando diferentes ações dependendo do resultado.</p>
+                
+                <div class="code-block">
+Seleção = Decisão
+
+SE condição for verdadeira:
+    faça algo
+SENÃO:
+    faça outra coisa
+                </div>
+                
+                <h3>📊 Estruturas de Seleção</h3>
+                <ul>
+                    <li><strong>SE (if):</strong> Executa se condição for verdadeira</li>
+                    <li><strong>SE-SENÃO (if-else):</strong> Escolhe entre duas opções</li>
+                    <li><strong>SE-SENÃO SE (if-else if):</strong> Múltiplas condições</li>
+                    <li><strong>ESCOLHA (switch):</strong> Múltiplas opções</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo: Decidir o que Vestir</h4>
+                    <pre>
+SE está chovendo:
+    usar casaco
+    pegar guarda-chuva
+SENÃO:
+    usar roupa normal
+                    </pre>
+                </div>
+                
+                <h3>🎯 Em Programação (JavaScript)</h3>
+                <div class="code-block">
+// Seleção simples
+if (idade >= 18) {
+    console.log("Maior de idade");
+}
+
+// Seleção com alternativa
+if (nota >= 7) {
+    console.log("Aprovado");
+} else {
+    console.log("Reprovado");
+}
+
+// Múltiplas condições
+if (nota >= 9) {
+    console.log("Excelente");
+} else if (nota >= 7) {
+    console.log("Bom");
+} else {
+    console.log("Precisa melhorar");
+}
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

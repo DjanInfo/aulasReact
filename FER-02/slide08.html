@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-02: Variáveis, Tipos de Dados e Operadores - Slide 08</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-02: Variáveis, Tipos de Dados e Operadores</h1>
+            <p>Ensinar como armazenar e manipular informações usando variáveis, tipos de dados primitivos e operadores em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide8">
+                <h2><i class="fas fa-project-diagram"></i> Operadores Lógicos</h2>
+                
+                <h3>📝 Operadores Lógicos</h3>
+                <p>Operadores lógicos combinam ou invertem valores booleanos, retornando um resultado booleano.</p>
+                
+                <div class="code-block">
+// Operadores lógicos
+let a = true;
+let b = false;
+
+a && b   // false (E - ambos devem ser true)
+a || b   // true  (OU - pelo menos um true)
+!a       // false (NÃO - inverte o valor)
+                </div>
+                
+                <h3>📊 Tabela Verdade - E (&&)</h3>
+                <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+                    <tr style="background:#4299E1; color:white;">
+                        <th style="padding:10px; border:1px solid #ddd;">A</th>
+                        <th style="padding:10px; border:1px solid #ddd;">B</th>
+                        <th style="padding:10px; border:1px solid #ddd;">A && B</th>
+                    </tr>
+                    <tr><td style="padding:10px; border:1px solid #ddd;">true</td><td style="padding:10px; border:1px solid #ddd;">true</td><td style="padding:10px; border:1px solid #ddd;">true</td></tr>
+                    <tr><td style="padding:10px; border:1px solid #ddd;">true</td><td style="padding:10px; border:1px solid #ddd;">false</td><td style="padding:10px; border:1px solid #ddd;">false</td></tr>
+                    <tr><td style="padding:10px; border:1px solid #ddd;">false</td><td style="padding:10px; border:1px solid #ddd;">true</td><td style="padding:10px; border:1px solid #ddd;">false</td></tr>
+                    <tr><td style="padding:10px; border:1px solid #ddd;">false</td><td style="padding:10px; border:1px solid #ddd;">false</td><td style="padding:10px; border:1px solid #ddd;">false</td></tr>
+                </table>
+                
+                <h3>📊 Tabela Verdade - OU (||)</h3>
+                <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+                    <tr style="background:#4299E1; color:white;">
+                        <th style="padding:10px; border:1px solid #ddd;">A</th>
+                        <th style="padding:10px; border:1px solid #ddd;">B</th>
+                        <th style="padding:10px; border:1px solid #ddd;">A || B</th>
+                    </tr>
+                    <tr><td style="padding:10px; border:1px solid #ddd;">true</td><td style="padding:10px; border:1px solid #ddd;">true</td><td style="padding:10px; border:1px solid #ddd;">true</td></tr>
+                    <tr><td style="padding:10px; border:1px solid #ddd;">true</td><td style="padding:10px; border:1px solid #ddd;">false</td><td style="padding:10px; border:1px solid #ddd;">true</td></tr>
+                    <tr><td style="padding:10px; border:1px solid #ddd;">false</td><td style="padding:10px; border:1px solid #ddd;">true</td><td style="padding:10px; border:1px solid #ddd;">true</td></tr>
+                    <tr><td style="padding:10px; border:1px solid #ddd;">false</td><td style="padding:10px; border:1px solid #ddd;">false</td><td style="padding:10px; border:1px solid #ddd;">false</td></tr>
+                </table>
+                
+                <h3>🎯 Exemplos Práticos</h3>
+                <div class="code-block">
+let idade = 18;
+let temCarteira = true;
+
+// Pode dirigir?
+if (idade >= 18 && temCarteira) {
+    console.log("Pode dirigir");
+}
+
+// Pode entrar no site?
+let maiorIdade = idade >= 18;
+let temPermissao = true;
+if (maiorIdade || temPermissao) {
+    console.log("Acesso permitido");
+}
+
+// Negação
+let bloqueado = false;
+if (!bloqueado) {
+    console.log("Usuário ativo");
+}
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

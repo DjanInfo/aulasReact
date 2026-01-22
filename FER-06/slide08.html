@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-06: Arrays e Objetos - Slide 08</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-database"></i> FER-06: Arrays e Objetos como Estruturas de Dados</h1>
+            <p>Apresentar arrays e objetos para armazenar e manipular coleções de dados em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide8">
+                <h2><i class="fas fa-key"></i> Propriedades de Objetos</h2>
+                
+                <h3>📝 Adicionar Propriedades</h3>
+                <div class="code-block">
+let pessoa = {
+    nome: "João"
+};
+
+// Adicionar propriedade
+pessoa.idade = 30;
+pessoa["cidade"] = "Salvador";
+
+console.log(pessoa);
+// { nome: "João", idade: 30, cidade: "Salvador" }
+                </div>
+                
+                <h3>📊 Modificar Propriedades</h3>
+                <div class="code-block">
+let pessoa = {
+    nome: "João",
+    idade: 30
+};
+
+// Modificar
+pessoa.idade = 31;
+console.log(pessoa.idade);  // 31
+                </div>
+                
+                <h3>📊 Remover Propriedades</h3>
+                <div class="code-block">
+let pessoa = {
+    nome: "João",
+    idade: 30,
+    cidade: "Salvador"
+};
+
+delete pessoa.cidade;
+console.log(pessoa);
+// { nome: "João", idade: 30 }
+                </div>
+                
+                <h3>🎯 Exemplo Prático</h3>
+                <div class="code-block">
+let produto = {
+    nome: "Notebook",
+    preco: 2500,
+    estoque: 10
+};
+
+// Adicionar desconto
+produto.desconto = 0.1;
+
+// Calcular preço final
+produto.precoFinal = produto.preco * (1 - produto.desconto);
+
+console.log(produto);
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

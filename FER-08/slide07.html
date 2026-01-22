@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-08: Introdução ao JSX e Componentes - Slide 07</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-08: Introdução ao JSX e Componentes no React</h1>
+            <p>Apresentar o JSX como extensão de sintaxe JavaScript para definir componentes React</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide7">
+                <h2><i class="fas fa-code"></i> Criando Componentes</h2>
+                
+                <h3>📝 Forma 1: Function Component</h3>
+                <div class="code-block">
+function Saudacao() {
+    return <h1>Olá, Mundo!</h1>;
+}
+                </div>
+                
+                <h3>📝 Forma 2: Arrow Function</h3>
+                <div class="code-block">
+const Saudacao = () => {
+    return <h1>Olá, Mundo!</h1>;
+};
+
+// Ou forma curta
+const Saudacao = () => <h1>Olá, Mundo!</h1>;
+                </div>
+                
+                <h3>📊 Exemplo: Componente com Props</h3>
+                <div class="code-block">
+function Saudacao(props) {
+    return <h1>Olá, {props.nome}!</h1>;
+}
+
+// Usar
+<Saudacao nome="João" />
+<Saudacao nome="Maria" />
+                </div>
+                
+                <h3>📊 Exemplo: Componente Completo</h3>
+                <div class="code-block">
+function Card(props) {
+    return (
+        <div className="card">
+            <h2>{props.titulo}</h2>
+            <p>{props.descricao}</p>
+        </div>
+    );
+}
+
+// Usar
+<Card titulo="React" descricao="Biblioteca JavaScript" />
+                </div>
+                
+                <h3>🎯 Convenções</h3>
+                <ul>
+                    <li>Nome do componente começa com maiúscula</li>
+                    <li>Um componente por arquivo (geralmente)</li>
+                    <li>Retorna JSX</li>
+                    <li>Pode receber props (propriedades)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

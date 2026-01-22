@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-05: Funções e Modularização - Slide 09</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-puzzle-piece"></i> FER-05: Funções e Modularização</h1>
+            <p>Introduzir o conceito de funções para modularização e reutilização de código</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide9">
+                <h2><i class="fas fa-exclamation-triangle"></i> Efeitos Colaterais</h2>
+                
+                <h3>📝 O que são Efeitos Colaterais?</h3>
+                <p><strong>Efeitos Colaterais</strong> são mudanças que uma função causa fora de seu escopo, como modificar variáveis globais, fazer chamadas de API, ou alterar o DOM.</p>
+                
+                <div class="code-block">
+Efeitos Colaterais:
+- Modificar variáveis globais
+- Fazer chamadas de API
+- Alterar DOM
+- Imprimir no console
+- Ler/escrever arquivos
+                </div>
+                
+                <h3>📊 Exemplos</h3>
+                <div class="info">
+                    <h4><i class="fas fa-times-circle"></i> Função com Efeito Colateral</h4>
+                    <div class="code-block">
+let total = 0;
+
+function adicionar(valor) {
+    total += valor;  // Modifica variável externa
+    console.log(total);  // Efeito colateral: imprime
+    return total;
+}
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-check-circle"></i> Função Sem Efeito Colateral</h4>
+                    <div class="code-block">
+function calcularTotal(valores) {
+    let soma = 0;
+    for (let valor of valores) {
+        soma += valor;
+    }
+    return soma;  // Apenas retorna, não modifica nada
+}
+                    </div>
+                </div>
+                
+                <h3>🎯 Quando Efeitos Colaterais são Necessários?</h3>
+                <ul>
+                    <li>Atualizar interface (DOM)</li>
+                    <li>Fazer requisições HTTP</li>
+                    <li>Salvar dados</li>
+                    <li>Interagir com APIs externas</li>
+                </ul>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Boa Prática</h4>
+                    <p>Separe funções puras (lógica) de funções com efeitos colaterais (interação). Isso torna código mais testável e previsível!</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

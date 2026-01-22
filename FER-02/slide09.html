@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-02: Variáveis, Tipos de Dados e Operadores - Slide 09</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-02: Variáveis, Tipos de Dados e Operadores</h1>
+            <p>Ensinar como armazenar e manipular informações usando variáveis, tipos de dados primitivos e operadores em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide9">
+                <h2><i class="fas fa-check-circle"></i> Boas Práticas na Declaração</h2>
+                
+                <h3>📝 Nomenclatura de Variáveis</h3>
+                <p>Nomes de variáveis devem ser descritivos e seguir convenções:</p>
+                
+                <div class="info">
+                    <h4><i class="fas fa-check"></i> Regras</h4>
+                    <ul>
+                        <li>Começar com letra, _ ou $</li>
+                        <li>Não pode começar com número</li>
+                        <li>Case-sensitive (nome ≠ Nome)</li>
+                        <li>Não usar palavras reservadas (if, for, etc.)</li>
+                        <li>Usar camelCase para múltiplas palavras</li>
+                    </ul>
+                </div>
+                
+                <div class="code-block">
+// ✅ BOM
+let nomeUsuario = "João";
+let idadeUsuario = 25;
+let estaAtivo = true;
+
+// ❌ RUIM
+let n = "João";           // não descritivo
+let idade-usuario = 25;   // hífen não permitido
+let 2nome = "João";       // não pode começar com número
+let let = "João";         // palavra reservada
+                </div>
+                
+                <h3>🎯 Escolha de Palavras-chave</h3>
+                <ul>
+                    <li><strong>let:</strong> Use para variáveis que podem mudar</li>
+                    <li><strong>const:</strong> Use para valores que não mudam (constantes)</li>
+                    <li><strong>var:</strong> Evite usar (comportamento antigo)</li>
+                </ul>
+                
+                <div class="code-block">
+// Prefira const quando possível
+const PI = 3.14159;
+const NOME_APLICACAO = "Meu App";
+
+// Use let quando o valor muda
+let contador = 0;
+let usuarioAtual = null;
+                </div>
+                
+                <h3>🔧 Convenções</h3>
+                <ul>
+                    <li><strong>camelCase:</strong> nomeUsuario, idadeTotal</li>
+                    <li><strong>UPPER_CASE:</strong> Para constantes (PI, MAX_SIZE)</li>
+                    <li><strong>Nomes descritivos:</strong> Evite abreviações confusas</li>
+                    <li><strong>Verbos para funções:</strong> calcularTotal(), obterNome()</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

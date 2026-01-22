@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-08: Introdução ao JSX e Componentes - Slide 06</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-08: Introdução ao JSX e Componentes no React</h1>
+            <p>Apresentar o JSX como extensão de sintaxe JavaScript para definir componentes React</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide6">
+                <h2><i class="fas fa-cube"></i> O que são Componentes?</h2>
+                
+                <h3>📝 Definição</h3>
+                <p><strong>Componente</strong> é uma função ou classe que retorna JSX. Representa uma parte reutilizável da interface. Componentes permitem dividir a UI em partes independentes e reutilizáveis.</p>
+                
+                <div class="code-block">
+// Componente é uma função que retorna JSX
+function Saudacao() {
+    return <h1>Olá, Mundo!</h1>;
+}
+                </div>
+                
+                <h3>📊 Características</h3>
+                <ul>
+                    <li><strong>Reutilizável:</strong> Pode usar várias vezes</li>
+                    <li><strong>Isolado:</strong> Funciona independentemente</li>
+                    <li><strong>Composável:</strong> Pode combinar componentes</li>
+                    <li><strong>Manutenível:</strong> Fácil de modificar</li>
+                </ul>
+                
+                <h3>📊 Exemplo: Componente Simples</h3>
+                <div class="code-block">
+function Botao() {
+    return <button>Clique Aqui</button>;
+}
+
+// Usar o componente
+function App() {
+    return (
+        <div>
+            <Botao />
+            <Botao />
+            <Botao />
+        </div>
+    );
+}
+                </div>
+                
+                <h3>🎯 Vantagens</h3>
+                <ul>
+                    <li>Organiza código em partes menores</li>
+                    <li>Facilita reutilização</li>
+                    <li>Torna código mais legível</li>
+                    <li>Simplifica manutenção</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

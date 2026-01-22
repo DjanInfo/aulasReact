@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-02: Variáveis, Tipos de Dados e Operadores - Slide 10</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-02: Variáveis, Tipos de Dados e Operadores</h1>
+            <p>Ensinar como armazenar e manipular informações usando variáveis, tipos de dados primitivos e operadores em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide10">
+                <h2><i class="fas fa-lightbulb"></i> Exemplos Práticos</h2>
+                
+                <h3>📝 Exemplo 1: Calculadora Simples</h3>
+                <div class="code-block">
+let numero1 = 10;
+let numero2 = 5;
+
+let soma = numero1 + numero2;
+let subtracao = numero1 - numero2;
+let multiplicacao = numero1 * numero2;
+let divisao = numero1 / numero2;
+
+console.log("Soma:", soma);           // 15
+console.log("Subtração:", subtracao); // 5
+console.log("Multiplicação:", multiplicacao); // 50
+console.log("Divisão:", divisao);     // 2
+                </div>
+                
+                <h3>📝 Exemplo 2: Informações do Usuário</h3>
+                <div class="code-block">
+let nome = "Maria";
+let sobrenome = "Silva";
+let idade = 30;
+
+let nomeCompleto = nome + " " + sobrenome;
+let mensagem = `Olá, ${nomeCompleto}! Você tem ${idade} anos.`;
+
+console.log(mensagem);
+// "Olá, Maria Silva! Você tem 30 anos."
+                </div>
+                
+                <h3>📝 Exemplo 3: Validação de Acesso</h3>
+                <div class="code-block">
+let idade = 20;
+let temPermissao = true;
+let estaBloqueado = false;
+
+let podeAcessar = idade >= 18 && temPermissao && !estaBloqueado;
+
+if (podeAcessar) {
+    console.log("Acesso permitido");
+} else {
+    console.log("Acesso negado");
+}
+                </div>
+                
+                <h3>📝 Exemplo 4: Cálculo de Preço</h3>
+                <div class="code-block">
+let precoBase = 100;
+let desconto = 0.1;  // 10%
+let taxa = 0.05;     // 5%
+
+let valorDesconto = precoBase * desconto;
+let precoComDesconto = precoBase - valorDesconto;
+let valorTaxa = precoComDesconto * taxa;
+let precoFinal = precoComDesconto + valorTaxa;
+
+console.log("Preço final:", precoFinal);
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

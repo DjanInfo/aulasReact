@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-07: Eventos e Interatividade - Slide 04</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-mouse-pointer"></i> FER-07: Eventos e Interatividade em JavaScript</h1>
+            <p>Demonstrar como capturar e responder a eventos do usuário em páginas web</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide4">
+                <h2><i class="fas fa-hand-pointer"></i> Evento click</h2>
+                
+                <h3>📝 O que é?</h3>
+                <p><strong>click</strong> é disparado quando o usuário clica em um elemento (botão, link, imagem, etc.).</p>
+                
+                <div class="code-block">
+let botao = document.querySelector('#meuBotao');
+
+botao.addEventListener('click', function() {
+    console.log('Botão clicado!');
+});
+                </div>
+                
+                <h3>📊 Exemplos Práticos</h3>
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 1: Alterar Texto</h4>
+                    <div class="code-block">
+let botao = document.querySelector('#botao');
+let paragrafo = document.querySelector('#texto');
+
+botao.addEventListener('click', function() {
+    paragrafo.textContent = 'Texto alterado!';
+});
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 2: Contador</h4>
+                    <div class="code-block">
+let botao = document.querySelector('#contador');
+let contador = 0;
+
+botao.addEventListener('click', function() {
+    contador++;
+    botao.textContent = `Clicado ${contador} vezes`;
+});
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 3: Toggle (Ligar/Desligar)</h4>
+                    <div class="code-block">
+let botao = document.querySelector('#toggle');
+let div = document.querySelector('#conteudo');
+
+botao.addEventListener('click', function() {
+    if (div.style.display === 'none') {
+        div.style.display = 'block';
+    } else {
+        div.style.display = 'none';
+    }
+});
+                    </div>
+                </div>
+                
+                <h3>🎯 Uso Comum</h3>
+                <ul>
+                    <li>Botões de ação</li>
+                    <li>Links interativos</li>
+                    <li>Cards clicáveis</li>
+                    <li>Menus e navegação</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

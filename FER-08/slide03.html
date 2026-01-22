@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-08: Introdução ao JSX e Componentes - Slide 03</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-08: Introdução ao JSX e Componentes no React</h1>
+            <p>Apresentar o JSX como extensão de sintaxe JavaScript para definir componentes React</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide3">
+                <h2><i class="fas fa-code"></i> O que é JSX?</h2>
+                
+                <h3>📝 Definição</h3>
+                <p><strong>JSX</strong> (JavaScript XML) é uma extensão de sintaxe que permite escrever código que parece HTML dentro de JavaScript. Facilita a criação de elementos React.</p>
+                
+                <div class="code-block">
+// JSX parece HTML, mas é JavaScript
+const elemento = <h1>Olá, Mundo!</h1>;
+                </div>
+                
+                <h3>📊 Características</h3>
+                <ul>
+                    <li><strong>Sintaxe Familiar:</strong> Parece HTML</li>
+                    <li><strong>JavaScript:</strong> Na verdade é JavaScript</li>
+                    <li><strong>Expressões:</strong> Pode usar JavaScript dentro</li>
+                    <li><strong>Compilado:</strong> Transformado em JavaScript</li>
+                </ul>
+                
+                <h3>📊 Exemplo: JSX vs JavaScript Puro</h3>
+                <div class="info">
+                    <h4><i class="fas fa-check"></i> Com JSX (Mais Legível)</h4>
+                    <div class="code-block">
+const elemento = (
+    <div>
+        <h1>Olá, {nome}!</h1>
+        <p>Bem-vindo ao React</p>
+    </div>
+);
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-check"></i> Sem JSX (Mais Verboso)</h4>
+                    <div class="code-block">
+const elemento = React.createElement(
+    'div',
+    null,
+    React.createElement('h1', null, 'Olá, ', nome, '!'),
+    React.createElement('p', null, 'Bem-vindo ao React')
+);
+                    </div>
+                </div>
+                
+                <h3>🎯 Vantagens do JSX</h3>
+                <ul>
+                    <li>Mais legível e intuitivo</li>
+                    <li>Facilita criação de UI</li>
+                    <li>Permite usar JavaScript dentro</li>
+                    <li>Ferramentas ajudam a encontrar erros</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

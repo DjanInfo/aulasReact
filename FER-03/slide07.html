@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-03: Estruturas Condicionais - Slide 07</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code-branch"></i> FER-03: Estruturas Condicionais</h1>
+            <p>Capacitar os alunos a implementar decisões lógicas usando estruturas condicionais em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide7">
+                <h2><i class="fas fa-sitemap"></i> Casos Aninhados</h2>
+                
+                <h3>📝 O que são Casos Aninhados?</h3>
+                <p><strong>Casos Aninhados</strong> são estruturas condicionais dentro de outras estruturas condicionais, permitindo decisões mais complexas.</p>
+                
+                <div class="code-block">
+if (condição1) {
+    if (condição2) {
+        // código se ambas condições forem true
+    } else {
+        // código se condição1 for true mas condição2 for false
+    }
+} else {
+    // código se condição1 for false
+}
+                </div>
+                
+                <h3>📊 Exemplo: Sistema de Acesso</h3>
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Acesso com Múltiplas Verificações</h4>
+                    <div class="code-block">
+let idade = 20;
+let temPermissao = true;
+
+if (idade >= 18) {
+    if (temPermissao) {
+        console.log("Acesso completo permitido");
+    } else {
+        console.log("Idade OK, mas sem permissão");
+    }
+} else {
+    console.log("Acesso negado - menor de idade");
+}
+                    </div>
+                </div>
+                
+                <h3>📊 Exemplo: Classificação de Nota</h3>
+                <div class="code-block">
+let nota = 8.5;
+let frequencia = 0.85;
+
+if (nota >= 7) {
+    if (frequencia >= 0.75) {
+        console.log("Aprovado!");
+    } else {
+        console.log("Nota OK, mas frequência insuficiente");
+    }
+} else {
+    console.log("Reprovado por nota");
+}
+                </div>
+                
+                <h3>🎯 Boas Práticas</h3>
+                <ul>
+                    <li>Evite muitos níveis de aninhamento (máximo 2-3)</li>
+                    <li>Use operadores lógicos quando possível</li>
+                    <li>Considere refatorar para funções</li>
+                    <li>Mantenha código legível</li>
+                </ul>
+                
+                <div class="example">
+                    <h5>💡 Alternativa com Operadores Lógicos</h5>
+                    <div class="code-block">
+// Em vez de aninhar, use &&
+if (idade >= 18 && temPermissao) {
+    console.log("Acesso permitido");
+} else {
+    console.log("Acesso negado");
+}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

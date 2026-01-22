@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-06: Arrays e Objetos - Slide 04</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-database"></i> FER-06: Arrays e Objetos como Estruturas de Dados</h1>
+            <p>Apresentar arrays e objetos para armazenar e manipular coleções de dados em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide4">
+                <h2><i class="fas fa-minus-circle"></i> Método pop()</h2>
+                
+                <h3>📝 O que faz?</h3>
+                <p><strong>pop()</strong> remove o último elemento do array e retorna esse elemento.</p>
+                
+                <div class="code-block">
+let frutas = ["maçã", "banana", "laranja"];
+
+let removido = frutas.pop();
+console.log(removido);  // "laranja"
+console.log(frutas);    // ["maçã", "banana"]
+                </div>
+                
+                <h3>📊 Exemplos Práticos</h3>
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 1: Pilha de Tarefas</h4>
+                    <div class="code-block">
+let tarefas = ["Tarefa 1", "Tarefa 2", "Tarefa 3"];
+
+let ultima = tarefas.pop();
+console.log("Tarefa concluída:", ultima);
+console.log("Restam:", tarefas);
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo 2: Array Vazio</h4>
+                    <div class="code-block">
+let vazio = [];
+let resultado = vazio.pop();
+console.log(resultado);  // undefined (não há elementos)
+                    </div>
+                </div>
+                
+                <h3>🎯 Características</h3>
+                <ul>
+                    <li>Remove do final do array</li>
+                    <li>Modifica o array original</li>
+                    <li>Retorna o elemento removido</li>
+                    <li>Retorna undefined se array vazio</li>
+                </ul>
+                
+                <h3>📊 Outros Métodos Similares</h3>
+                <ul>
+                    <li><strong>shift():</strong> Remove do início</li>
+                    <li><strong>unshift():</strong> Adiciona no início</li>
+                    <li><strong>splice():</strong> Remove/adiciona em qualquer posição</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

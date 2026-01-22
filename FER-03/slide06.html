@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-03: Estruturas Condicionais - Slide 06</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code-branch"></i> FER-03: Estruturas Condicionais</h1>
+            <p>Capacitar os alunos a implementar decisões lógicas usando estruturas condicionais em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide6">
+                <h2><i class="fas fa-project-diagram"></i> Operadores de Comparação</h2>
+                
+                <h3>📝 Revisão dos Operadores</h3>
+                <p>Operadores de comparação são essenciais para estruturas condicionais. Eles retornam valores booleanos.</p>
+                
+                <div class="code-block">
+// Operadores de comparação
+let a = 10;
+let b = 5;
+
+a > b   // true  (maior que)
+a < b   // false (menor que)
+a >= b  // true  (maior ou igual)
+a <= b  // false (menor ou igual)
+a === b // false (igual e mesmo tipo)
+a !== b // true  (diferente ou tipo diferente)
+                </div>
+                
+                <h3>📊 Uso em Condicionais</h3>
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplos</h4>
+                    <div class="code-block">
+let idade = 20;
+
+// Maior que
+if (idade > 18) {
+    console.log("Maior de 18");
+}
+
+// Menor ou igual
+if (idade <= 17) {
+    console.log("Menor de idade");
+}
+
+// Igualdade estrita
+if (idade === 20) {
+    console.log("Tem exatamente 20 anos");
+}
+
+// Diferente
+if (idade !== 0) {
+    console.log("Idade válida");
+}
+                    </div>
+                </div>
+                
+                <h3>🎯 Comparações Múltiplas</h3>
+                <div class="code-block">
+let numero = 15;
+
+// Entre dois valores
+if (numero > 10 && numero < 20) {
+    console.log("Entre 10 e 20");
+}
+
+// Fora de um intervalo
+if (numero < 10 || numero > 20) {
+    console.log("Fora do intervalo 10-20");
+}
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Lembre-se</h4>
+                    <p>Sempre use <code>===</code> e <code>!==</code> em vez de <code>==</code> e <code>!=</code> para comparações mais seguras!</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

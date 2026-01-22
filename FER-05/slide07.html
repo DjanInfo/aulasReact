@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-05: Funções e Modularização - Slide 07</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-puzzle-piece"></i> FER-05: Funções e Modularização</h1>
+            <p>Introduzir o conceito de funções para modularização e reutilização de código</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide7">
+                <h2><i class="fas fa-layer-group"></i> Escopo de Variáveis</h2>
+                
+                <h3>📝 O que é Escopo?</h3>
+                <p><strong>Escopo</strong> define onde uma variável pode ser acessada no código. Em JavaScript, temos escopo global e escopo local (de função).</p>
+                
+                <div class="code-block">
+// Escopo Global
+let global = "Acessível em todo lugar";
+
+function minhaFuncao() {
+    // Escopo Local
+    let local = "Acessível apenas na função";
+    console.log(global);  // OK
+    console.log(local);   // OK
+}
+
+console.log(global);  // OK
+console.log(local);   // ERRO! local não existe aqui
+                </div>
+                
+                <h3>📊 Tipos de Escopo</h3>
+                <div class="info">
+                    <h4><i class="fas fa-globe"></i> Escopo Global</h4>
+                    <ul>
+                        <li>Variáveis declaradas fora de funções</li>
+                        <li>Acessíveis em qualquer lugar</li>
+                        <li>Evite usar em excesso</li>
+                    </ul>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lock"></i> Escopo Local (Função)</h4>
+                    <ul>
+                        <li>Variáveis declaradas dentro de funções</li>
+                        <li>Acessíveis apenas dentro da função</li>
+                        <li>Protege variáveis de modificações externas</li>
+                    </ul>
+                </div>
+                
+                <h3>🎯 Exemplos</h3>
+                <div class="code-block">
+let global = "Global";
+
+function exemplo() {
+    let local = "Local";
+    console.log(global);  // Acessa global
+    console.log(local);   // Acessa local
+}
+
+exemplo();
+console.log(global);  // OK
+console.log(local);   // ERRO! local não existe aqui
+                </div>
+                
+                <h3>🔧 let vs var</h3>
+                <ul>
+                    <li><strong>let:</strong> Escopo de bloco (recomendado)</li>
+                    <li><strong>var:</strong> Escopo de função (evitar usar)</li>
+                    <li><strong>const:</strong> Escopo de bloco, valor constante</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-01: Pensamento Computacional e Algoritmos - Slide 08</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-brain"></i> FER-01: Pensamento Computacional e Algoritmos</h1>
+            <p>Introduzir os conceitos de pensamento computacional, algoritmos e resolução de problemas como base para a programação</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide8">
+                <h2><i class="fas fa-redo"></i> Repetição (Loops)</h2>
+                
+                <h3>📝 O que é Repetição?</h3>
+                <p><strong>Repetição</strong> (ou loop) permite executar uma sequência de instruções múltiplas vezes, enquanto uma condição for verdadeira.</p>
+                
+                <div class="code-block">
+Repetição = Fazer Múltiplas Vezes
+
+ENQUANTO condição for verdadeira:
+    faça algo
+                </div>
+                
+                <h3>📊 Tipos de Repetição</h3>
+                <ul>
+                    <li><strong>ENQUANTO (while):</strong> Repete enquanto condição for verdadeira</li>
+                    <li><strong>PARA (for):</strong> Repete um número específico de vezes</li>
+                    <li><strong>FAÇA-ENQUANTO (do-while):</strong> Executa pelo menos uma vez</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Exemplo: Contar até 10</h4>
+                    <pre>
+número = 1
+ENQUANTO número <= 10:
+    mostrar número
+    número = número + 1
+                    </pre>
+                </div>
+                
+                <h3>🎯 Em Programação (JavaScript)</h3>
+                <div class="code-block">
+// While - enquanto condição for verdadeira
+let i = 1;
+while (i <= 10) {
+    console.log(i);
+    i++;
+}
+
+// For - número específico de vezes
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
+
+// Do-while - executa pelo menos uma vez
+let j = 1;
+do {
+    console.log(j);
+    j++;
+} while (j <= 10);
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

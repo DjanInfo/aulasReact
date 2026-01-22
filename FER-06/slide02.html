@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-06: Arrays e Objetos - Slide 02</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-database"></i> FER-06: Arrays e Objetos como Estruturas de Dados</h1>
+            <p>Apresentar arrays e objetos para armazenar e manipular coleções de dados em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide2">
+                <h2><i class="fas fa-list"></i> O que são Arrays?</h2>
+                
+                <h3>📝 Definição</h3>
+                <p><strong>Array</strong> é uma estrutura de dados que armazena uma coleção ordenada de valores. Cada valor tem uma posição (índice) que começa em 0.</p>
+                
+                <div class="code-block">
+// Array é uma lista ordenada
+let frutas = ["maçã", "banana", "laranja"];
+// Índices:     0        1         2
+                </div>
+                
+                <h3>📊 Características</h3>
+                <ul>
+                    <li><strong>Ordenado:</strong> Elementos têm posição específica</li>
+                    <li><strong>Indexado:</strong> Acesso por índice (começa em 0)</li>
+                    <li><strong>Dinâmico:</strong> Pode adicionar/remover elementos</li>
+                    <li><strong>Heterogêneo:</strong> Pode misturar tipos de dados</li>
+                </ul>
+                
+                <h3>📊 Criação de Arrays</h3>
+                <div class="code-block">
+// Forma 1: Literal
+let numeros = [1, 2, 3, 4, 5];
+
+// Forma 2: Construtor
+let letras = new Array("a", "b", "c");
+
+// Array vazio
+let vazio = [];
+
+// Array com tipos mistos
+let misto = [1, "texto", true, null];
+                </div>
+                
+                <h3>🎯 Acesso a Elementos</h3>
+                <div class="code-block">
+let frutas = ["maçã", "banana", "laranja"];
+
+console.log(frutas[0]);  // "maçã"
+console.log(frutas[1]);  // "banana"
+console.log(frutas[2]);  // "laranja"
+console.log(frutas.length);  // 3 (tamanho)
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>
