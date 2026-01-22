@@ -129,6 +129,122 @@ function createSimpleNavigation() {
     nav.appendChild(nextBtn);
     
     console.log('Navegação criada com sucesso!');
+    
+    // Criar navegação no final da página (antes do rodapé)
+    createBottomNavigation(currentSlideNumber, totalSlides);
+}
+
+// Função para criar navegação no final da página
+function createBottomNavigation(currentSlideNumber, totalSlides) {
+    // Verificar se já existe navegação no final
+    const existingBottomNav = document.querySelector('.bottom-nav');
+    if (existingBottomNav) {
+        existingBottomNav.remove();
+    }
+    
+    // Criar container para navegação inferior
+    const bottomNav = document.createElement('div');
+    bottomNav.className = 'bottom-nav';
+    bottomNav.style.cssText = `
+        background: #2D3748;
+        padding: 20px;
+        margin: 30px 0 0 0;
+        border-radius: 8px;
+        text-align: center;
+    `;
+    
+    // Botão índice da aula (home)
+    const homeBtn = document.createElement('a');
+    homeBtn.textContent = '🏠 Índice da aula';
+    homeBtn.href = 'index.html';
+    homeBtn.style.cssText = `
+        background: #4A5568;
+        color: white;
+        text-decoration: none;
+        padding: 10px 16px;
+        border-radius: 5px;
+        margin-right: 10px;
+        font-size: 14px;
+        display: inline-block;
+    `;
+    bottomNav.appendChild(homeBtn);
+
+    // Botão anterior
+    const prevBtn = document.createElement('button');
+    prevBtn.innerHTML = '← Anterior';
+    prevBtn.style.cssText = `
+        background: #4B8BBE;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+        font-size: 14px;
+    `;
+    
+    prevBtn.onclick = () => {
+        if (currentSlideNumber > 1) {
+            window.location.href = `slide${String(currentSlideNumber - 1).padStart(2, '0')}.html`;
+        }
+    };
+    
+    if (currentSlideNumber <= 1) {
+        prevBtn.disabled = true;
+        prevBtn.style.opacity = '0.5';
+        prevBtn.style.cursor = 'not-allowed';
+    }
+    bottomNav.appendChild(prevBtn);
+    
+    // Indicador de slide atual
+    const slideIndicator = document.createElement('span');
+    slideIndicator.innerHTML = `${currentSlideNumber} / ${totalSlides}`;
+    slideIndicator.style.cssText = `
+        color: white;
+        margin: 0 20px;
+        font-weight: bold;
+        font-size: 16px;
+    `;
+    bottomNav.appendChild(slideIndicator);
+    
+    // Botão próximo
+    const nextBtn = document.createElement('button');
+    nextBtn.innerHTML = 'Próximo →';
+    nextBtn.style.cssText = `
+        background: #4B8BBE;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 10px;
+        font-size: 14px;
+    `;
+    
+    nextBtn.onclick = () => {
+        if (currentSlideNumber < totalSlides) {
+            window.location.href = `slide${String(currentSlideNumber + 1).padStart(2, '0')}.html`;
+        }
+    };
+    
+    if (currentSlideNumber >= totalSlides) {
+        nextBtn.disabled = true;
+        nextBtn.style.opacity = '0.5';
+        nextBtn.style.cursor = 'not-allowed';
+    }
+    bottomNav.appendChild(nextBtn);
+    
+    // Inserir antes do rodapé
+    const footer = document.querySelector('.footer');
+    if (footer && footer.parentNode) {
+        footer.parentNode.insertBefore(bottomNav, footer);
+    } else {
+        // Se não encontrar footer, adicionar no final do content
+        const content = document.querySelector('.content');
+        if (content) {
+            content.appendChild(bottomNav);
+        }
+    }
 }
 
 // Função para adicionar navegação por teclado
@@ -242,7 +358,51 @@ function getTotalSlides() {
         'FER-029': 12,
         'FER-030': 12,
         'FER-09': 12,
-        'FER-010': 12
+        'FER-010': 12,
+        'FER-01': 12,
+        'FER-02': 12,
+        'FER-03': 12,
+        'FER-04': 12,
+        'FER-05': 12,
+        'FER-06': 12,
+        'FER-07': 12,
+        'FER-08': 12,
+        'FER-011': 12,
+        'FER-012': 12,
+        'FER-013': 12,
+        'FER-014': 12,
+        'FER-015': 12,
+        'FER-016': 12,
+        'FER-017': 12,
+        'FER-018': 12,
+        'FER-019': 12,
+        'FER-020': 12,
+        'FER-021': 12,
+        'FER-022': 12,
+        'FER-023': 12,
+        'FER-024': 12,
+        'FER-025': 12,
+        'FER-026': 12,
+        'FER-027': 12,
+        'FER-028': 12,
+        'FER-031': 12,
+        'FER-032': 12,
+        'FER-033': 12,
+        'FER-034': 12,
+        'FER-035': 12,
+        'FER-036': 12,
+        'FER-037': 12,
+        'FER-038': 12,
+        'FER-039': 12,
+        'FER-040': 12,
+        'FER-041': 12,
+        'FER-042': 12,
+        'FER-043': 12,
+        'FER-044': 12,
+        'FER-045': 12,
+        'FER-046': 12,
+        'FER-047': 12,
+        'FER-048': 12
     };
     
     // Detectar a pasta atual usando múltiplos métodos
