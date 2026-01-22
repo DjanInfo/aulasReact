@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-024: Layouts com Flexbox - Slide 06</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-th"></i> FER-024: Layouts com Flexbox</h1>
+            <p>Ensinar a criar layouts responsivos com Flexbox</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide6">
+                <h2><i class="fas fa-redo"></i> Propriedades do Container: flex-wrap e gap</h2>
+                
+                <h3>📝 flex-wrap</h3>
+                <p>Define se os itens devem quebrar linha quando não cabem no container.</p>
+                
+                <h3>🔑 Valores de flex-wrap</h3>
+                <ul>
+                    <li><strong>nowrap:</strong> Não quebra linha (padrão, itens encolhem)</li>
+                    <li><strong>wrap:</strong> Quebra linha quando necessário</li>
+                    <li><strong>wrap-reverse:</strong> Quebra linha na direção reversa</li>
+                </ul>
+                
+                <h3>📝 gap</h3>
+                <p>Define o espaçamento entre itens flex (propriedade moderna, substitui margin em muitos casos).</p>
+                
+                <h3>💻 Exemplo: Wrap e Gap</h3>
+                <div class="code-block">
+                    <pre><code>/* Container com quebra de linha */
+.container {
+    display: flex;
+    flex-wrap: wrap;  /* Permite quebra de linha */
+    gap: 20px;        /* Espaço entre itens */
+}
+
+/* Antes (sem gap, usando margin) */
+.item {
+    margin: 10px;  /* Mais complexo */
+}
+
+/* Agora (com gap) */
+.container {
+    gap: 20px;  /* Simples e limpo */
+}</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Layout Responsivo</h3>
+                <div class="code-block">
+                    <pre><code>.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item {
+    flex: 1 1 300px;  /* Cresce, encolhe, base 300px */
+    /* Em telas pequenas, itens quebram linha */
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

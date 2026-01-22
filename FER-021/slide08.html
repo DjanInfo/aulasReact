@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-021: Estruturação de Documentos HTML - Slide 08</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-html5"></i> FER-021: Estruturação de Documentos HTML</h1>
+            <p>Ensinar a estruturação básica de páginas web</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide8">
+                <h2><i class="fas fa-link"></i> Links</h2>
+                
+                <h3>📝 Elemento &lt;a&gt;</h3>
+                <p>O elemento <strong>&lt;a&gt;</strong> (âncora) é usado para criar links que conectam páginas e recursos.</p>
+                
+                <h3>🔑 Atributos Principais</h3>
+                <ul>
+                    <li><strong>href:</strong> URL de destino (obrigatório)</li>
+                    <li><strong>target:</strong> Onde abrir o link (_blank, _self, etc.)</li>
+                    <li><strong>title:</strong> Tooltip ao passar o mouse</li>
+                    <li><strong>rel:</strong> Relação com o recurso (nofollow, noopener)</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Diferentes Tipos de Links</h3>
+                <div class="code-block">
+                    <pre><code>&lt;!-- Link para outra página --&gt;
+&lt;a href="sobre.html"&gt;Sobre Nós&lt;/a&gt;
+
+&lt;!-- Link externo --&gt;
+&lt;a href="https://www.example.com" target="_blank"&gt;Site Externo&lt;/a&gt;
+
+&lt;!-- Link para email --&gt;
+&lt;a href="mailto:contato@example.com"&gt;Enviar Email&lt;/a&gt;
+
+&lt;!-- Link para telefone --&gt;
+&lt;a href="tel:+5511999999999"&gt;Ligar&lt;/a&gt;
+
+&lt;!-- Link para seção da página --&gt;
+&lt;a href="#secao1"&gt;Ir para Seção 1&lt;/a&gt;</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Link com Imagem</h3>
+                <div class="code-block">
+                    <pre><code>&lt;a href="https://example.com"&gt;
+    &lt;img src="logo.png" alt="Logo"&gt;
+&lt;/a&gt;</code></pre>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>Use <code>target="_blank"</code> com <code>rel="noopener"</code> para links externos por segurança!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

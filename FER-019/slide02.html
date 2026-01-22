@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-019: Composição e Associação entre Objetos - Slide 02</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-project-diagram"></i> FER-019: Composição e Associação entre Objetos</h1>
+            <p>Apresentar como criar relações entre objetos para modelar sistemas complexos em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide2">
+                <h2><i class="fas fa-link"></i> Relações entre Objetos</h2>
+                
+                <h3>📝 Tipos de Relações</h3>
+                <p>Em POO, objetos podem se relacionar de diferentes formas para modelar sistemas do mundo real.</p>
+                
+                <div class="info">
+                    <h4>1. Herança (É UM)</h4>
+                    <ul>
+                        <li>Cachorro É UM Animal</li>
+                        <li>Relacionamento de especialização</li>
+                        <li>Usa <code>extends</code></li>
+                    </ul>
+                </div>
+                
+                <div class="example">
+                    <h4>2. Associação (TEM UM / USA)</h4>
+                    <ul>
+                        <li>Pessoa TEM UM Carro</li>
+                        <li>Relacionamento mais fraco</li>
+                        <li>Objetos podem existir independentemente</li>
+                    </ul>
+                </div>
+                
+                <div class="info">
+                    <h4>3. Composição (CONTÉM / É PARTE DE)</h4>
+                    <ul>
+                        <li>Carro CONTÉM Motor</li>
+                        <li>Relacionamento mais forte</li>
+                        <li>Objeto parte não existe sem o todo</li>
+                    </ul>
+                </div>
+                
+                <h3>💻 Exemplo: Diferentes Relações</h3>
+                <div class="code-block">
+                    <pre><code>// Herança: Cachorro É UM Animal
+class Animal { }
+class Cachorro extends Animal { }
+
+// Associação: Pessoa TEM UM Carro
+class Pessoa {
+    constructor(carro) {
+        this.carro = carro;  // Associação
+    }
+}
+
+// Composição: Carro CONTÉM Motor
+class Carro {
+    constructor() {
+        this.motor = new Motor();  // Composição
+    }
+}</code></pre>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-info-circle"></i> Importante</h4>
+                    <p>Escolha o tipo de relação baseado no relacionamento real entre os objetos. Herança para "é um", Associação para "tem um", Composição para "contém"!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

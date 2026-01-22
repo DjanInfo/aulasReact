@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-016: Criando e Instanciando Classes - Slide 06</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-016: Criando e Instanciando Classes</h1>
+            <p>Implementar e utilizar classes em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide6">
+                <h2><i class="fas fa-magic"></i> Instanciação de Objetos</h2>
+                
+                <h3>📝 O que é Instanciação?</h3>
+                <p><strong>Instanciação</strong> é o processo de criar um objeto (instância) a partir de uma classe usando a palavra-chave <code>new</code>.</p>
+                
+                <div class="code-block">
+Instanciação = Criar objeto a partir de classe
+
+Sintaxe: let objeto = new NomeDaClasse();
+                </div>
+                
+                <h3>💻 Processo de Instanciação</h3>
+                <ol>
+                    <li>JavaScript cria um novo objeto vazio</li>
+                    <li>O constructor é chamado automaticamente</li>
+                    <li>Os atributos são inicializados</li>
+                    <li>O objeto é retornado e atribuído à variável</li>
+                </ol>
+                
+                <h3>💻 Exemplo Prático</h3>
+                <div class="code-block">
+                    <pre><code>class Pessoa {
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+    
+    apresentar() {
+        return `Olá, sou ${this.nome} e tenho ${this.idade} anos`;
+    }
+}
+
+// Instanciação
+let pessoa1 = new Pessoa("Ana", 25);
+let pessoa2 = new Pessoa("Carlos", 30);
+
+// Cada objeto é independente
+console.log(pessoa1.nome);  // "Ana"
+console.log(pessoa2.nome);  // "Carlos"
+console.log(pessoa1.apresentar());  // "Olá, sou Ana e tenho 25 anos"</code></pre>
+                </div>
+                
+                <h3>🔑 Características</h3>
+                <ul>
+                    <li>Cada instância é um objeto único</li>
+                    <li>Objetos independentes não afetam uns aos outros</li>
+                    <li>Podem ter valores diferentes nos atributos</li>
+                    <li>Compartilham os mesmos métodos</li>
+                </ul>
+                
+                <div class="example">
+                    <h5>💡 Múltiplas Instâncias</h5>
+                    <pre><code>class Carro {
+    constructor(marca) {
+        this.marca = marca;
+        this.velocidade = 0;
+    }
+    
+    acelerar() {
+        this.velocidade += 10;
+    }
+}
+
+let carro1 = new Carro("Toyota");
+let carro2 = new Carro("Honda");
+
+carro1.acelerar();  // carro1.velocidade = 10
+carro2.acelerar();  // carro2.velocidade = 10
+
+// Cada carro tem sua própria velocidade!</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

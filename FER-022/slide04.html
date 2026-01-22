@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-022: Formulários e Controles de Entrada - Slide 04</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-wpforms"></i> FER-022: Formulários e Controles de Entrada</h1>
+            <p>Desenvolver formulários interativos e acessíveis</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide4">
+                <h2><i class="fas fa-list"></i> Selects</h2>
+                
+                <h3>📝 Elemento &lt;select&gt;</h3>
+                <p>O elemento <strong>&lt;select&gt;</strong> cria uma lista suspensa (dropdown) que permite ao usuário escolher uma ou mais opções.</p>
+                
+                <h3>💻 Exemplo: Select Simples</h3>
+                <div class="code-block">
+                    <pre><code>&lt;label for="pais"&gt;País:&lt;/label&gt;
+&lt;select id="pais" name="pais"&gt;
+    &lt;option value=""&gt;Selecione um país&lt;/option&gt;
+    &lt;option value="br"&gt;Brasil&lt;/option&gt;
+    &lt;option value="us"&gt;Estados Unidos&lt;/option&gt;
+    &lt;option value="uk"&gt;Reino Unido&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Select Múltiplo</h3>
+                <div class="code-block">
+                    <pre><code>&lt;label for="linguagens"&gt;Linguagens que você conhece:&lt;/label&gt;
+&lt;select id="linguagens" name="linguagens" multiple size="4"&gt;
+    &lt;option value="js"&gt;JavaScript&lt;/option&gt;
+    &lt;option value="py"&gt;Python&lt;/option&gt;
+    &lt;option value="java"&gt;Java&lt;/option&gt;
+    &lt;option value="cpp"&gt;C++&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                </div>
+                
+                <h3>🔑 Atributos do Select</h3>
+                <ul>
+                    <li><strong>name:</strong> Nome do campo</li>
+                    <li><strong>id:</strong> Identificador único</li>
+                    <li><strong>multiple:</strong> Permite seleção múltipla</li>
+                    <li><strong>size:</strong> Número de opções visíveis</li>
+                    <li><strong>required:</strong> Campo obrigatório</li>
+                    <li><strong>disabled:</strong> Campo desabilitado</li>
+                </ul>
+                
+                <h3>🔑 Atributos do Option</h3>
+                <ul>
+                    <li><strong>value:</strong> Valor enviado no formulário</li>
+                    <li><strong>selected:</strong> Opção pré-selecionada</li>
+                    <li><strong>disabled:</strong> Opção desabilitada</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

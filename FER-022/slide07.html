@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-022: Formulários e Controles de Entrada - Slide 07</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-wpforms"></i> FER-022: Formulários e Controles de Entrada</h1>
+            <p>Desenvolver formulários interativos e acessíveis</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide7">
+                <h2><i class="fas fa-shield-alt"></i> Validação HTML5</h2>
+                
+                <h3>📝 Atributos de Validação HTML5</h3>
+                <p>HTML5 oferece validação nativa através de atributos especiais que o navegador verifica automaticamente.</p>
+                
+                <h3>🔑 Atributos de Validação</h3>
+                <ul>
+                    <li><strong>required:</strong> Campo obrigatório</li>
+                    <li><strong>min/max:</strong> Valor mínimo/máximo (números, datas)</li>
+                    <li><strong>minlength/maxlength:</strong> Tamanho mínimo/máximo (texto)</li>
+                    <li><strong>pattern:</strong> Expressão regular para validação</li>
+                    <li><strong>type:</strong> Tipo específico (email, url, number, etc.)</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Validação Completa</h3>
+                <div class="code-block">
+                    <pre><code>&lt;form&gt;
+    &lt;!-- Email obrigatório --&gt;
+    &lt;input type="email" name="email" required&gt;
+    
+    &lt;!-- Número entre 18 e 100 --&gt;
+    &lt;input type="number" name="idade" min="18" max="100" required&gt;
+    
+    &lt;!-- Texto com tamanho mínimo --&gt;
+    &lt;input type="text" name="nome" minlength="3" maxlength="50" required&gt;
+    
+    &lt;!-- URL com padrão --&gt;
+    &lt;input type="url" name="site" pattern="https?://.+"&gt;
+    
+    &lt;!-- Senha com padrão --&gt;
+    &lt;input type="password" name="senha" 
+           pattern=".{8,}" 
+           title="Senha deve ter pelo menos 8 caracteres"&gt;
+    
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+                
+                <h3>✅ Vantagens da Validação HTML5</h3>
+                <ul>
+                    <li>Validação automática pelo navegador</li>
+                    <li>Mensagens de erro nativas</li>
+                    <li>Sem necessidade de JavaScript</li>
+                    <li>Melhor experiência do usuário</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

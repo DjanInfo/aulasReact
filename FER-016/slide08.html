@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-016: Criando e Instanciando Classes - Slide 08</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-016: Criando e Instanciando Classes</h1>
+            <p>Implementar e utilizar classes em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide8">
+                <h2><i class="fas fa-laptop-code"></i> Exemplos Práticos</h2>
+                
+                <h3>💻 Exemplo 1: Classe Retângulo</h3>
+                <div class="code-block">
+                    <pre><code>class Retangulo {
+    constructor(largura, altura) {
+        this.largura = largura;
+        this.altura = altura;
+    }
+    
+    calcularArea() {
+        return this.largura * this.altura;
+    }
+    
+    calcularPerimetro() {
+        return 2 * (this.largura + this.altura);
+    }
+}
+
+let ret1 = new Retangulo(5, 3);
+let ret2 = new Retangulo(10, 4);
+
+console.log(ret1.calcularArea());      // 15
+console.log(ret2.calcularPerimetro());  // 28</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo 2: Classe Conta Bancária</h3>
+                <div class="code-block">
+                    <pre><code>class ContaBancaria {
+    constructor(titular, saldoInicial) {
+        this.titular = titular;
+        this.saldo = saldoInicial || 0;
+    }
+    
+    depositar(valor) {
+        this.saldo += valor;
+        return `Depósito de R$ ${valor}. Saldo: R$ ${this.saldo}`;
+    }
+    
+    sacar(valor) {
+        if (valor <= this.saldo) {
+            this.saldo -= valor;
+            return `Saque de R$ ${valor}. Saldo: R$ ${this.saldo}`;
+        }
+        return "Saldo insuficiente!";
+    }
+    
+    consultarSaldo() {
+        return `Saldo: R$ ${this.saldo}`;
+    }
+}
+
+let conta = new ContaBancaria("João", 1000);
+conta.depositar(500);  // Saldo: 1500
+conta.sacar(200);      // Saldo: 1300</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo 3: Classe Livro</h3>
+                <div class="code-block">
+                    <pre><code>class Livro {
+    constructor(titulo, autor, paginas) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.paginas = paginas;
+        this.lido = false;
+    }
+    
+    marcarComoLido() {
+        this.lido = true;
+    }
+    
+    informacoes() {
+        return `${this.titulo} - ${this.autor} (${this.paginas} páginas) - ${this.lido ? 'Lido' : 'Não lido'}`;
+    }
+}
+
+let livro1 = new Livro("O Senhor dos Anéis", "Tolkien", 1200);
+let livro2 = new Livro("Harry Potter", "Rowling", 300);
+
+livro1.marcarComoLido();
+console.log(livro1.informacoes());</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

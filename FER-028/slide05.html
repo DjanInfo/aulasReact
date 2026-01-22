@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-028: Estilização em Componentes React - Slide 05</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-028: Estilização em Componentes React</h1>
+            <p>Aplicar técnicas modernas de estilização em projetos React</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide5">
+                <h2><i class="fas fa-paint-brush"></i> Styled Components</h2>
+                
+                <h3>📝 O que são Styled Components?</h3>
+                <p><strong>Styled Components</strong> é uma biblioteca CSS-in-JS que permite escrever CSS dentro de JavaScript, criando componentes estilizados reutilizáveis.</p>
+                
+                <h3>🔑 Características</h3>
+                <ul>
+                    <li><strong>CSS-in-JS:</strong> CSS escrito em JavaScript</li>
+                    <li><strong>Componentes:</strong> Estilos são componentes React</li>
+                    <li><strong>Props Dinâmicas:</strong> Estilos baseados em props</li>
+                    <li><strong>Escopo Automático:</strong> Sem conflitos de nomes</li>
+                </ul>
+                
+                <h3>💻 Instalação</h3>
+                <div class="code-block">
+                    <pre><code>npm install styled-components
+
+// ou
+
+yarn add styled-components</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Componente Estilizado</h3>
+                <div class="code-block">
+                    <pre><code>import styled from 'styled-components';
+
+const Button = styled.button`
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: #0056b3;
+    }
+`;
+
+function App() {
+    return &lt;Button&gt;Clique aqui&lt;/Button&gt;;
+}</code></pre>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>Styled Components usa template literals (backticks) para escrever CSS. É JavaScript puro, então você pode usar variáveis e lógica!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

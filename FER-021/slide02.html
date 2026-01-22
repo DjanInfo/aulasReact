@@ -16,12 +16,59 @@
         <div class="nav"></div>
         <div class="content">
             <div class="slide active" id="slide2">
-                <h2><i class="fas fa-question-circle"></i> Estrutura Básica de um Documento HTML</h2>
-                <h3>📝 Conteúdo</h3>
-                <p>Este slide será desenvolvido com conteúdo detalhado sobre estrutura básica de documentos HTML.</p>
+                <h2><i class="fas fa-file-code"></i> Estrutura Básica de um Documento HTML</h2>
+                
+                <h3>📝 Estrutura Fundamental</h3>
+                <p>Todo documento HTML segue uma estrutura básica com elementos essenciais que definem o tipo de documento e organizam o conteúdo.</p>
+                
+                <div class="code-block">
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Título da Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Conteúdo da página --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+                
+                <h3>🔑 Elementos Essenciais</h3>
+                <ul>
+                    <li><strong>&lt;!DOCTYPE html&gt;:</strong> Declara o tipo de documento (HTML5)</li>
+                    <li><strong>&lt;html&gt;:</strong> Elemento raiz que contém todo o documento</li>
+                    <li><strong>&lt;head&gt;:</strong> Contém metadados (não visível na página)</li>
+                    <li><strong>&lt;body&gt;:</strong> Contém o conteúdo visível da página</li>
+                </ul>
+                
+                <h3>💻 Exemplo Completo</h3>
+                <div class="code-block">
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Minha Primeira Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Olá, Mundo!&lt;/h1&gt;
+    &lt;p&gt;Esta é minha primeira página HTML.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>O <code>&lt;head&gt;</code> contém informações sobre a página (metadados), enquanto o <code>&lt;body&gt;</code> contém o conteúdo que o usuário vê!</p>
+                </div>
             </div>
         </div>
-        <div class="footer"><img src="../Rodape.png" alt="Rodapé"></div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
     </div>
     <script src="../script.js"></script>
 </body>

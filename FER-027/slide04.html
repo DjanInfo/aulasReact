@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-027: Pré-processadores CSS: SASS - Slide 04</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-sass"></i> FER-027: Pré-processadores CSS: SASS</h1>
+            <p>Aprender a utilizar pré-processadores para otimizar a escrita de CSS</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide4">
+                <h2><i class="fas fa-dollar-sign"></i> Variáveis</h2>
+                
+                <h3>📝 O que são Variáveis?</h3>
+                <p><strong>Variáveis</strong> permitem armazenar valores que podem ser reutilizados em todo o código, facilitando manutenção e consistência.</p>
+                
+                <h3>💻 Sintaxe</h3>
+                <div class="code-block">
+                    <pre><code>// Definir variável
+$primary-color: #007bff;
+$font-size-base: 16px;
+$spacing-unit: 20px;
+
+// Usar variável
+.button {
+    background-color: $primary-color;
+    font-size: $font-size-base;
+    margin: $spacing-unit;
+}</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Variáveis de Tema</h3>
+                <div class="code-block">
+                    <pre><code>// Cores
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$danger: #dc3545;
+
+// Espaçamentos
+$spacing-xs: 5px;
+$spacing-sm: 10px;
+$spacing-md: 20px;
+$spacing-lg: 40px;
+
+// Uso
+.button-primary {
+    background-color: $primary;
+    padding: $spacing-sm $spacing-md;
+}</code></pre>
+                </div>
+                
+                <h3>✅ Vantagens</h3>
+                <ul>
+                    <li>Mudança em um lugar afeta todo o projeto</li>
+                    <li>Consistência de valores</li>
+                    <li>Facilita criação de temas</li>
+                    <li>Melhor organização</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

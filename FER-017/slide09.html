@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-017: Encapsulamento e Métodos de Instância - Slide 09</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-lock"></i> FER-017: Encapsulamento e Métodos de Instância</h1>
+            <p>Ensinar o conceito de encapsulamento e a criação de métodos de instância para manipulação de dados dentro de objetos em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide9">
+                <h2><i class="fas fa-edit"></i> Leitura e Alteração de Atributos</h2>
+                
+                <h3>📖 Padrões de Acesso</h3>
+                
+                <div class="info">
+                    <h4>1. Acesso Direto (Não Recomendado)</h4>
+                    <pre><code>class Produto {
+    constructor(nome, preco) {
+        this.nome = nome;
+        this.preco = preco;  // Acesso direto
+    }
+}
+
+let p = new Produto("Notebook", 3500);
+p.preco = -100;  // ❌ Sem validação!</code></pre>
+                </div>
+                
+                <div class="example">
+                    <h4>2. Métodos Getter/Setter (Recomendado)</h4>
+                    <pre><code>class Produto {
+    constructor(nome, preco) {
+        this._nome = nome;
+        this._preco = 0;
+        this.setPreco(preco);
+    }
+    
+    getPreco() {
+        return this._preco;
+    }
+    
+    setPreco(valor) {
+        if (valor >= 0) {
+            this._preco = valor;
+        }
+    }
+}
+
+let p = new Produto("Notebook", 3500);
+p.setPreco(-100);  // ✅ Validação - não altera</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo Completo: Controle de Acesso</h3>
+                <div class="code-block">
+                    <pre><code>class Aluno {
+    constructor(nome, matricula) {
+        this._nome = nome;
+        this._matricula = matricula;
+        this._notas = [];
+    }
+    
+    // Leitura controlada
+    getNome() {
+        return this._nome;
+    }
+    
+    getMatricula() {
+        return this._matricula;
+    }
+    
+    getNotas() {
+        return [...this._notas];  // Cópia (proteção)
+    }
+    
+    // Alteração controlada
+    adicionarNota(nota) {
+        if (nota >= 0 && nota <= 10) {
+            this._notas.push(nota);
+        } else {
+            throw new Error("Nota deve estar entre 0 e 10!");
+        }
+    }
+    
+    calcularMedia() {
+        if (this._notas.length === 0) return 0;
+        const soma = this._notas.reduce((a, b) => a + b, 0);
+        return soma / this._notas.length;
+    }
+}
+
+let aluno = new Aluno("Maria", "2024001");
+aluno.adicionarNota(8.5);
+aluno.adicionarNota(7.0);
+console.log(aluno.calcularMedia());  // 7.75</code></pre>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Boa Prática</h4>
+                    <p>Sempre use métodos para acessar e modificar atributos que precisam de validação ou proteção. Acesso direto só para dados realmente públicos e simples!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-018: Herança e Polimorfismo - Slide 10</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-sitemap"></i> FER-018: Herança e Polimorfismo</h1>
+            <p>Explicar os conceitos de herança e polimorfismo para reutilização e extensão de código em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide10">
+                <h2><i class="fas fa-laptop-code"></i> Exemplos Práticos</h2>
+                
+                <h3>💻 Exemplo 1: Sistema de Veículos</h3>
+                <div class="code-block">
+                    <pre><code>class Veiculo {
+    constructor(marca, modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.velocidade = 0;
+    }
+    
+    acelerar() {
+        this.velocidade += 10;
+    }
+    
+    informacoes() {
+        return `${this.marca} ${this.modelo}`;
+    }
+}
+
+class Carro extends Veiculo {
+    acelerar() {
+        this.velocidade += 20;  // Carro acelera mais rápido
+    }
+}
+
+class Moto extends Veiculo {
+    acelerar() {
+        this.velocidade += 30;  // Moto acelera ainda mais rápido
+    }
+}
+
+class Caminhao extends Veiculo {
+    acelerar() {
+        this.velocidade += 5;  // Caminhão acelera mais devagar
+    }
+}</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo 2: Sistema de Pagamentos</h3>
+                <div class="code-block">
+                    <pre><code>class Pagamento {
+    processar(valor) {
+        return false;
+    }
+}
+
+class PagamentoCartao extends Pagamento {
+    processar(valor) {
+        return `Pagamento de R$ ${valor} processado via cartão`;
+    }
+}
+
+class PagamentoBoleto extends Pagamento {
+    processar(valor) {
+        return `Boleto de R$ ${valor} gerado`;
+    }
+}
+
+class PagamentoPix extends Pagamento {
+    processar(valor) {
+        return `PIX de R$ ${valor} processado instantaneamente`;
+    }
+}
+
+// Polimorfismo: processa qualquer tipo de pagamento
+function processarPagamentos(pagamentos, valor) {
+    pagamentos.forEach(pag => {
+        console.log(pag.processar(valor));
+    });
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

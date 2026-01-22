@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-019: Composição e Associação entre Objetos - Slide 04</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-project-diagram"></i> FER-019: Composição e Associação entre Objetos</h1>
+            <p>Apresentar como criar relações entre objetos para modelar sistemas complexos em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide4">
+                <h2><i class="fas fa-puzzle-piece"></i> O que é Composição?</h2>
+                
+                <h3>📝 Definição</h3>
+                <p><strong>Composição</strong> é um relacionamento onde um objeto "contém" ou "é parte de" outro objeto. O objeto parte não pode existir sem o objeto todo. É um relacionamento mais forte.</p>
+                
+                <div class="code-block">
+Composição = Relacionamento "CONTÉM" ou "É PARTE DE"
+
+Objeto parte não existe sem o objeto todo
+                </div>
+                
+                <h3>🔑 Características</h3>
+                <ul>
+                    <li>Relacionamento mais forte</li>
+                    <li>Objeto parte não existe sem o todo</li>
+                    <li>Criado junto com o objeto todo</li>
+                    <li>Exemplo: Carro CONTÉM Motor (motor não existe sem carro)</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Composição</h3>
+                <div class="code-block">
+                    <pre><code>class Motor {
+    constructor(tipo) {
+        this.tipo = tipo;
+        this.ligado = false;
+    }
+    
+    ligar() {
+        this.ligado = true;
+    }
+}
+
+class Carro {
+    constructor(marca, modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+        // Composição: motor criado dentro do carro
+        this.motor = new Motor("Combustão");
+    }
+    
+    ligar() {
+        this.motor.ligar();
+        return "Carro ligado!";
+    }
+}
+
+let carro = new Carro("Toyota", "Corolla");
+// Motor foi criado automaticamente dentro do carro
+carro.ligar();  // Motor também é ligado
+
+// Motor não existe separadamente do carro
+// let motor = carro.motor;  // Existe apenas como parte do carro</code></pre>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-info-circle"></i> Importante</h4>
+                    <p>Composição é como um coração dentro de um corpo: o coração não existe sem o corpo. Se o corpo é destruído, o coração também é!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

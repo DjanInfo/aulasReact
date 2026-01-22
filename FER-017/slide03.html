@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-017: Encapsulamento e Métodos de Instância - Slide 03</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-lock"></i> FER-017: Encapsulamento e Métodos de Instância</h1>
+            <p>Ensinar o conceito de encapsulamento e a criação de métodos de instância para manipulação de dados dentro de objetos em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide3">
+                <h2><i class="fas fa-star"></i> Importância do Encapsulamento</h2>
+                
+                <h3>✅ Benefícios Principais</h3>
+                
+                <div class="info">
+                    <h4>1. Segurança de Dados</h4>
+                    <ul>
+                        <li>Protege dados sensíveis de modificações indevidas</li>
+                        <li>Previne valores inválidos ou inconsistentes</li>
+                        <li>Garante integridade dos dados</li>
+                    </ul>
+                </div>
+                
+                <div class="example">
+                    <h4>2. Validação e Controle</h4>
+                    <ul>
+                        <li>Valida dados antes de armazenar</li>
+                        <li>Controla como os dados são acessados</li>
+                        <li>Registra ou monitora alterações</li>
+                    </ul>
+                </div>
+                
+                <div class="info">
+                    <h4>3. Manutenibilidade</h4>
+                    <ul>
+                        <li>Mudanças internas não afetam código externo</li>
+                        <li>Facilita refatoração</li>
+                        <li>Reduz acoplamento entre classes</li>
+                    </ul>
+                </div>
+                
+                <h3>💻 Exemplo Prático: Comparação</h3>
+                <div class="code-block">
+                    <pre><code>// SEM encapsulamento - PROBLEMAS
+class Produto {
+    constructor(nome, preco) {
+        this.nome = nome;
+        this.preco = preco;
+    }
+}
+
+let p = new Produto("Notebook", 3500);
+p.preco = -100;  // ❌ Preço negativo!
+p.preco = "abc"; // ❌ Tipo errado!
+
+// COM encapsulamento - SEGURO
+class Produto {
+    constructor(nome, preco) {
+        this.nome = nome;
+        this._preco = 0;
+        this.setPreco(preco);  // Validação
+    }
+    
+    setPreco(valor) {
+        if (typeof valor === 'number' && valor >= 0) {
+            this._preco = valor;
+        } else {
+            throw new Error("Preço inválido!");
+        }
+    }
+    
+    getPreco() {
+        return this._preco;
+    }
+}</code></pre>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Regra de Ouro</h4>
+                    <p>Nunca exponha atributos diretamente se eles precisam de validação ou controle. Sempre use métodos!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-015: Fundamentos de Programação Orientada a Objetos (POO) - Slide 10</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-cube"></i> FER-015: Fundamentos de Programação Orientada a Objetos (POO)</h1>
+            <p>Introduzir os conceitos básicos de POO para alunos iniciantes e mostrar sua importância na organização de código</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide10">
+                <h2><i class="fas fa-briefcase"></i> Casos de Uso</h2>
+                
+                <h3>🌐 Onde POO é Usada?</h3>
+                
+                <div class="info">
+                    <h4>1. Desenvolvimento Web</h4>
+                    <ul>
+                        <li><strong>Frameworks JavaScript:</strong> React, Vue, Angular</li>
+                        <li><strong>Backend:</strong> Node.js com classes para APIs</li>
+                        <li><strong>Componentes:</strong> Reutilização de código UI</li>
+                    </ul>
+                </div>
+                
+                <div class="example">
+                    <h4>2. Aplicações Desktop</h4>
+                    <ul>
+                        <li><strong>Softwares:</strong> Editores, IDEs, jogos</li>
+                        <li><strong>Interfaces Gráficas:</strong> Organização de componentes</li>
+                        <li><strong>Sistemas Complexos:</strong> Gerenciamento de recursos</li>
+                    </ul>
+                </div>
+                
+                <div class="info">
+                    <h4>3. Desenvolvimento Mobile</h4>
+                    <ul>
+                        <li><strong>Apps Android/iOS:</strong> Classes para telas e funcionalidades</li>
+                        <li><strong>React Native:</strong> Componentes reutilizáveis</li>
+                        <li><strong>Gerenciamento de Estado:</strong> Classes para dados</li>
+                    </ul>
+                </div>
+                
+                <div class="example">
+                    <h4>4. Jogos</h4>
+                    <ul>
+                        <li><strong>Personagens:</strong> Classes para jogadores, inimigos</li>
+                        <li><strong>Objetos do Jogo:</strong> Itens, armas, power-ups</li>
+                        <li><strong>Sistemas:</strong> Física, IA, inventário</li>
+                    </ul>
+                </div>
+                
+                <h3>💼 Exemplo Real: Sistema de E-commerce</h3>
+                <div class="code-block">
+                    <pre><code>// Estrutura com POO
+class Produto {
+    constructor(nome, preco, estoque) { /* ... */ }
+}
+
+class Carrinho {
+    constructor() { /* ... */ }
+    adicionarItem(produto) { /* ... */ }
+    calcularTotal() { /* ... */ }
+}
+
+class Usuario {
+    constructor(nome, email) { /* ... */ }
+    fazerPedido(carrinho) { /* ... */ }
+}
+
+class Pedido {
+    constructor(usuario, itens) { /* ... */ }
+    processar() { /* ... */ }
+}
+
+// Cada classe tem responsabilidade específica!</code></pre>
+                </div>
+                
+                <h3>📱 Exemplo: Aplicativo de Tarefas</h3>
+                <div class="code-block">
+                    <pre><code>class Tarefa {
+    constructor(titulo, descricao, prioridade) {
+        this.titulo = titulo;
+        this.descricao = descricao;
+        this.prioridade = prioridade;
+        this.concluida = false;
+    }
+    
+    marcarConcluida() {
+        this.concluida = true;
+    }
+}
+
+class ListaTarefas {
+    constructor() {
+        this.tarefas = [];
+    }
+    
+    adicionarTarefa(tarefa) {
+        this.tarefas.push(tarefa);
+    }
+    
+    listarPendentes() {
+        return this.tarefas.filter(t => !t.concluida);
+    }
+}</code></pre>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-info-circle"></i> Quando Usar POO?</h4>
+                    <ul>
+                        <li>Projetos médios a grandes</li>
+                        <li>Necessidade de reutilização</li>
+                        <li>Múltiplos desenvolvedores</li>
+                        <li>Sistemas que vão crescer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-019: Composição e Associação entre Objetos - Slide 05</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-project-diagram"></i> FER-019: Composição e Associação entre Objetos</h1>
+            <p>Apresentar como criar relações entre objetos para modelar sistemas complexos em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide5">
+                <h2><i class="fas fa-balance-scale"></i> Diferença entre Composição e Associação</h2>
+                
+                <h3>📊 Comparação</h3>
+                <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                    <tr style="background: #E2E8F0;">
+                        <th style="padding: 10px; border: 1px solid #CBD5E0;">Característica</th>
+                        <th style="padding: 10px; border: 1px solid #CBD5E0;">Associação</th>
+                        <th style="padding: 10px; border: 1px solid #CBD5E0;">Composição</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Força</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Fraca</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Forte</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Independência</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Objetos independentes</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Parte depende do todo</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Criação</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Separada</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Junto com o todo</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Exemplo</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Pessoa TEM UM Carro</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Carro CONTÉM Motor</td>
+                    </tr>
+                </table>
+                
+                <h3>💻 Exemplo: Comparação Prática</h3>
+                <div class="code-block">
+                    <pre><code>// ASSOCIAÇÃO: Pessoa TEM UM Carro
+class Pessoa {
+    constructor(nome) {
+        this.nome = nome;
+        this.carro = null;  // Pode ser null
+    }
+}
+
+// Objetos criados separadamente
+let pessoa = new Pessoa("João");
+let carro = new Carro("Toyota");
+pessoa.carro = carro;  // Associação criada depois
+
+// COMPOSIÇÃO: Carro CONTÉM Motor
+class Carro {
+    constructor() {
+        this.motor = new Motor();  // Criado junto
+    }
+}
+
+// Motor não existe sem carro
+let carro2 = new Carro();
+// Motor já existe dentro do carro</code></pre>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Regra de Ouro</h4>
+                    <p>Se você pode dizer "tem um" e o objeto pode existir sozinho → Associação. Se você pode dizer "contém" e o objeto parte não existe sem o todo → Composição!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

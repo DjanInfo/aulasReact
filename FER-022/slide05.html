@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-022: Formulários e Controles de Entrada - Slide 05</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-wpforms"></i> FER-022: Formulários e Controles de Entrada</h1>
+            <p>Desenvolver formulários interativos e acessíveis</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide5">
+                <h2><i class="fas fa-align-left"></i> Textareas</h2>
+                
+                <h3>📝 Elemento &lt;textarea&gt;</h3>
+                <p>O elemento <strong>&lt;textarea&gt;</strong> cria um campo de texto multilinha, ideal para comentários, mensagens ou textos longos.</p>
+                
+                <h3>💻 Exemplo: Textarea Básico</h3>
+                <div class="code-block">
+                    <pre><code>&lt;label for="mensagem"&gt;Mensagem:&lt;/label&gt;
+&lt;textarea id="mensagem" name="mensagem" rows="4" cols="50"&gt;
+    Digite sua mensagem aqui...
+&lt;/textarea&gt;</code></pre>
+                </div>
+                
+                <h3>🔑 Atributos Principais</h3>
+                <ul>
+                    <li><strong>name:</strong> Nome do campo</li>
+                    <li><strong>id:</strong> Identificador único</li>
+                    <li><strong>rows:</strong> Número de linhas visíveis</li>
+                    <li><strong>cols:</strong> Número de colunas (largura)</li>
+                    <li><strong>placeholder:</strong> Texto de exemplo</li>
+                    <li><strong>required:</strong> Campo obrigatório</li>
+                    <li><strong>maxlength:</strong> Número máximo de caracteres</li>
+                    <li><strong>readonly:</strong> Apenas leitura</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Textarea com Validação</h3>
+                <div class="code-block">
+                    <pre><code>&lt;label for="comentario"&gt;Comentário:&lt;/label&gt;
+&lt;textarea 
+    id="comentario" 
+    name="comentario" 
+    rows="5" 
+    cols="40"
+    placeholder="Digite seu comentário (máximo 500 caracteres)"
+    maxlength="500"
+    required&gt;
+&lt;/textarea&gt;
+&lt;small&gt;Caracteres restantes: &lt;span id="contador"&gt;500&lt;/span&gt;&lt;/small&gt;</code></pre>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>Use CSS para controlar o tamanho do textarea ao invés de apenas <code>rows</code> e <code>cols</code>, pois oferece mais controle e responsividade!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-025: Layouts com CSS Grid - Slide 10</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-th-large"></i> FER-025: Layouts com CSS Grid</h1>
+            <p>Utilizar o CSS Grid para criar layouts complexos</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide10">
+                <h2><i class="fas fa-laptop-code"></i> Exemplos Práticos</h2>
+                
+                <h3>💻 Exemplo 1: Layout de Página Completo</h3>
+                <div class="code-block">
+                    <pre><code>&lt;div class="layout"&gt;
+    &lt;header&gt;Header&lt;/header&gt;
+    &lt;nav&gt;Nav&lt;/nav&gt;
+    &lt;main&gt;Main&lt;/main&gt;
+    &lt;aside&gt;Aside&lt;/aside&gt;
+    &lt;footer&gt;Footer&lt;/footer&gt;
+&lt;/div&gt;
+
+.layout {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 80px 1fr 60px;
+    gap: 20px;
+    min-height: 100vh;
+}
+
+header { grid-area: header; }
+nav { grid-area: nav; }
+main { grid-area: main; }
+aside { grid-area: aside; }
+footer { grid-area: footer; }</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo 2: Grid Responsivo de Cards</h3>
+                <div class="code-block">
+                    <pre><code>.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Em telas grandes: 3 colunas
+   Em telas médias: 2 colunas
+   Em telas pequenas: 1 coluna */</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo 3: Grid com Áreas Vazias</h3>
+                <div class="code-block">
+                    <pre><code>.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        ". main ."
+        "footer footer footer";
+    /* Ponto (.) representa célula vazia */
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

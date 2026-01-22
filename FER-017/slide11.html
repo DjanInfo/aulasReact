@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-017: Encapsulamento e Métodos de Instância - Slide 11</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-lock"></i> FER-017: Encapsulamento e Métodos de Instância</h1>
+            <p>Ensinar o conceito de encapsulamento e a criação de métodos de instância para manipulação de dados dentro de objetos em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide11">
+                <h2><i class="fas fa-dumbbell"></i> Exercícios Práticos</h2>
+                
+                <h3>📝 Exercício 1: Classe Conta Corrente</h3>
+                <div class="code-block">
+                    <p><strong>Crie uma classe ContaCorrente com:</strong></p>
+                    <ul>
+                        <li>Atributo privado: saldo</li>
+                        <li>Método: depositar(valor) - valida valor positivo</li>
+                        <li>Método: sacar(valor) - valida saldo suficiente</li>
+                        <li>Getter: getSaldo() - retorna saldo</li>
+                        <li>Método: transferir(contaDestino, valor)</li>
+                    </ul>
+                </div>
+                
+                <h3>📝 Exercício 2: Classe Produto com Desconto</h3>
+                <div class="code-block">
+                    <p><strong>Crie uma classe Produto com:</strong></p>
+                    <ul>
+                        <li>Atributos privados: preco, desconto</li>
+                        <li>Getter/Setter para preco (validar >= 0)</li>
+                        <li>Getter/Setter para desconto (validar 0-100%)</li>
+                        <li>Getter calculado: precoFinal (preco com desconto)</li>
+                    </ul>
+                </div>
+                
+                <h3>📝 Exercício 3: Classe Aluno com Notas</h3>
+                <div class="code-block">
+                    <p><strong>Crie uma classe Aluno com:</strong></p>
+                    <ul>
+                        <li>Atributo privado: notas (array)</li>
+                        <li>Método: adicionarNota(nota) - validar 0-10</li>
+                        <li>Método: removerNota(indice)</li>
+                        <li>Getter: getNotas() - retorna cópia do array</li>
+                        <li>Método: calcularMedia()</li>
+                        <li>Método: estaAprovado() - média >= 7</li>
+                    </ul>
+                </div>
+                
+                <h3>📝 Exercício 4: Classe Usuário com Senha</h3>
+                <div class="code-block">
+                    <p><strong>Crie uma classe Usuario com:</strong></p>
+                    <ul>
+                        <li>Atributos privados: email, senha, tentativasLogin</li>
+                        <li>Getter/Setter para email (validar formato)</li>
+                        <li>Método: alterarSenha(senhaAntiga, senhaNova) - validar senha antiga e tamanho mínimo</li>
+                        <li>Método: fazerLogin(email, senha) - bloquear após 3 tentativas</li>
+                    </ul>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-lightbulb"></i> Dicas</h4>
+                    <ul>
+                        <li>Use campos privados (#) ou convenção (_)</li>
+                        <li>Sempre valide dados antes de atribuir</li>
+                        <li>Retorne cópias de arrays para proteger dados</li>
+                        <li>Use getters/setters quando apropriado</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

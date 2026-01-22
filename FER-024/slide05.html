@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-024: Layouts com Flexbox - Slide 05</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-th"></i> FER-024: Layouts com Flexbox</h1>
+            <p>Ensinar a criar layouts responsivos com Flexbox</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide5">
+                <h2><i class="fas fa-align-center"></i> Propriedades do Container: justify-content e align-items</h2>
+                
+                <h3>📝 justify-content</h3>
+                <p>Alinha itens ao longo do <strong>eixo principal</strong> (direção definida por flex-direction).</p>
+                
+                <h3>🔑 Valores de justify-content</h3>
+                <ul>
+                    <li><strong>flex-start:</strong> Início do container (padrão)</li>
+                    <li><strong>flex-end:</strong> Fim do container</li>
+                    <li><strong>center:</strong> Centro do container</li>
+                    <li><strong>space-between:</strong> Espaço entre itens</li>
+                    <li><strong>space-around:</strong> Espaço ao redor de cada item</li>
+                    <li><strong>space-evenly:</strong> Espaço igual entre todos</li>
+                </ul>
+                
+                <h3>📝 align-items</h3>
+                <p>Alinha itens ao longo do <strong>eixo cruzado</strong> (perpendicular ao eixo principal).</p>
+                
+                <h3>🔑 Valores de align-items</h3>
+                <ul>
+                    <li><strong>stretch:</strong> Estica para preencher (padrão)</li>
+                    <li><strong>flex-start:</strong> Início do eixo cruzado</li>
+                    <li><strong>flex-end:</strong> Fim do eixo cruzado</li>
+                    <li><strong>center:</strong> Centro do eixo cruzado</li>
+                    <li><strong>baseline:</strong> Alinha pela linha de base do texto</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Centralização Perfeita</h3>
+                <div class="code-block">
+                    <pre><code>/* Centralizar horizontal e verticalmente */
+.container {
+    display: flex;
+    justify-content: center;  /* Horizontal */
+    align-items: center;      /* Vertical */
+    height: 100vh;            /* Altura da viewport */
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

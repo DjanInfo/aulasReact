@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-017: Encapsulamento e Métodos de Instância - Slide 02</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-lock"></i> FER-017: Encapsulamento e Métodos de Instância</h1>
+            <p>Ensinar o conceito de encapsulamento e a criação de métodos de instância para manipulação de dados dentro de objetos em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide2">
+                <h2><i class="fas fa-shield-alt"></i> O que é Encapsulamento?</h2>
+                
+                <h3>📝 Definição</h3>
+                <p><strong>Encapsulamento</strong> é o princípio de POO que consiste em ocultar os detalhes internos de implementação de uma classe e expor apenas o que é necessário através de uma interface controlada.</p>
+                
+                <div class="code-block">
+Encapsulamento = Ocultar detalhes internos + Expor interface controlada
+
+Protege dados + Controla acesso
+                </div>
+                
+                <h3>🎯 Objetivos do Encapsulamento</h3>
+                <ul>
+                    <li><strong>Proteção de Dados:</strong> Impede acesso direto e modificações indevidas</li>
+                    <li><strong>Controle de Acesso:</strong> Define quem pode acessar o quê</li>
+                    <li><strong>Validação:</strong> Permite validar dados antes de alterar</li>
+                    <li><strong>Manutenibilidade:</strong> Facilita mudanças internas sem afetar código externo</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Sem Encapsulamento (Problema)</h3>
+                <div class="code-block">
+                    <pre><code>class ContaBancaria {
+    constructor(titular) {
+        this.titular = titular;
+        this.saldo = 0;  // Acesso direto - PERIGOSO!
+    }
+}
+
+let conta = new ContaBancaria("João");
+conta.saldo = -1000;  // ❌ Pode colocar saldo negativo!
+conta.saldo = "abc";  // ❌ Pode colocar valor inválido!</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Com Encapsulamento (Solução)</h3>
+                <div class="code-block">
+                    <pre><code>class ContaBancaria {
+    constructor(titular) {
+        this.titular = titular;
+        this._saldo = 0;  // Privado (convenção _)
+    }
+    
+    depositar(valor) {
+        if (valor > 0) {
+            this._saldo += valor;
+        }
+    }
+    
+    sacar(valor) {
+        if (valor > 0 && valor <= this._saldo) {
+            this._saldo -= valor;
+        }
+    }
+    
+    getSaldo() {
+        return this._saldo;
+    }
+}
+
+let conta = new ContaBancaria("João");
+conta.depositar(1000);  // ✅ Método controlado
+conta.sacar(200);       // ✅ Método controlado
+// conta._saldo = -1000;  // ❌ Ainda possível, mas não recomendado</code></pre>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-info-circle"></i> Importante</h4>
+                    <p>Em JavaScript, não há encapsulamento verdadeiro como em outras linguagens. Usamos convenções (como <code>_</code>) e métodos para simular encapsulamento.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

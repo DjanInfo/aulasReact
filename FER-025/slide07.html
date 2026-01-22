@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-025: Layouts com CSS Grid - Slide 07</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-th-large"></i> FER-025: Layouts com CSS Grid</h1>
+            <p>Utilizar o CSS Grid para criar layouts complexos</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide7">
+                <h2><i class="fas fa-map"></i> Grid Areas</h2>
+                
+                <h3>📝 O que são Grid Areas?</h3>
+                <p><strong>Grid Areas</strong> são áreas nomeadas no grid que permitem posicionar itens de forma semântica e visual.</p>
+                
+                <h3>🔑 Vantagens</h3>
+                <ul>
+                    <li><strong>Semântico:</strong> Nomes descritivos para áreas</li>
+                    <li><strong>Visual:</strong> Fácil de entender o layout</li>
+                    <li><strong>Flexível:</strong> Fácil de reorganizar</li>
+                    <li><strong>Responsivo:</strong> Adapta-se facilmente</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Layout com Grid Areas</h3>
+                <div class="code-block">
+                    <pre><code>.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar main aside"
+        "footer footer footer";
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+}
+
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main { grid-area: main; }
+.aside { grid-area: aside; }
+.footer { grid-area: footer; }</code></pre>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>Grid Areas tornam o layout muito mais legível e fácil de manter. Use pontos (.) para células vazias!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

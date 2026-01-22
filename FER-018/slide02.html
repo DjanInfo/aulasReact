@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-018: Herança e Polimorfismo - Slide 02</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-sitemap"></i> FER-018: Herança e Polimorfismo</h1>
+            <p>Explicar os conceitos de herança e polimorfismo para reutilização e extensão de código em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide2">
+                <h2><i class="fas fa-question-circle"></i> O que é Herança?</h2>
+                
+                <h3>📝 Definição</h3>
+                <p><strong>Herança</strong> é um mecanismo de POO que permite criar uma nova classe baseada em uma classe existente, herdando seus atributos e métodos. A classe original é chamada de <strong>classe pai</strong> (ou superclasse) e a nova classe é chamada de <strong>classe filha</strong> (ou subclasse).</p>
+                
+                <div class="code-block">
+Herança = Reutilizar código de uma classe existente
+
+Classe Pai (Superclasse) → Classe Filha (Subclasse)
+                </div>
+                
+                <h3>🏠 Analogia: Herança como Herança Genética</h3>
+                <div class="info">
+                    <ul>
+                        <li><strong>Classe Pai "Animal":</strong> Características comuns (respirar, mover, comer)</li>
+                        <li><strong>Classe Filha "Cachorro":</strong> Herda tudo de Animal + características próprias (latir, abanar rabo)</li>
+                        <li><strong>Classe Filha "Gato":</strong> Herda tudo de Animal + características próprias (miar, escalar)</li>
+                    </ul>
+                    <p>Assim como filhos herdam características dos pais, classes filhas herdam da classe pai!</p>
+                </div>
+                
+                <h3>💻 Exemplo Básico</h3>
+                <div class="code-block">
+                    <pre><code>// Classe Pai
+class Animal {
+    constructor(nome) {
+        this.nome = nome;
+    }
+    
+    mover() {
+        return `${this.nome} está se movendo`;
+    }
+    
+    comer() {
+        return `${this.nome} está comendo`;
+    }
+}
+
+// Classe Filha (herda de Animal)
+class Cachorro extends Animal {
+    latir() {
+        return `${this.nome} está latindo!`;
+    }
+}
+
+let dog = new Cachorro("Rex");
+console.log(dog.mover());  // "Rex está se movendo" (herdado)
+console.log(dog.comer());   // "Rex está comendo" (herdado)
+console.log(dog.latir());   // "Rex está latindo!" (próprio)</code></pre>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-info-circle"></i> Importante</h4>
+                    <p>Herança permite reutilizar código sem duplicação. A classe filha herda tudo da classe pai e pode adicionar ou modificar comportamentos!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

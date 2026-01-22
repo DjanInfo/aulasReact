@@ -17,10 +17,63 @@
         <div class="content">
             <div class="slide active" id="slide2">
                 <h2><i class="fas fa-question-circle"></i> O que é Programação Orientada a Objetos?</h2>
-                <h3>📝 Conteúdo</h3>
-                <p>Este slide será desenvolvido com conteúdo detalhado sobre programação orientada a objetos.</p>
+                
+                <h3>📝 Definição</h3>
+                <p><strong>Programação Orientada a Objetos (POO)</strong> é um paradigma de programação que organiza o código em torno de objetos, que são instâncias de classes que contêm dados (atributos) e comportamentos (métodos).</p>
+                
+                <div class="code-block">
+POO = Organização do código em objetos
+
+Objeto = Dados + Comportamentos
+Classe = Modelo/Template para criar objetos
+                </div>
+                
+                <h3>🎯 Características Principais</h3>
+                <ul>
+                    <li><strong>Encapsulamento:</strong> Agrupa dados e métodos relacionados</li>
+                    <li><strong>Abstração:</strong> Esconde detalhes complexos, mostra apenas o essencial</li>
+                    <li><strong>Herança:</strong> Permite criar novas classes baseadas em classes existentes</li>
+                    <li><strong>Polimorfismo:</strong> Permite que objetos diferentes respondam ao mesmo comando de formas diferentes</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Analogia: POO como um Catálogo de Produtos</h4>
+                    <p>Imagine um catálogo de produtos:</p>
+                    <ul>
+                        <li><strong>Classe "Produto":</strong> Define características comuns (nome, preço, descrição)</li>
+                        <li><strong>Objeto "Notebook":</strong> Uma instância específica com valores concretos</li>
+                        <li><strong>Objeto "Mouse":</strong> Outra instância com valores diferentes</li>
+                    </ul>
+                    <p>Ambos são produtos, mas com características específicas!</p>
+                </div>
+                
+                <div class="example">
+                    <h5>💡 Exemplo Prático</h5>
+                    <p>Em vez de ter variáveis soltas:</p>
+                    <pre><code>let nome1 = "João";
+let idade1 = 25;
+let nome2 = "Maria";
+let idade2 = 30;</code></pre>
+                    <p>POO organiza em objetos:</p>
+                    <pre><code>class Pessoa {
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+}
+
+let pessoa1 = new Pessoa("João", 25);
+let pessoa2 = new Pessoa("Maria", 30);</code></pre>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Importante</h4>
+                    <p>POO não é apenas sobre sintaxe, é sobre organização e estruturação de código para facilitar manutenção e reutilização!</p>
+                </div>
             </div>
         </div>
+        
+        <div class="bottom-nav"></div>
         <div class="footer"><img src="../Rodape.png" alt="Rodapé"></div>
     </div>
     <script src="../script.js"></script>

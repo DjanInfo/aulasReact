@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-018: Herança e Polimorfismo - Slide 03</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-sitemap"></i> FER-018: Herança e Polimorfismo</h1>
+            <p>Explicar os conceitos de herança e polimorfismo para reutilização e extensão de código em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide3">
+                <h2><i class="fas fa-star"></i> Vantagens da Herança</h2>
+                
+                <h3>✅ Benefícios Principais</h3>
+                
+                <div class="info">
+                    <h4>1. Reutilização de Código</h4>
+                    <ul>
+                        <li>Evita duplicação de código</li>
+                        <li>Compartilha funcionalidades comuns</li>
+                        <li>Reduz tempo de desenvolvimento</li>
+                    </ul>
+                </div>
+                
+                <div class="example">
+                    <h4>2. Organização e Hierarquia</h4>
+                    <ul>
+                        <li>Estrutura clara de classes</li>
+                        <li>Relacionamentos bem definidos</li>
+                        <li>Fácil entender a estrutura do código</li>
+                    </ul>
+                </div>
+                
+                <div class="info">
+                    <h4>3. Extensibilidade</h4>
+                    <ul>
+                        <li>Fácil adicionar novas funcionalidades</li>
+                        <li>Estende sem modificar classe pai</li>
+                        <li>Mantém código original intacto</li>
+                    </ul>
+                </div>
+                
+                <div class="example">
+                    <h4>4. Manutenibilidade</h4>
+                    <ul>
+                        <li>Mudanças na classe pai afetam todas as filhas</li>
+                        <li>Correções propagam automaticamente</li>
+                        <li>Menos código para manter</li>
+                    </ul>
+                </div>
+                
+                <h3>💻 Exemplo: Sem Herança (Problema)</h3>
+                <div class="code-block">
+                    <pre><code>// Duplicação de código
+class Cachorro {
+    constructor(nome) {
+        this.nome = nome;
+    }
+    mover() { return `${this.nome} está se movendo`; }
+    comer() { return `${this.nome} está comendo`; }
+    latir() { return `${this.nome} está latindo!`; }
+}
+
+class Gato {
+    constructor(nome) {
+        this.nome = nome;
+    }
+    mover() { return `${this.nome} está se movendo`; }  // ❌ Duplicado
+    comer() { return `${this.nome} está comendo`; }      // ❌ Duplicado
+    miar() { return `${this.nome} está miando!`; }
+}</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Com Herança (Solução)</h3>
+                <div class="code-block">
+                    <pre><code>// Classe pai com código comum
+class Animal {
+    constructor(nome) {
+        this.nome = nome;
+    }
+    mover() { return `${this.nome} está se movendo`; }
+    comer() { return `${this.nome} está comendo`; }
+}
+
+// Classes filhas herdam código comum
+class Cachorro extends Animal {
+    latir() { return `${this.nome} está latindo!`; }
+}
+
+class Gato extends Animal {
+    miar() { return `${this.nome} está miando!`; }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-020: Tratamento de Exceções em POO - Slide 10</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-exclamation-triangle"></i> FER-020: Tratamento de Exceções em Programação Orientada a Objetos</h1>
+            <p>Melhorar a segurança e robustez do código através do tratamento de exceções</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide10">
+                <h2><i class="fas fa-laptop-code"></i> Exemplos Práticos</h2>
+                
+                <h3>💻 Exemplo 1: Classe Conta Bancária</h3>
+                <div class="code-block">
+                    <pre><code>class SaldoInsuficienteError extends Error {
+    constructor(saldo, valor) {
+        super(`Saldo insuficiente! Saldo: R$ ${saldo}, Valor: R$ ${valor}`);
+        this.name = "SaldoInsuficienteError";
+    }
+}
+
+class ContaBancaria {
+    constructor(titular, saldoInicial) {
+        if (saldoInicial < 0) {
+            throw new Error("Saldo inicial não pode ser negativo!");
+        }
+        this.titular = titular;
+        this.saldo = saldoInicial;
+    }
+    
+    sacar(valor) {
+        if (valor <= 0) {
+            throw new Error("Valor de saque deve ser positivo!");
+        }
+        if (valor > this.saldo) {
+            throw new SaldoInsuficienteError(this.saldo, valor);
+        }
+        this.saldo -= valor;
+        return `Saque de R$ ${valor} realizado. Saldo: R$ ${this.saldo}`;
+    }
+}</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo 2: Classe Validador</h3>
+                <div class="code-block">
+                    <pre><code>class ValidacaoError extends Error {
+    constructor(campo, motivo) {
+        super(`Validação falhou no campo '${campo}': ${motivo}`);
+        this.name = "ValidacaoError";
+        this.campo = campo;
+    }
+}
+
+class Validador {
+    validarEmail(email) {
+        if (!email || !email.includes("@")) {
+            throw new ValidacaoError("email", "Formato inválido");
+        }
+        return true;
+    }
+    
+    validarIdade(idade) {
+        if (typeof idade !== 'number' || idade < 0 || idade > 150) {
+            throw new ValidacaoError("idade", "Idade deve estar entre 0 e 150");
+        }
+        return true;
+    }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

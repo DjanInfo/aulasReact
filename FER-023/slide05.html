@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-023: Estilização com CSS: Seletores e Especificidade - Slide 05</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-css3-alt"></i> FER-023: Estilização com CSS: Seletores e Especificidade</h1>
+            <p>Introduzir o uso de CSS para estilização de elementos</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide5">
+                <h2><i class="fas fa-arrow-down"></i> Herança</h2>
+                
+                <h3>📝 O que é Herança em CSS?</h3>
+                <p><strong>Herança</strong> é o mecanismo pelo qual algumas propriedades CSS são passadas de elementos pais para elementos filhos automaticamente.</p>
+                
+                <h3>🔑 Propriedades que Herdam</h3>
+                <ul>
+                    <li><strong>color:</strong> Cor do texto</li>
+                    <li><strong>font-family:</strong> Família da fonte</li>
+                    <li><strong>font-size:</strong> Tamanho da fonte</li>
+                    <li><strong>line-height:</strong> Altura da linha</li>
+                    <li><strong>text-align:</strong> Alinhamento do texto</li>
+                    <li><strong>visibility:</strong> Visibilidade</li>
+                </ul>
+                
+                <h3>🔑 Propriedades que NÃO Herdam</h3>
+                <ul>
+                    <li><strong>margin:</strong> Margem</li>
+                    <li><strong>padding:</strong> Preenchimento</li>
+                    <li><strong>border:</strong> Borda</li>
+                    <li><strong>background:</strong> Fundo</li>
+                    <li><strong>width/height:</strong> Largura/altura</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Herança</h3>
+                <div class="code-block">
+                    <pre><code>/* Estilo no elemento pai */
+body {
+    color: blue;
+    font-family: Arial;
+    font-size: 16px;
+}
+
+/* Todos os elementos filhos herdam essas propriedades */
+/* Não precisa definir em cada elemento */
+
+/* Para sobrescrever herança */
+p {
+    color: red;  /* Sobrescreve a cor azul herdada */
+}
+
+/* Para forçar herança */
+.botao {
+    color: inherit;  /* Herda a cor do pai */
+}</code></pre>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-info-circle"></i> Importante</h4>
+                    <p>Use <code>inherit</code> quando quiser forçar uma propriedade a herdar do elemento pai, mesmo que normalmente não herde!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

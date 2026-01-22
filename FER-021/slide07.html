@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-021: Estruturação de Documentos HTML - Slide 07</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-html5"></i> FER-021: Estruturação de Documentos HTML</h1>
+            <p>Ensinar a estruturação básica de páginas web</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide7">
+                <h2><i class="fas fa-image"></i> Imagens</h2>
+                
+                <h3>📝 Elemento &lt;img&gt;</h3>
+                <p>O elemento <strong>&lt;img&gt;</strong> é usado para inserir imagens em uma página HTML.</p>
+                
+                <h3>🔑 Atributos Essenciais</h3>
+                <ul>
+                    <li><strong>src:</strong> Caminho para a imagem (obrigatório)</li>
+                    <li><strong>alt:</strong> Texto alternativo (obrigatório para acessibilidade)</li>
+                    <li><strong>width:</strong> Largura da imagem</li>
+                    <li><strong>height:</strong> Altura da imagem</li>
+                    <li><strong>title:</strong> Título da imagem (tooltip)</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Inserindo Imagens</h3>
+                <div class="code-block">
+                    <pre><code>&lt;!-- Imagem simples --&gt;
+&lt;img src="foto.jpg" alt="Descrição da foto"&gt;
+
+&lt;!-- Imagem com tamanho --&gt;
+&lt;img src="logo.png" alt="Logo da empresa" width="200" height="100"&gt;
+
+&lt;!-- Imagem com título --&gt;
+&lt;img src="imagem.jpg" alt="Foto de exemplo" title="Clique para ampliar"&gt;</code></pre>
+                </div>
+                
+                <h3>✅ Boas Práticas</h3>
+                <ul>
+                    <li>Sempre use o atributo <code>alt</code> (acessibilidade)</li>
+                    <li>Use formatos adequados (JPG, PNG, WebP)</li>
+                    <li>Otimize tamanho das imagens</li>
+                    <li>Use caminhos relativos quando possível</li>
+                </ul>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-info-circle"></i> Importante</h4>
+                    <p>O atributo <code>alt</code> é essencial para acessibilidade. Descreva a imagem de forma clara para usuários que usam leitores de tela!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-015: Fundamentos de Programação Orientada a Objetos (POO) - Slide 07</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-cube"></i> FER-015: Fundamentos de Programação Orientada a Objetos (POO)</h1>
+            <p>Introduzir os conceitos básicos de POO para alunos iniciantes e mostrar sua importância na organização de código</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide7">
+                <h2><i class="fas fa-cogs"></i> Métodos</h2>
+                
+                <h3>📝 Definição</h3>
+                <p><strong>Métodos</strong> são funções definidas dentro de uma classe que descrevem os comportamentos ou ações que os objetos podem realizar.</p>
+                
+                <div class="code-block">
+Método = Função dentro de uma classe
+
+Define comportamentos/ações do objeto
+                </div>
+                
+                <h3>💻 Exemplo: Métodos de uma Conta Bancária</h3>
+                <div class="code-block">
+                    <pre><code>class ContaBancaria {
+    constructor(titular, saldo) {
+        this.titular = titular;
+        this.saldo = saldo;
+    }
+    
+    // Métodos
+    depositar(valor) {
+        this.saldo += valor;
+        return `Depósito de R$ ${valor} realizado. Saldo: R$ ${this.saldo}`;
+    }
+    
+    sacar(valor) {
+        if (valor <= this.saldo) {
+            this.saldo -= valor;
+            return `Saque de R$ ${valor} realizado. Saldo: R$ ${this.saldo}`;
+        } else {
+            return "Saldo insuficiente!";
+        }
+    }
+    
+    consultarSaldo() {
+        return `Saldo atual: R$ ${this.saldo}`;
+    }
+}
+
+let conta = new ContaBancaria("João", 1000);
+conta.depositar(500);   // Saldo: 1500
+conta.sacar(200);       // Saldo: 1300
+conta.consultarSaldo(); // "Saldo atual: R$ 1300"</code></pre>
+                </div>
+                
+                <h3>🔑 Tipos de Métodos</h3>
+                <ul>
+                    <li><strong>Métodos de Instância:</strong> Acessam e modificam atributos do objeto</li>
+                    <li><strong>Métodos Estáticos:</strong> Pertencem à classe, não ao objeto</li>
+                    <li><strong>Getters e Setters:</strong> Métodos especiais para acessar/modificar atributos</li>
+                </ul>
+                
+                <div class="example">
+                    <h5>💡 Exemplo: Métodos Estáticos</h5>
+                    <pre><code>class Calculadora {
+    static somar(a, b) {
+        return a + b;
+    }
+    
+    static multiplicar(a, b) {
+        return a * b;
+    }
+}
+
+// Chamada sem criar objeto
+let resultado = Calculadora.somar(5, 3);  // 8
+let produto = Calculadora.multiplicar(4, 2);  // 8</code></pre>
+                </div>
+                
+                <h3>📊 Características dos Métodos</h3>
+                <ul>
+                    <li><strong>Acessam atributos:</strong> Podem ler e modificar <code>this.atributo</code></li>
+                    <li><strong>Podem receber parâmetros:</strong> Aceitam valores de entrada</li>
+                    <li><strong>Podem retornar valores:</strong> Retornam resultados de processamento</li>
+                    <li><strong>Encapsulam lógica:</strong> Agrupam funcionalidades relacionadas</li>
+                </ul>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-info-circle"></i> Boa Prática</h4>
+                    <p>Métodos devem ter nomes verbais que descrevem ações: <code>calcular()</code>, <code>validar()</code>, <code>processar()</code>, etc.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

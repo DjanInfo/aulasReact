@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-025: Layouts com CSS Grid - Slide 09</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-th-large"></i> FER-025: Layouts com CSS Grid</h1>
+            <p>Utilizar o CSS Grid para criar layouts complexos</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide9">
+                <h2><i class="fas fa-balance-scale"></i> Grid vs Flexbox</h2>
+                
+                <h3>📊 Comparação</h3>
+                
+                <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                    <tr style="background: #E2E8F0;">
+                        <th style="padding: 10px; border: 1px solid #CBD5E0;">Característica</th>
+                        <th style="padding: 10px; border: 1px solid #CBD5E0;">Flexbox</th>
+                        <th style="padding: 10px; border: 1px solid #CBD5E0;">Grid</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;"><strong>Dimensão</strong></td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Unidimensional (linha ou coluna)</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Bidimensional (linhas e colunas)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;"><strong>Uso Ideal</strong></td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Componentes, navegação, alinhamento</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Layouts de página, grids complexos</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;"><strong>Controle</strong></td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Distribuição de espaço</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Posicionamento preciso</td>
+                    </tr>
+                </table>
+                
+                <h3>✅ Quando Usar Flexbox</h3>
+                <ul>
+                    <li>Layouts em uma direção (linha ou coluna)</li>
+                    <li>Alinhamento de componentes</li>
+                    <li>Navegação e menus</li>
+                    <li>Distribuição de espaço em uma dimensão</li>
+                </ul>
+                
+                <h3>✅ Quando Usar Grid</h3>
+                <ul>
+                    <li>Layouts bidimensionais complexos</li>
+                    <li>Estruturas de página (header, sidebar, main, footer)</li>
+                    <li>Grids de cards com múltiplas colunas</li>
+                    <li>Quando precisa controlar linhas e colunas</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>Grid e Flexbox podem trabalhar juntos! Use Grid para o layout geral da página e Flexbox para componentes internos!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

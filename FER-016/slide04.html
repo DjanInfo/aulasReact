@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-016: Criando e Instanciando Classes - Slide 04</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-016: Criando e Instanciando Classes</h1>
+            <p>Implementar e utilizar classes em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide4">
+                <h2><i class="fas fa-tools"></i> Métodos Construtores</h2>
+                
+                <h3>📝 O que é um Constructor?</h3>
+                <p>O <strong>constructor</strong> é um método especial que é executado automaticamente quando um objeto é criado. Ele inicializa os atributos do objeto.</p>
+                
+                <div class="code-block">
+Constructor = Método especial de inicialização
+
+Executado automaticamente ao criar objeto
+                </div>
+                
+                <h3>💻 Sintaxe do Constructor</h3>
+                <div class="code-block">
+                    <pre><code>class MinhaClasse {
+    constructor(parametro1, parametro2) {
+        // Código de inicialização
+        this.atributo1 = parametro1;
+        this.atributo2 = parametro2;
+    }
+}</code></pre>
+                </div>
+                
+                <h3>🔑 Características do Constructor</h3>
+                <ul>
+                    <li>É executado automaticamente ao criar objeto</li>
+                    <li>Recebe parâmetros para inicializar atributos</li>
+                    <li>Pode ter lógica de inicialização</li>
+                    <li>Não retorna valor (implícito)</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Constructor com Validação</h3>
+                <div class="code-block">
+                    <pre><code>class ContaBancaria {
+    constructor(titular, saldoInicial) {
+        this.titular = titular;
+        
+        // Validação no constructor
+        if (saldoInicial >= 0) {
+            this.saldo = saldoInicial;
+        } else {
+            this.saldo = 0;
+            console.log("Saldo inicial não pode ser negativo!");
+        }
+        
+        this.numeroConta = Math.floor(Math.random() * 10000);
+    }
+}
+
+let conta = new ContaBancaria("João", 1000);
+// Constructor é executado automaticamente!</code></pre>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Importante</h4>
+                    <p>Se você não definir um constructor, JavaScript cria um vazio automaticamente. Mas geralmente você precisa de um para inicializar atributos!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

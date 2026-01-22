@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-023: Estilização com CSS: Seletores e Especificidade - Slide 04</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-css3-alt"></i> FER-023: Estilização com CSS: Seletores e Especificidade</h1>
+            <p>Introduzir o uso de CSS para estilização de elementos</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide4">
+                <h2><i class="fas fa-sitemap"></i> Seletores Compostos</h2>
+                
+                <h3>📝 O que são Seletores Compostos?</h3>
+                <p><strong>Seletores compostos</strong> combinam múltiplos seletores simples para criar regras mais específicas.</p>
+                
+                <h3>🔑 Tipos de Seletores Compostos</h3>
+                <ul>
+                    <li><strong>Descendente:</strong> div p (todos os p dentro de div)</li>
+                    <li><strong>Filho direto:</strong> div > p (p que é filho direto de div)</li>
+                    <li><strong>Irmão adjacente:</strong> h1 + p (p imediatamente após h1)</li>
+                    <li><strong>Irmão geral:</strong> h1 ~ p (todos os p após h1)</li>
+                    <li><strong>Múltiplos:</strong> h1, h2, h3 (agrupa seletores)</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Seletores Compostos</h3>
+                <div class="code-block">
+                    <pre><code>/* Descendente: todos os p dentro de .container */
+.container p {
+    color: blue;
+}
+
+/* Filho direto: apenas p que é filho direto de .container */
+.container > p {
+    font-weight: bold;
+}
+
+/* Irmão adjacente: p imediatamente após h1 */
+h1 + p {
+    margin-top: 0;
+}
+
+/* Irmão geral: todos os p após h1 */
+h1 ~ p {
+    color: gray;
+}
+
+/* Múltiplos seletores */
+h1, h2, h3 {
+    font-family: Arial, sans-serif;
+}
+
+/* Combinando tipos */
+.container .destaque {
+    background-color: yellow;
+}</code></pre>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>Seletores compostos permitem estilizar elementos de forma mais precisa, baseando-se em sua posição na estrutura HTML!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

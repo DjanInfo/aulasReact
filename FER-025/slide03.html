@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-025: Layouts com CSS Grid - Slide 03</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-th-large"></i> FER-025: Layouts com CSS Grid</h1>
+            <p>Utilizar o CSS Grid para criar layouts complexos</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide3">
+                <h2><i class="fas fa-table"></i> Definindo Linhas e Colunas</h2>
+                
+                <h3>📝 Estrutura do Grid</h3>
+                <p>Grid é composto por <strong>linhas</strong> (rows) e <strong>colunas</strong> (columns) que formam uma grade.</p>
+                
+                <h3>💻 Exemplo: Grid Básico</h3>
+                <div class="code-block">
+                    <pre><code>/* 3 colunas de tamanho igual */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* ou */
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* 2 linhas */
+.container {
+    grid-template-rows: auto auto;
+}</code></pre>
+                </div>
+                
+                <h3>🔑 Unidades Comuns</h3>
+                <ul>
+                    <li><strong>fr (fraction):</strong> Fração do espaço disponível</li>
+                    <li><strong>px, em, rem:</strong> Tamanhos fixos</li>
+                    <li><strong>auto:</strong> Tamanho automático baseado no conteúdo</li>
+                    <li><strong>minmax():</strong> Define mínimo e máximo</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Diferentes Tamanhos</h3>
+                <div class="code-block">
+                    <pre><code>/* Colunas com tamanhos diferentes */
+.container {
+    grid-template-columns: 200px 1fr 300px;
+    /* Coluna 1: 200px fixo
+       Coluna 2: ocupa espaço restante
+       Coluna 3: 300px fixo */
+}
+
+/* Com minmax */
+.container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Cria colunas que se ajustam automaticamente */
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-019: Composição e Associação entre Objetos - Slide 03</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-project-diagram"></i> FER-019: Composição e Associação entre Objetos</h1>
+            <p>Apresentar como criar relações entre objetos para modelar sistemas complexos em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide3">
+                <h2><i class="fas fa-handshake"></i> O que é Associação?</h2>
+                
+                <h3>📝 Definição</h3>
+                <p><strong>Associação</strong> é um relacionamento onde um objeto "tem um" ou "usa" outro objeto, mas ambos podem existir independentemente. É um relacionamento mais fraco e flexível.</p>
+                
+                <div class="code-block">
+Associação = Relacionamento "TEM UM" ou "USA"
+
+Objetos podem existir independentemente
+                </div>
+                
+                <h3>🔑 Características</h3>
+                <ul>
+                    <li>Relacionamento mais fraco</li>
+                    <li>Objetos podem existir separadamente</li>
+                    <li>Pode ser alterado durante a execução</li>
+                    <li>Exemplo: Pessoa TEM UM Carro (pode trocar de carro)</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Associação</h3>
+                <div class="code-block">
+                    <pre><code>class Pessoa {
+    constructor(nome) {
+        this.nome = nome;
+        this.carro = null;  // Associação (pode ser null)
+    }
+    
+    comprarCarro(carro) {
+        this.carro = carro;  // Associação
+    }
+    
+    venderCarro() {
+        this.carro = null;  // Remove associação
+    }
+}
+
+class Carro {
+    constructor(marca, modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+    }
+}
+
+// Objetos podem existir independentemente
+let pessoa = new Pessoa("João");
+let carro = new Carro("Toyota", "Corolla");
+
+// Associação criada depois
+pessoa.comprarCarro(carro);
+
+// Carro ainda existe sem pessoa
+console.log(carro.marca);  // "Toyota"</code></pre>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>Associação é como uma amizade: duas pessoas podem ser amigas, mas cada uma existe independentemente. Se a amizade acabar, ambas continuam existindo!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

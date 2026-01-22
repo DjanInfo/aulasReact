@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-027: Pré-processadores CSS: SASS - Slide 08</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-sass"></i> FER-027: Pré-processadores CSS: SASS</h1>
+            <p>Aprender a utilizar pré-processadores para otimizar a escrita de CSS</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide8">
+                <h2><i class="fas fa-cog"></i> Compilação</h2>
+                
+                <h3>📝 O que é Compilação?</h3>
+                <p><strong>Compilação</strong> é o processo de converter código SASS em CSS padrão que os navegadores podem entender.</p>
+                
+                <h3>🔑 Métodos de Compilação</h3>
+                <ul>
+                    <li><strong>Linha de Comando:</strong> Usando sass CLI</li>
+                    <li><strong>Ferramentas GUI:</strong> Aplicativos visuais</li>
+                    <li><strong>Task Runners:</strong> Gulp, Grunt, Webpack</li>
+                    <li><strong>Build Tools:</strong> Vite, Parcel, Create React App</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Compilação via CLI</h3>
+                <div class="code-block">
+                    <pre><code>// Instalar SASS globalmente
+npm install -g sass
+
+// Compilar arquivo único
+sass input.scss output.css
+
+// Compilar e observar mudanças
+sass --watch input.scss:output.css
+
+// Compilar diretório inteiro
+sass styles/scss:styles/css
+
+// Modo comprimido (produção)
+sass input.scss output.css --style compressed</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: package.json Script</h3>
+                <div class="code-block">
+                    <pre><code>{
+  "scripts": {
+    "sass": "sass styles/scss:styles/css",
+    "sass:watch": "sass --watch styles/scss:styles/css"
+  }
+}
+
+// Executar
+npm run sass
+npm run sass:watch</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

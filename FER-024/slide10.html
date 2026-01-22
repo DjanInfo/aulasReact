@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-024: Layouts com Flexbox - Slide 10</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-th"></i> FER-024: Layouts com Flexbox</h1>
+            <p>Ensinar a criar layouts responsivos com Flexbox</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide10">
+                <h2><i class="fas fa-laptop-code"></i> Exemplos Práticos</h2>
+                
+                <h3>💻 Exemplo 1: Header com Logo e Menu</h3>
+                <div class="code-block">
+                    <pre><code>&lt;header class="header"&gt;
+    &lt;div class="logo"&gt;Logo&lt;/div&gt;
+    &lt;nav class="nav"&gt;
+        &lt;a href="#"&gt;Home&lt;/a&gt;
+        &lt;a href="#"&gt;Sobre&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo 2: Footer com Colunas</h3>
+                <div class="code-block">
+                    <pre><code>&lt;footer class="footer"&gt;
+    &lt;div class="coluna"&gt;Coluna 1&lt;/div&gt;
+    &lt;div class="coluna"&gt;Coluna 2&lt;/div&gt;
+    &lt;div class="coluna"&gt;Coluna 3&lt;/div&gt;
+&lt;/footer&gt;
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.coluna {
+    flex: 1 1 250px;
+}</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo 3: Centralização Perfeita</h3>
+                <div class="code-block">
+                    <pre><code>.centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

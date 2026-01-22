@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-022: Formulários e Controles de Entrada - Slide 09</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-wpforms"></i> FER-022: Formulários e Controles de Entrada</h1>
+            <p>Desenvolver formulários interativos e acessíveis</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide9">
+                <h2><i class="fas fa-paper-plane"></i> Envio de Dados</h2>
+                
+                <h3>📝 Métodos de Envio</h3>
+                <p>Formulários HTML podem enviar dados usando dois métodos HTTP principais.</p>
+                
+                <div class="info">
+                    <h4>1. Método GET</h4>
+                    <ul>
+                        <li>Dados visíveis na URL</li>
+                        <li>Limitado em tamanho</li>
+                        <li>Usado para buscas e filtros</li>
+                        <li>Pode ser bookmarkado</li>
+                    </ul>
+                    <pre><code>&lt;form action="/buscar" method="GET"&gt;
+    &lt;input type="text" name="q"&gt;
+    &lt;button type="submit"&gt;Buscar&lt;/button&gt;
+&lt;/form&gt;
+// URL: /buscar?q=termo+buscado</code></pre>
+                </div>
+                
+                <div class="example">
+                    <h4>2. Método POST</h4>
+                    <ul>
+                        <li>Dados no corpo da requisição</li>
+                        <li>Sem limite de tamanho</li>
+                        <li>Usado para cadastros, envios</li>
+                        <li>Mais seguro para dados sensíveis</li>
+                    </ul>
+                    <pre><code>&lt;form action="/cadastro" method="POST"&gt;
+    &lt;input type="text" name="nome"&gt;
+    &lt;input type="email" name="email"&gt;
+    &lt;button type="submit"&gt;Cadastrar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Envio com JavaScript</h3>
+                <div class="code-block">
+                    <pre><code>document.getElementById('formCadastro').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    let formData = new FormData(this);
+    
+    fetch('/api/cadastro', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Sucesso:', data);
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+    });
+});</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

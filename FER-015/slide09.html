@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-015: Fundamentos de Programação Orientada a Objetos (POO) - Slide 09</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-cube"></i> FER-015: Fundamentos de Programação Orientada a Objetos (POO)</h1>
+            <p>Introduzir os conceitos básicos de POO para alunos iniciantes e mostrar sua importância na organização de código</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide9">
+                <h2><i class="fas fa-code"></i> Exemplos Práticos Simples</h2>
+                
+                <h3>💻 Exemplo 1: Classe Animal</h3>
+                <div class="code-block">
+                    <pre><code>class Animal {
+    constructor(nome, especie, som) {
+        this.nome = nome;
+        this.especie = especie;
+        this.som = som;
+    }
+    
+    fazerSom() {
+        return `${this.nome} faz: ${this.som}!`;
+    }
+    
+    apresentar() {
+        return `Olá, sou ${this.nome}, um ${this.especie}`;
+    }
+}
+
+// Criando objetos
+let cachorro = new Animal("Rex", "Cachorro", "Au au");
+let gato = new Animal("Mimi", "Gato", "Miau");
+
+console.log(cachorro.fazerSom());    // "Rex faz: Au au!"
+console.log(gato.apresentar());      // "Olá, sou Mimi, um Gato"</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo 2: Classe Retângulo</h3>
+                <div class="code-block">
+                    <pre><code>class Retangulo {
+    constructor(largura, altura) {
+        this.largura = largura;
+        this.altura = altura;
+    }
+    
+    calcularArea() {
+        return this.largura * this.altura;
+    }
+    
+    calcularPerimetro() {
+        return 2 * (this.largura + this.altura);
+    }
+    
+    ehQuadrado() {
+        return this.largura === this.altura;
+    }
+}
+
+let ret1 = new Retangulo(5, 3);
+let ret2 = new Retangulo(4, 4);
+
+console.log(ret1.calcularArea());      // 15
+console.log(ret1.calcularPerimetro()); // 16
+console.log(ret2.ehQuadrado());       // true</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo 3: Classe Aluno</h3>
+                <div class="code-block">
+                    <pre><code>class Aluno {
+    constructor(nome, matricula) {
+        this.nome = nome;
+        this.matricula = matricula;
+        this.notas = [];
+    }
+    
+    adicionarNota(nota) {
+        this.notas.push(nota);
+    }
+    
+    calcularMedia() {
+        if (this.notas.length === 0) return 0;
+        let soma = this.notas.reduce((a, b) => a + b, 0);
+        return soma / this.notas.length;
+    }
+    
+    estaAprovado() {
+        return this.calcularMedia() >= 7;
+    }
+}
+
+let aluno = new Aluno("Maria", "2024001");
+aluno.adicionarNota(8);
+aluno.adicionarNota(7);
+aluno.adicionarNota(9);
+
+console.log(aluno.calcularMedia());  // 8
+console.log(aluno.estaAprovado());   // true</code></pre>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>Comece com exemplos simples como estes para entender POO. Depois, você pode criar classes mais complexas!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

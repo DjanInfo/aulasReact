@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-022: Formulários e Controles de Entrada - Slide 06</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-wpforms"></i> FER-022: Formulários e Controles de Entrada</h1>
+            <p>Desenvolver formulários interativos e acessíveis</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide6">
+                <h2><i class="fas fa-check-circle"></i> Validação de Formulários</h2>
+                
+                <h3>📝 O que é Validação?</h3>
+                <p><strong>Validação</strong> é o processo de verificar se os dados inseridos no formulário estão corretos e completos antes de enviar.</p>
+                
+                <h3>🔑 Tipos de Validação</h3>
+                <ul>
+                    <li><strong>Validação HTML5:</strong> Validação nativa do navegador</li>
+                    <li><strong>Validação JavaScript:</strong> Validação customizada</li>
+                    <li><strong>Validação no Servidor:</strong> Validação no backend</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Validação HTML5</h3>
+                <div class="code-block">
+                    <pre><code>&lt;form&gt;
+    &lt;input type="email" name="email" required&gt;
+    &lt;input type="number" name="idade" min="18" max="100" required&gt;
+    &lt;input type="text" name="nome" minlength="3" maxlength="50" required&gt;
+    &lt;input type="url" name="website" pattern="https?://.+"&gt;
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Validação com JavaScript</h3>
+                <div class="code-block">
+                    <pre><code>function validarFormulario(event) {
+    event.preventDefault();
+    
+    let nome = document.getElementById('nome').value;
+    let email = document.getElementById('email').value;
+    
+    if (nome.length < 3) {
+        alert('Nome deve ter pelo menos 3 caracteres!');
+        return false;
+    }
+    
+    if (!email.includes('@')) {
+        alert('Email inválido!');
+        return false;
+    }
+    
+    // Se tudo estiver OK, enviar formulário
+    return true;
+}</code></pre>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-info-circle"></i> Importante</h4>
+                    <p>Sempre valide no servidor também! Validação no cliente (HTML5/JS) pode ser contornada. Validação no servidor é obrigatória para segurança!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-015: Fundamentos de Programação Orientada a Objetos (POO) - Slide 05</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-cube"></i> FER-015: Fundamentos de Programação Orientada a Objetos (POO)</h1>
+            <p>Introduzir os conceitos básicos de POO para alunos iniciantes e mostrar sua importância na organização de código</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide5">
+                <h2><i class="fas fa-file-code"></i> Conceito de Classe</h2>
+                
+                <h3>📝 Definição</h3>
+                <p>Uma <strong>classe</strong> é um modelo ou template que define as características (atributos) e comportamentos (métodos) que os objetos terão. É como um "molde" para criar objetos.</p>
+                
+                <div class="code-block">
+Classe = Template/Molde para criar objetos
+
+Define: Atributos e Métodos
+Não é um objeto, é o projeto do objeto!
+                </div>
+                
+                <h3>🏭 Analogia: Classe como uma Fábrica</h3>
+                <div class="info">
+                    <ul>
+                        <li><strong>Classe "Smartphone":</strong> Define características (tela, câmera, bateria)</li>
+                        <li><strong>Objeto "iPhone 15":</strong> Instância com valores específicos</li>
+                        <li><strong>Objeto "Samsung S23":</strong> Outra instância com valores diferentes</li>
+                        <li>Ambos são smartphones, mas com características diferentes!</li>
+                    </ul>
+                </div>
+                
+                <h3>💻 Exemplo: Classe Pessoa</h3>
+                <div class="code-block">
+                    <pre><code>// Classe (definição do modelo)
+class Pessoa {
+    constructor(nome, idade, profissao) {
+        this.nome = nome;
+        this.idade = idade;
+        this.profissao = profissao;
+    }
+    
+    apresentar() {
+        return `Olá, sou ${this.nome}, tenho ${this.idade} anos e sou ${this.profissao}`;
+    }
+    
+    fazerAniversario() {
+        this.idade++;
+    }
+}
+
+// Criando objetos a partir da classe
+let pessoa1 = new Pessoa("Ana", 25, "Desenvolvedora");
+let pessoa2 = new Pessoa("Carlos", 30, "Designer");
+
+console.log(pessoa1.apresentar());
+// "Olá, sou Ana, tenho 25 anos e sou Desenvolvedora"</code></pre>
+                </div>
+                
+                <h3>🔑 Componentes de uma Classe</h3>
+                <ul>
+                    <li><strong>Atributos:</strong> Variáveis que armazenam dados do objeto</li>
+                    <li><strong>Métodos:</strong> Funções que definem comportamentos</li>
+                    <li><strong>Constructor:</strong> Método especial que inicializa o objeto</li>
+                </ul>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Importante</h4>
+                    <p>A classe é apenas a definição. Para usar, você precisa criar objetos (instâncias) usando a palavra-chave <code>new</code>!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

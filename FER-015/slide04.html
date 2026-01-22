@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-015: Fundamentos de Programação Orientada a Objetos (POO) - Slide 04</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-cube"></i> FER-015: Fundamentos de Programação Orientada a Objetos (POO)</h1>
+            <p>Introduzir os conceitos básicos de POO para alunos iniciantes e mostrar sua importância na organização de código</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide4">
+                <h2><i class="fas fa-box"></i> Conceito de Objeto</h2>
+                
+                <h3>📝 Definição</h3>
+                <p>Um <strong>objeto</strong> é uma instância concreta de uma classe. É uma entidade que possui características (atributos) e comportamentos (métodos).</p>
+                
+                <div class="code-block">
+Objeto = Instância de uma Classe
+
+Características: Atributos (dados)
+Comportamentos: Métodos (ações)
+                </div>
+                
+                <h3>🏠 Analogia: Objeto como uma Casa</h3>
+                <div class="info">
+                    <ul>
+                        <li><strong>Classe "Casa":</strong> Define o modelo (tem quartos, banheiros, área)</li>
+                        <li><strong>Objeto "Minha Casa":</strong> Instância específica (3 quartos, 2 banheiros, 120m²)</li>
+                        <li><strong>Objeto "Casa do Vizinho":</strong> Outra instância (4 quartos, 3 banheiros, 150m²)</li>
+                    </ul>
+                </div>
+                
+                <h3>💻 Exemplo Prático: Objeto Carro</h3>
+                <div class="code-block">
+                    <pre><code>// Classe (modelo)
+class Carro {
+    constructor(marca, modelo, ano) {
+        this.marca = marca;      // Atributo
+        this.modelo = modelo;    // Atributo
+        this.ano = ano;          // Atributo
+    }
+    
+    ligar() {                    // Método
+        return "Carro ligado!";
+    }
+}
+
+// Objetos (instâncias)
+let carro1 = new Carro("Toyota", "Corolla", 2023);
+let carro2 = new Carro("Honda", "Civic", 2022);
+
+console.log(carro1.marca);  // "Toyota"
+console.log(carro2.marca);  // "Honda"
+carro1.ligar();             // "Carro ligado!"</code></pre>
+                </div>
+                
+                <h3>🔑 Características dos Objetos</h3>
+                <ul>
+                    <li><strong>Identidade:</strong> Cada objeto é único, mesmo com mesmos valores</li>
+                    <li><strong>Estado:</strong> Valores atuais dos atributos</li>
+                    <li><strong>Comportamento:</strong> Métodos que o objeto pode executar</li>
+                </ul>
+                
+                <div class="example">
+                    <h5>💡 Importante</h5>
+                    <p>Objetos são independentes. Modificar um objeto não afeta outros objetos da mesma classe!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

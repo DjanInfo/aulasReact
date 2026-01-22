@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-016: Criando e Instanciando Classes - Slide 03</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-016: Criando e Instanciando Classes</h1>
+            <p>Implementar e utilizar classes em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide3">
+                <h2><i class="fas fa-keyboard"></i> Sintaxe de Classes em JavaScript</h2>
+                
+                <h3>📐 Estrutura Completa</h3>
+                <div class="code-block">
+                    <pre><code>class NomeDaClasse {
+    // Método construtor (obrigatório para inicializar)
+    constructor(parametros) {
+        // Inicialização de atributos
+        this.atributo1 = valor1;
+        this.atributo2 = valor2;
+    }
+    
+    // Métodos da classe
+    metodo1() {
+        // código do método
+    }
+    
+    metodo2() {
+        // código do método
+    }
+}</code></pre>
+                </div>
+                
+                <h3>🔑 Palavras-chave Importantes</h3>
+                <ul>
+                    <li><strong><code>class</code>:</strong> Define uma nova classe</li>
+                    <li><strong><code>constructor</code>:</strong> Método especial para inicializar objetos</li>
+                    <li><strong><code>this</code>:</strong> Referência ao objeto atual</li>
+                    <li><strong><code>new</code>:</strong> Cria uma nova instância (usado fora da classe)</li>
+                </ul>
+                
+                <h3>💻 Exemplo Completo</h3>
+                <div class="code-block">
+                    <pre><code>class Carro {
+    constructor(marca, modelo, ano) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+        this.ligado = false;
+    }
+    
+    ligar() {
+        this.ligado = true;
+        return "Carro ligado!";
+    }
+    
+    desligar() {
+        this.ligado = false;
+        return "Carro desligado!";
+    }
+    
+    informacoes() {
+        return `${this.marca} ${this.modelo} (${this.ano})`;
+    }
+}</code></pre>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>O <code>this</code> sempre se refere ao objeto que está chamando o método. É como dizer "este objeto aqui"!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

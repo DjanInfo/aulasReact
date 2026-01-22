@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-019: Composição e Associação entre Objetos - Slide 08</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-project-diagram"></i> FER-019: Composição e Associação entre Objetos</h1>
+            <p>Apresentar como criar relações entre objetos para modelar sistemas complexos em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide8">
+                <h2><i class="fas fa-sitemap"></i> Associação entre Classes</h2>
+                
+                <h3>📊 Tipos de Associação</h3>
+                
+                <div class="info">
+                    <h4>1. Associação 1 para 1</h4>
+                    <p>Um objeto se relaciona com exatamente um outro objeto.</p>
+                    <pre><code>class Pessoa {
+    constructor() {
+        this.cpf = null;  // 1 para 1
+    }
+}</code></pre>
+                </div>
+                
+                <div class="example">
+                    <h4>2. Associação 1 para Muitos</h4>
+                    <p>Um objeto se relaciona com vários outros objetos.</p>
+                    <pre><code>class Professor {
+    constructor() {
+        this.disciplinas = [];  // 1 para muitos
+    }
+}</code></pre>
+                </div>
+                
+                <div class="info">
+                    <h4>3. Associação Muitos para Muitos</h4>
+                    <p>Vários objetos se relacionam com vários outros objetos.</p>
+                    <pre><code>class Aluno {
+    constructor() {
+        this.cursos = [];  // Muitos para muitos
+    }
+}
+
+class Curso {
+    constructor() {
+        this.alunos = [];  // Muitos para muitos
+    }
+}</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Sistema de Biblioteca</h3>
+                <div class="code-block">
+                    <pre><code>class Livro {
+    constructor(titulo) {
+        this.titulo = titulo;
+    }
+}
+
+class Autor {
+    constructor(nome) {
+        this.nome = nome;
+        this.livros = [];  // 1 para muitos
+    }
+    
+    escreverLivro(livro) {
+        this.livros.push(livro);
+    }
+}
+
+class Biblioteca {
+    constructor() {
+        this.livros = [];  // 1 para muitos
+    }
+    
+    adicionarLivro(livro) {
+        this.livros.push(livro);
+    }
+}
+
+let autor = new Autor("Tolkien");
+let livro1 = new Livro("O Senhor dos Anéis");
+let livro2 = new Livro("O Hobbit");
+
+autor.escreverLivro(livro1);
+autor.escreverLivro(livro2);  // 1 autor, muitos livros</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-028: Estilização em Componentes React - Slide 09</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-028: Estilização em Componentes React</h1>
+            <p>Aplicar técnicas modernas de estilização em projetos React</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide9">
+                <h2><i class="fas fa-plug"></i> Integração com React</h2>
+                
+                <h3>💻 Exemplo: Tailwind com React</h3>
+                <div class="code-block">
+                    <pre><code>// tailwind.config.js
+module.exports = {
+    content: [
+        "./src/**/*.{js,jsx,ts,tsx}",
+    ],
+    theme: {
+        extend: {},
+    },
+    plugins: [],
+}
+
+// index.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Componente
+function Button({ children, variant = 'primary' }) {
+    const baseClasses = "px-4 py-2 rounded font-semibold";
+    const variants = {
+        primary: "bg-blue-500 text-white hover:bg-blue-600",
+        danger: "bg-red-500 text-white hover:bg-red-600"
+    };
+    
+    return (
+        &lt;button className={`${baseClasses} ${variants[variant]}`}&gt;
+            {children}
+        &lt;/button&gt;
+    );
+}</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Combinando Abordagens</h3>
+                <div class="code-block">
+                    <pre><code>// Pode combinar Tailwind com CSS Modules
+import styles from './Card.module.css';
+
+function Card() {
+    return (
+        &lt;div className={`${styles.card} shadow-lg rounded-lg`}&gt;
+            Conteúdo
+        &lt;/div&gt;
+    );
+}</code></pre>
+                </div>
+                
+                <h3>✅ Boas Práticas</h3>
+                <ul>
+                    <li>Escolha uma abordagem principal</li>
+                    <li>Mantenha consistência no projeto</li>
+                    <li>Use variáveis/temas para cores</li>
+                    <li>Otimize para produção</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

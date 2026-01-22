@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-017: Encapsulamento e Métodos de Instância - Slide 07</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-lock"></i> FER-017: Encapsulamento e Métodos de Instância</h1>
+            <p>Ensinar o conceito de encapsulamento e a criação de métodos de instância para manipulação de dados dentro de objetos em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide7">
+                <h2><i class="fas fa-cogs"></i> Métodos de Instância</h2>
+                
+                <h3>📝 O que são Métodos de Instância?</h3>
+                <p><strong>Métodos de instância</strong> são funções definidas dentro de uma classe que operam sobre os dados de uma instância específica do objeto. Eles têm acesso a <code>this</code> e aos atributos do objeto.</p>
+                
+                <div class="code-block">
+Método de Instância = Função que opera sobre dados do objeto
+
+Acesso via: this.atributo
+                </div>
+                
+                <h3>💻 Exemplo: Métodos de Instância</h3>
+                <div class="code-block">
+                    <pre><code>class ContaBancaria {
+    constructor(titular, saldoInicial) {
+        this.titular = titular;
+        this.#saldo = saldoInicial || 0;
+    }
+    
+    // Métodos de instância
+    depositar(valor) {
+        if (valor > 0) {
+            this.#saldo += valor;
+            return `Depósito de R$ ${valor} realizado. Saldo: R$ ${this.#saldo}`;
+        }
+        return "Valor inválido!";
+    }
+    
+    sacar(valor) {
+        if (valor > 0 && valor <= this.#saldo) {
+            this.#saldo -= valor;
+            return `Saque de R$ ${valor} realizado. Saldo: R$ ${this.#saldo}`;
+        }
+        return "Saldo insuficiente ou valor inválido!";
+    }
+    
+    consultarSaldo() {
+        return `Saldo atual: R$ ${this.#saldo}`;
+    }
+    
+    transferir(contaDestino, valor) {
+        if (this.sacar(valor) !== "Saldo insuficiente ou valor inválido!") {
+            contaDestino.depositar(valor);
+            return `Transferência de R$ ${valor} realizada!`;
+        }
+        return "Transferência não realizada!";
+    }
+}
+
+let conta1 = new ContaBancaria("João", 1000);
+let conta2 = new ContaBancaria("Maria", 500);
+
+conta1.depositar(200);        // Método de instância
+conta1.transferir(conta2, 300);  // Método de instância</code></pre>
+                </div>
+                
+                <h3>🔑 Características</h3>
+                <ul>
+                    <li>Acessam atributos via <code>this</code></li>
+                    <li>Podem modificar o estado do objeto</li>
+                    <li>São chamados através de uma instância</li>
+                    <li>Cada instância tem seus próprios métodos</li>
+                </ul>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-info-circle"></i> Importante</h4>
+                    <p>Métodos de instância são diferentes de métodos estáticos. Métodos estáticos pertencem à classe, não à instância, e não têm acesso a <code>this</code>.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

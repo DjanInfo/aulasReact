@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-025: Layouts com CSS Grid - Slide 05</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-th-large"></i> FER-025: Layouts com CSS Grid</h1>
+            <p>Utilizar o CSS Grid para criar layouts complexos</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide5">
+                <h2><i class="fas fa-arrows-alt"></i> gap e grid-gap</h2>
+                
+                <h3>📝 gap (recomendado)</h3>
+                <p>Propriedade moderna que define o espaçamento entre linhas e colunas do grid.</p>
+                
+                <h3>💻 Exemplos de gap</h3>
+                <div class="code-block">
+                    <pre><code>/* Espaçamento igual em linhas e colunas */
+gap: 20px;
+
+/* Espaçamento diferente */
+gap: 20px 30px;  /* row-gap column-gap */
+
+/* Usando row-gap e column-gap separadamente */
+row-gap: 20px;
+column-gap: 30px;</code></pre>
+                </div>
+                
+                <h3>📝 grid-gap (legado)</h3>
+                <p>Propriedade antiga, ainda funciona mas <code>gap</code> é preferível.</p>
+                
+                <h3>💻 Exemplo: Grid com Gap</h3>
+                <div class="code-block">
+                    <pre><code>.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;  /* Espaço entre todos os itens */
+}
+
+/* Equivalente a */
+.container {
+    row-gap: 20px;
+    column-gap: 20px;
+}</code></pre>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>Use <code>gap</code> ao invés de <code>grid-gap</code>. É mais moderno e funciona também com Flexbox!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

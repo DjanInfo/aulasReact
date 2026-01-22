@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-028: Estilização em Componentes React - Slide 06</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-028: Estilização em Componentes React</h1>
+            <p>Aplicar técnicas modernas de estilização em projetos React</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide6">
+                <h2><i class="fas fa-cube"></i> Criando Componentes Estilizados</h2>
+                
+                <h3>💻 Exemplo: Componentes Básicos</h3>
+                <div class="code-block">
+                    <pre><code>import styled from 'styled-components';
+
+// Estilizar elementos HTML
+const Container = styled.div`
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+`;
+
+const Title = styled.h1`
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+`;
+
+const Card = styled.div`
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+`;
+
+// Uso
+function App() {
+    return (
+        &lt;Container&gt;
+            &lt;Title&gt;Meu Título&lt;/Title&gt;
+            &lt;Card&gt;Conteúdo do card&lt;/Card&gt;
+        &lt;/Container&gt;
+    );
+}</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Estender Componentes</h3>
+                <div class="code-block">
+                    <pre><code>const Button = styled.button`
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+`;
+
+const PrimaryButton = styled(Button)`
+    background-color: #007bff;
+    color: white;
+`;
+
+const DangerButton = styled(Button)`
+    background-color: #dc3545;
+    color: white;
+`;</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

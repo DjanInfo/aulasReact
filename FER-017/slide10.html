@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-017: Encapsulamento e Métodos de Instância - Slide 10</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-lock"></i> FER-017: Encapsulamento e Métodos de Instância</h1>
+            <p>Ensinar o conceito de encapsulamento e a criação de métodos de instância para manipulação de dados dentro de objetos em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide10">
+                <h2><i class="fas fa-laptop-code"></i> Exemplos Práticos</h2>
+                
+                <h3>💻 Exemplo 1: Classe Produto com Encapsulamento</h3>
+                <div class="code-block">
+                    <pre><code>class Produto {
+    #preco = 0;
+    #estoque = 0;
+    
+    constructor(nome, preco, estoque) {
+        this.nome = nome;  // Público
+        this.setPreco(preco);
+        this.setEstoque(estoque);
+    }
+    
+    getPreco() {
+        return this.#preco;
+    }
+    
+    setPreco(valor) {
+        if (typeof valor === 'number' && valor >= 0) {
+            this.#preco = valor;
+        }
+    }
+    
+    getEstoque() {
+        return this.#estoque;
+    }
+    
+    setEstoque(valor) {
+        if (Number.isInteger(valor) && valor >= 0) {
+            this.#estoque = valor;
+        }
+    }
+    
+    vender(quantidade) {
+        if (quantidade <= this.#estoque) {
+            this.#estoque -= quantidade;
+            return true;
+        }
+        return false;
+    }
+}</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo 2: Classe Usuário com Getters/Setters</h3>
+                <div class="code-block">
+                    <pre><code>class Usuario {
+    constructor(email, senha) {
+        this._email = email;
+        this._senha = senha;
+        this._ativo = true;
+    }
+    
+    get email() {
+        return this._email;
+    }
+    
+    set email(novoEmail) {
+        if (novoEmail.includes("@")) {
+            this._email = novoEmail;
+        }
+    }
+    
+    get ativo() {
+        return this._ativo;
+    }
+    
+    ativar() {
+        this._ativo = true;
+    }
+    
+    desativar() {
+        this._ativo = false;
+    }
+    
+    alterarSenha(senhaAntiga, senhaNova) {
+        if (senhaAntiga === this._senha && senhaNova.length >= 6) {
+            this._senha = senhaNova;
+            return true;
+        }
+        return false;
+    }
+}</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo 3: Classe Carro com Métodos de Instância</h3>
+                <div class="code-block">
+                    <pre><code>class Carro {
+    #velocidade = 0;
+    #ligado = false;
+    
+    constructor(marca, modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+    }
+    
+    ligar() {
+        this.#ligado = true;
+        return "Carro ligado!";
+    }
+    
+    desligar() {
+        this.#velocidade = 0;
+        this.#ligado = false;
+        return "Carro desligado!";
+    }
+    
+    acelerar(valor) {
+        if (this.#ligado && valor > 0) {
+            this.#velocidade += valor;
+            return `Velocidade: ${this.#velocidade} km/h`;
+        }
+        return "Carro precisa estar ligado!";
+    }
+    
+    frear(valor) {
+        if (this.#velocidade > 0) {
+            this.#velocidade = Math.max(0, this.#velocidade - valor);
+            return `Velocidade: ${this.#velocidade} km/h`;
+        }
+        return "Carro já está parado!";
+    }
+    
+    getVelocidade() {
+        return this.#velocidade;
+    }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

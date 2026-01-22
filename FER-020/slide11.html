@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-020: Tratamento de Exceções em POO - Slide 11</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-exclamation-triangle"></i> FER-020: Tratamento de Exceções em Programação Orientada a Objetos</h1>
+            <p>Melhorar a segurança e robustez do código através do tratamento de exceções</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide11">
+                <h2><i class="fas fa-dumbbell"></i> Exercícios Práticos</h2>
+                
+                <h3>📝 Exercício 1: Classe Calculadora com Exceções</h3>
+                <div class="code-block">
+                    <p><strong>Crie uma classe Calculadora com:</strong></p>
+                    <ul>
+                        <li>Método dividir() - lança exceção se divisor for zero</li>
+                        <li>Método calcularRaiz() - lança exceção se número for negativo</li>
+                        <li>Método fatorial() - lança exceção se número for negativo</li>
+                        <li>Crie exceções customizadas para cada caso</li>
+                    </ul>
+                </div>
+                
+                <h3>📝 Exercício 2: Classe Produto com Validação</h3>
+                <div class="code-block">
+                    <p><strong>Crie uma classe Produto com:</strong></p>
+                    <ul>
+                        <li>Constructor que valida nome (não vazio) e preço (>= 0)</li>
+                        <li>Método aplicarDesconto() - valida percentual (0-100)</li>
+                        <li>Crie exceções customizadas: NomeInvalidoError, PrecoInvalidoError</li>
+                    </ul>
+                </div>
+                
+                <h3>📝 Exercício 3: Classe Usuário com Try-Catch</h3>
+                <div class="code-block">
+                    <p><strong>Crie uma classe Usuario com:</strong></p>
+                    <ul>
+                        <li>Método alterarSenha() - valida senha antiga e nova (mínimo 6 caracteres)</li>
+                        <li>Use try-catch para tratar erros</li>
+                        <li>Use finally para registrar tentativa de alteração</li>
+                    </ul>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-lightbulb"></i> Dicas</h4>
+                    <ul>
+                        <li>Crie exceções customizadas herdando de Error</li>
+                        <li>Use try-catch dentro de métodos de classe</li>
+                        <li>Valide dados antes de processar</li>
+                        <li>Use finally para limpeza quando necessário</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

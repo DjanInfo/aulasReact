@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-028: Estilização em Componentes React - Slide 02</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-028: Estilização em Componentes React</h1>
+            <p>Aplicar técnicas modernas de estilização em projetos React</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide2">
+                <h2><i class="fas fa-exclamation-triangle"></i> Estilização em React: Desafios</h2>
+                
+                <h3>⚠️ Problemas com CSS Global</h3>
+                <ul>
+                    <li><strong>Conflitos de Nomes:</strong> Classes podem colidir</li>
+                    <li><strong>Sem Escopo:</strong> Estilos afetam todos os componentes</li>
+                    <li><strong>Manutenção:</strong> Difícil rastrear onde estilos são usados</li>
+                    <li><strong>Especificidade:</strong> Guerra de especificidade CSS</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Problema de Conflito</h3>
+                <div class="code-block">
+                    <pre><code>/* Button.css - usado em múltiplos componentes */
+.button {
+    background-color: blue;
+}
+
+/* Card.css - conflito! */
+.button {
+    background-color: red;  /* Sobrescreve o anterior */
+}</code></pre>
+                </div>
+                
+                <h3>✅ Soluções Modernas</h3>
+                <ul>
+                    <li><strong>CSS Modules:</strong> CSS com escopo local</li>
+                    <li><strong>Styled Components:</strong> CSS-in-JS</li>
+                    <li><strong>Tailwind CSS:</strong> Utility classes</li>
+                    <li><strong>CSS-in-JS:</strong> Outras bibliotecas (Emotion, etc.)</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>Não existe uma solução perfeita. Escolha baseado nas necessidades do seu projeto, equipe e preferências!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

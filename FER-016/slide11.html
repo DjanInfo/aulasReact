@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-016: Criando e Instanciando Classes - Slide 11</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-016: Criando e Instanciando Classes</h1>
+            <p>Implementar e utilizar classes em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide11">
+                <h2><i class="fas fa-dumbbell"></i> Exercícios Práticos</h2>
+                
+                <h3>📝 Exercício 1: Classe Círculo</h3>
+                <div class="code-block">
+                    <p><strong>Crie uma classe Círculo com:</strong></p>
+                    <ul>
+                        <li>Atributo: raio</li>
+                        <li>Método: calcularArea() - retorna π * raio²</li>
+                        <li>Método: calcularPerimetro() - retorna 2 * π * raio</li>
+                        <li>Método: informacoes() - retorna string com raio e área</li>
+                    </ul>
+                </div>
+                
+                <div class="example">
+                    <h5>💡 Solução:</h5>
+                    <pre><code>class Circulo {
+    constructor(raio) {
+        this.raio = raio;
+    }
+    
+    calcularArea() {
+        return Math.PI * this.raio * this.raio;
+    }
+    
+    calcularPerimetro() {
+        return 2 * Math.PI * this.raio;
+    }
+    
+    informacoes() {
+        return `Círculo com raio ${this.raio} - Área: ${this.calcularArea().toFixed(2)}`;
+    }
+}</code></pre>
+                </div>
+                
+                <h3>📝 Exercício 2: Classe Agenda de Tarefas</h3>
+                <div class="code-block">
+                    <p><strong>Crie uma classe Agenda com:</strong></p>
+                    <ul>
+                        <li>Atributo: tarefas (array vazio)</li>
+                        <li>Método: adicionarTarefa(titulo, descricao)</li>
+                        <li>Método: listarTarefas() - retorna todas as tarefas</li>
+                        <li>Método: removerTarefa(indice)</li>
+                        <li>Método: contarTarefas() - retorna quantidade</li>
+                    </ul>
+                </div>
+                
+                <h3>📝 Exercício 3: Classe Calculadora</h3>
+                <div class="code-block">
+                    <p><strong>Crie uma classe Calculadora com:</strong></p>
+                    <ul>
+                        <li>Atributo: resultado (inicia em 0)</li>
+                        <li>Método: somar(valor)</li>
+                        <li>Método: subtrair(valor)</li>
+                        <li>Método: multiplicar(valor)</li>
+                        <li>Método: dividir(valor) - validar divisão por zero</li>
+                        <li>Método: limpar() - zera o resultado</li>
+                    </ul>
+                </div>
+                
+                <h3>📝 Exercício 4: Classe Produto com Desconto</h3>
+                <div class="code-block">
+                    <p><strong>Crie uma classe Produto com:</strong></p>
+                    <ul>
+                        <li>Atributos: nome, preco, categoria</li>
+                        <li>Método: aplicarDesconto(percentual)</li>
+                        <li>Método: precoComDesconto() - retorna preço final</li>
+                        <li>Método: informacoes() - retorna string formatada</li>
+                    </ul>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-lightbulb"></i> Dicas</h4>
+                    <ul>
+                        <li>Use Math.PI para cálculos com π</li>
+                        <li>Valide entradas no constructor</li>
+                        <li>Teste cada método após criar</li>
+                        <li>Use toFixed(2) para formatar números</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

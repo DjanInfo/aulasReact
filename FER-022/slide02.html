@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-022: Formulários e Controles de Entrada - Slide 02</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-wpforms"></i> FER-022: Formulários e Controles de Entrada</h1>
+            <p>Desenvolver formulários interativos e acessíveis</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide2">
+                <h2><i class="fas fa-file-code"></i> Estrutura de Formulários</h2>
+                
+                <h3>📝 Elemento &lt;form&gt;</h3>
+                <p>O elemento <strong>&lt;form&gt;</strong> é o container que agrupa todos os controles de entrada de um formulário.</p>
+                
+                <h3>🔑 Atributos Principais</h3>
+                <ul>
+                    <li><strong>action:</strong> URL para onde enviar os dados</li>
+                    <li><strong>method:</strong> Método HTTP (GET ou POST)</li>
+                    <li><strong>enctype:</strong> Tipo de codificação (multipart/form-data para uploads)</li>
+                    <li><strong>name:</strong> Nome do formulário</li>
+                    <li><strong>id:</strong> Identificador único</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Estrutura Básica</h3>
+                <div class="code-block">
+                    <pre><code>&lt;form action="/processar" method="POST"&gt;
+    &lt;!-- Controles do formulário aqui --&gt;
+    &lt;input type="text" name="nome"&gt;
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Formulário Completo</h3>
+                <div class="code-block">
+                    <pre><code>&lt;form action="/cadastro" method="POST" id="formCadastro"&gt;
+    &lt;label for="nome"&gt;Nome:&lt;/label&gt;
+    &lt;input type="text" id="nome" name="nome" required&gt;
+    
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+    
+    &lt;button type="submit"&gt;Cadastrar&lt;/button&gt;
+    &lt;button type="reset"&gt;Limpar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>Use <code>method="GET"</code> para buscas (dados visíveis na URL) e <code>method="POST"</code> para envio de dados sensíveis (dados no corpo da requisição)!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

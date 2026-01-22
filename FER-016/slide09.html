@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-016: Criando e Instanciando Classes - Slide 09</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-016: Criando e Instanciando Classes</h1>
+            <p>Implementar e utilizar classes em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide9">
+                <h2><i class="fas fa-graduation-cap"></i> Classes Básicas</h2>
+                
+                <h3>📚 Padrões Comuns de Classes</h3>
+                
+                <div class="info">
+                    <h4>1. Classe com Apenas Atributos</h4>
+                    <pre><code>class Pessoa {
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+}
+
+// Útil para armazenar dados simples</code></pre>
+                </div>
+                
+                <div class="example">
+                    <h4>2. Classe com Métodos Simples</h4>
+                    <pre><code>class Calculadora {
+    constructor() {
+        this.resultado = 0;
+    }
+    
+    somar(valor) {
+        this.resultado += valor;
+    }
+    
+    subtrair(valor) {
+        this.resultado -= valor;
+    }
+}</code></pre>
+                </div>
+                
+                <div class="info">
+                    <h4>3. Classe com Validação</h4>
+                    <pre><code>class Email {
+    constructor(endereco) {
+        if (endereco.includes("@")) {
+            this.endereco = endereco;
+        } else {
+            throw new Error("Email inválido!");
+        }
+    }
+}</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Classe Completa</h3>
+                <div class="code-block">
+                    <pre><code>class Produto {
+    constructor(nome, preco, categoria) {
+        // Atributos
+        this.nome = nome;
+        this.preco = preco;
+        this.categoria = categoria;
+        this.desconto = 0;
+    }
+    
+    // Métodos
+    aplicarDesconto(percentual) {
+        this.desconto = percentual;
+        this.preco = this.preco * (1 - percentual / 100);
+    }
+    
+    precoFinal() {
+        return this.preco.toFixed(2);
+    }
+    
+    informacoes() {
+        return `${this.nome} - R$ ${this.precoFinal()} (${this.categoria})`;
+    }
+}
+
+let produto = new Produto("Notebook", 3500, "Eletrônicos");
+produto.aplicarDesconto(10);  // 10% de desconto
+console.log(produto.informacoes());</code></pre>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-info-circle"></i> Dica</h4>
+                    <p>Comece com classes simples e vá adicionando complexidade conforme necessário. Não complique demais desde o início!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

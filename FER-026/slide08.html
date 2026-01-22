@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-026: Animações e Transições - Slide 08</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-magic"></i> FER-026: Animações e Transições</h1>
+            <p>Incorporar efeitos visuais para melhorar a experiência do usuário</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide8">
+                <h2><i class="fas fa-tachometer-alt"></i> Timing Functions</h2>
+                
+                <h3>📝 O que são Timing Functions?</h3>
+                <p><strong>Timing Functions</strong> definem como a animação acelera e desacelera ao longo do tempo, criando diferentes sensações de movimento.</p>
+                
+                <h3>🔑 Valores Predefinidos</h3>
+                <ul>
+                    <li><strong>linear:</strong> Velocidade constante (sem aceleração)</li>
+                    <li><strong>ease:</strong> Lento no início e fim, rápido no meio (padrão)</li>
+                    <li><strong>ease-in:</strong> Lento no início, acelera</li>
+                    <li><strong>ease-out:</strong> Rápido no início, desacelera</li>
+                    <li><strong>ease-in-out:</strong> Lento no início e fim</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Timing Functions</h3>
+                <div class="code-block">
+                    <pre><code>/* Linear - velocidade constante */
+animation: move 2s linear;
+
+/* Ease - padrão */
+animation: move 2s ease;
+
+/* Ease-in - acelera */
+animation: move 2s ease-in;
+
+/* Ease-out - desacelera */
+animation: move 2s ease-out;
+
+/* Ease-in-out - acelera e desacelera */
+animation: move 2s ease-in-out;</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Cubic Bezier Customizado</h3>
+                <div class="code-block">
+                    <pre><code>/* Função customizada */
+animation: move 2s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+/* Efeito de bounce */
+animation: bounce 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);</code></pre>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>Use <code>cubic-bezier()</code> para criar timing functions customizadas. Ferramentas online como cubic-bezier.com ajudam a visualizar!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

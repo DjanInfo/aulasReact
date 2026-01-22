@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-022: Formulários e Controles de Entrada - Slide 10</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-wpforms"></i> FER-022: Formulários e Controles de Entrada</h1>
+            <p>Desenvolver formulários interativos e acessíveis</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide10">
+                <h2><i class="fas fa-universal-access"></i> Acessibilidade em Formulários</h2>
+                
+                <h3>📝 Por que Acessibilidade?</h3>
+                <p>Acessibilidade garante que formulários sejam usáveis por todos, incluindo pessoas com deficiências.</p>
+                
+                <h3>🔑 Elementos de Acessibilidade</h3>
+                <ul>
+                    <li><strong>&lt;label&gt;:</strong> Associa texto ao campo (obrigatório)</li>
+                    <li><strong>for/id:</strong> Conecta label ao input</li>
+                    <li><strong>aria-label:</strong> Rótulo para leitores de tela</li>
+                    <li><strong>aria-describedby:</strong> Descrição adicional</li>
+                    <li><strong>aria-required:</strong> Indica campo obrigatório</li>
+                    <li><strong>aria-invalid:</strong> Indica campo inválido</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Formulário Acessível</h3>
+                <div class="code-block">
+                    <pre><code>&lt;form&gt;
+    &lt;!-- Label associado corretamente --&gt;
+    &lt;label for="nome"&gt;Nome completo:&lt;/label&gt;
+    &lt;input type="text" id="nome" name="nome" required
+           aria-required="true"
+           aria-describedby="nome-help"&gt;
+    &lt;small id="nome-help"&gt;Digite seu nome completo&lt;/small&gt;
+    
+    &lt;!-- Campo com aria-label --&gt;
+    &lt;input type="email" 
+           name="email" 
+           aria-label="Endereço de email"
+           required&gt;
+    
+    &lt;!-- Campo com mensagem de erro --&gt;
+    &lt;label for="senha"&gt;Senha:&lt;/label&gt;
+    &lt;input type="password" 
+           id="senha" 
+           name="senha"
+           aria-invalid="true"
+           aria-describedby="senha-erro"&gt;
+    &lt;span id="senha-erro" role="alert"&gt;Senha muito curta&lt;/span&gt;
+    
+    &lt;button type="submit"&gt;Cadastrar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+                
+                <h3>✅ Boas Práticas</h3>
+                <ul>
+                    <li>Sempre use <code>&lt;label&gt;</code> para cada campo</li>
+                    <li>Conecte labels com <code>for</code> e <code>id</code></li>
+                    <li>Use <code>placeholder</code> como complemento, não substituição</li>
+                    <li>Forneça mensagens de erro claras</li>
+                    <li>Teste com leitores de tela</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

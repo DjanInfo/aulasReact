@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-025: Layouts com CSS Grid - Slide 02</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-th-large"></i> FER-025: Layouts com CSS Grid</h1>
+            <p>Utilizar o CSS Grid para criar layouts complexos</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide2">
+                <h2><i class="fas fa-question-circle"></i> O que é CSS Grid?</h2>
+                
+                <h3>📝 Definição</h3>
+                <p><strong>CSS Grid</strong> é um sistema de layout bidimensional que permite criar layouts complexos usando linhas e colunas. É ideal para estruturas 2D onde você precisa controlar ambos os eixos.</p>
+                
+                <div class="code-block">
+CSS Grid = Layout Bidimensional
+
+Controla linhas E colunas simultaneamente
+                </div>
+                
+                <h3>🔑 Características Principais</h3>
+                <ul>
+                    <li><strong>Bidimensional:</strong> Trabalha com linhas e colunas</li>
+                    <li><strong>Preciso:</strong> Controle exato sobre posicionamento</li>
+                    <li><strong>Áreas Nomeadas:</strong> Cria áreas semânticas</li>
+                    <li><strong>Responsivo:</strong> Adapta-se facilmente</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Ativando Grid</h3>
+                <div class="code-block">
+                    <pre><code>/* Container grid */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+}</code></pre>
+                </div>
+                
+                <h3>✅ Vantagens</h3>
+                <ul>
+                    <li>Layouts complexos com menos código</li>
+                    <li>Controle preciso sobre posicionamento</li>
+                    <li>Áreas nomeadas para melhor organização</li>
+                    <li>Alinhamento fácil em ambos os eixos</li>
+                    <li>Suporte moderno em todos os navegadores</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>Grid é perfeito para layouts bidimensionais (linhas e colunas). Para layouts unidimensionais, Flexbox ainda é mais simples!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

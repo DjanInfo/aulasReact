@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-026: Animações e Transições - Slide 03</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-magic"></i> FER-026: Animações e Transições</h1>
+            <p>Incorporar efeitos visuais para melhorar a experiência do usuário</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide3">
+                <h2><i class="fas fa-sliders-h"></i> Transições CSS: transition</h2>
+                
+                <h3>📝 Propriedade transition</h3>
+                <p>A propriedade <code>transition</code> é uma abreviação que combina várias propriedades de transição.</p>
+                
+                <h3>💻 Sintaxe</h3>
+                <div class="code-block">
+                    <pre><code>transition: property duration timing-function delay;
+
+/* Exemplo completo */
+transition: background-color 0.3s ease 0s;
+
+/* Múltiplas propriedades */
+transition: background-color 0.3s ease, transform 0.5s ease;
+
+/* Todas as propriedades */
+transition: all 0.3s ease;</code></pre>
+                </div>
+                
+                <h3>🔑 Propriedades Individuais</h3>
+                <ul>
+                    <li><strong>transition-property:</strong> Propriedade a animar (all, none, ou nome específico)</li>
+                    <li><strong>transition-duration:</strong> Duração (ex: 0.3s, 500ms)</li>
+                    <li><strong>transition-timing-function:</strong> Função de timing (ease, linear, etc.)</li>
+                    <li><strong>transition-delay:</strong> Atraso antes de iniciar (ex: 0.1s)</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Transição Completa</h3>
+                <div class="code-block">
+                    <pre><code>.button {
+    background-color: blue;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: red;
+    transform: scale(1.1);
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

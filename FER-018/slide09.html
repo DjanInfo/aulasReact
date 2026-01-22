@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-018: Herança e Polimorfismo - Slide 09</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-sitemap"></i> FER-018: Herança e Polimorfismo</h1>
+            <p>Explicar os conceitos de herança e polimorfismo para reutilização e extensão de código em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide9">
+                <h2><i class="fas fa-code"></i> Polimorfismo em JavaScript</h2>
+                
+                <h3>💻 Exemplo Prático: Sistema de Formas</h3>
+                <div class="code-block">
+                    <pre><code>class Forma {
+    calcularArea() {
+        return 0;
+    }
+}
+
+class Retangulo extends Forma {
+    constructor(largura, altura) {
+        super();
+        this.largura = largura;
+        this.altura = altura;
+    }
+    
+    calcularArea() {
+        return this.largura * this.altura;
+    }
+}
+
+class Circulo extends Forma {
+    constructor(raio) {
+        super();
+        this.raio = raio;
+    }
+    
+    calcularArea() {
+        return Math.PI * this.raio * this.raio;
+    }
+}
+
+class Triangulo extends Forma {
+    constructor(base, altura) {
+        super();
+        this.base = base;
+        this.altura = altura;
+    }
+    
+    calcularArea() {
+        return (this.base * this.altura) / 2;
+    }
+}
+
+// Polimorfismo: mesmo método, cálculos diferentes
+let formas = [
+    new Retangulo(5, 3),
+    new Circulo(4),
+    new Triangulo(6, 4)
+];
+
+formas.forEach(forma => {
+    console.log(`Área: ${forma.calcularArea().toFixed(2)}`);
+});
+// Área: 15.00
+// Área: 50.27
+// Área: 12.00</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Processamento Genérico</h3>
+                <div class="code-block">
+                    <pre><code>class Funcionario {
+    calcularSalario() {
+        return 0;
+    }
+}
+
+class Desenvolvedor extends Funcionario {
+    calcularSalario() {
+        return 5000;
+    }
+}
+
+class Designer extends Funcionario {
+    calcularSalario() {
+        return 4000;
+    }
+}
+
+// Função genérica que funciona com qualquer Funcionario
+function processarFolhaPagamento(funcionarios) {
+    let total = 0;
+    funcionarios.forEach(func => {
+        total += func.calcularSalario();  // Polimorfismo!
+    });
+    return total;
+}
+
+let funcionarios = [
+    new Desenvolvedor(),
+    new Designer(),
+    new Desenvolvedor()
+];
+
+console.log(processarFolhaPagamento(funcionarios));  // 14000</code></pre>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Vantagem</h4>
+                    <p>Polimorfismo permite escrever código que funciona com qualquer objeto que implemente o método esperado, sem precisar saber o tipo específico!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

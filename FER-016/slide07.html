@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-016: Criando e Instanciando Classes - Slide 07</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-016: Criando e Instanciando Classes</h1>
+            <p>Implementar e utilizar classes em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide7">
+                <h2><i class="fas fa-plus-circle"></i> Criando Objetos com new</h2>
+                
+                <h3>🔑 A Palavra-chave new</h3>
+                <p>A palavra-chave <code>new</code> é essencial para criar objetos. Ela aciona o processo de instanciação.</p>
+                
+                <div class="code-block">
+Sintaxe: let objeto = new NomeDaClasse(argumentos);
+
+new = Cria nova instância
+                </div>
+                
+                <h3>💻 Exemplos de Uso</h3>
+                <div class="code-block">
+                    <pre><code>// Classe simples
+class Produto {
+    constructor(nome, preco) {
+        this.nome = nome;
+        this.preco = preco;
+    }
+}
+
+// Criando objetos
+let produto1 = new Produto("Notebook", 3500);
+let produto2 = new Produto("Mouse", 50);
+let produto3 = new Produto("Teclado", 150);
+
+// Cada um é um objeto independente
+console.log(produto1.nome);  // "Notebook"
+console.log(produto2.preco); // 50</code></pre>
+                </div>
+                
+                <h3>⚠️ O que Acontece SEM new?</h3>
+                <div class="warning">
+                    <pre><code>// ERRADO - sem new
+let produto = Produto("Notebook", 3500);
+// Erro! Constructor não pode ser chamado sem new
+
+// CORRETO - com new
+let produto = new Produto("Notebook", 3500);
+// Funciona perfeitamente!</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Array de Objetos</h3>
+                <div class="code-block">
+                    <pre><code>class Aluno {
+    constructor(nome, nota) {
+        this.nome = nome;
+        this.nota = nota;
+    }
+}
+
+// Criando múltiplos objetos
+let alunos = [
+    new Aluno("Maria", 8.5),
+    new Aluno("João", 7.0),
+    new Aluno("Ana", 9.0)
+];
+
+// Acessando objetos
+console.log(alunos[0].nome);  // "Maria"
+console.log(alunos[1].nota);   // 7.0</code></pre>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>Sempre use <code>new</code> ao criar objetos. É a única forma correta de instanciar classes em JavaScript!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

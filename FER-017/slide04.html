@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-017: Encapsulamento e Métodos de Instância - Slide 04</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-lock"></i> FER-017: Encapsulamento e Métodos de Instância</h1>
+            <p>Ensinar o conceito de encapsulamento e a criação de métodos de instância para manipulação de dados dentro de objetos em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide4">
+                <h2><i class="fas fa-unlock"></i> Modificadores de Acesso: Public</h2>
+                
+                <h3>📝 O que é Public?</h3>
+                <p><strong>Public</strong> é o modificador padrão em JavaScript. Atributos e métodos públicos podem ser acessados de qualquer lugar, tanto dentro quanto fora da classe.</p>
+                
+                <div class="code-block">
+Public = Acesso livre
+
+Padrão em JavaScript (sem prefixo)
+                </div>
+                
+                <h3>💻 Exemplo: Atributos e Métodos Públicos</h3>
+                <div class="code-block">
+                    <pre><code>class Pessoa {
+    constructor(nome, idade) {
+        // Atributos públicos (padrão)
+        this.nome = nome;      // Public
+        this.idade = idade;    // Public
+    }
+    
+    // Método público
+    apresentar() {
+        return `Olá, sou ${this.nome} e tenho ${this.idade} anos`;
+    }
+}
+
+let pessoa = new Pessoa("Ana", 25);
+
+// Acesso público - permitido
+console.log(pessoa.nome);           // "Ana"
+console.log(pessoa.idade);          // 25
+console.log(pessoa.apresentar());   // "Olá, sou Ana e tenho 25 anos"
+
+// Modificação pública - permitida
+pessoa.nome = "Maria";
+pessoa.idade = 30;</code></pre>
+                </div>
+                
+                <h3>✅ Quando Usar Public?</h3>
+                <ul>
+                    <li>Dados que não precisam de proteção</li>
+                    <li>Métodos que devem ser acessíveis externamente</li>
+                    <li>Interface pública da classe</li>
+                    <li>Dados que não precisam de validação</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>Em JavaScript, tudo é público por padrão. Se você não usar convenções ou recursos modernos (como # para private), todos os atributos são públicos!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

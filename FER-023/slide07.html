@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-023: Estilização com CSS: Seletores e Especificidade - Slide 07</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-css3-alt"></i> FER-023: Estilização com CSS: Seletores e Especificidade</h1>
+            <p>Introduzir o uso de CSS para estilização de elementos</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide7">
+                <h2><i class="fas fa-calculator"></i> Especificidade</h2>
+                
+                <h3>📝 O que é Especificidade?</h3>
+                <p><strong>Especificidade</strong> é um sistema de pontuação que determina qual regra CSS prevalece quando múltiplas regras se aplicam ao mesmo elemento.</p>
+                
+                <h3>🔑 Sistema de Pontuação</h3>
+                <ul>
+                    <li><strong>Inline style:</strong> 1000 pontos</li>
+                    <li><strong>ID:</strong> 100 pontos</li>
+                    <li><strong>Classe, atributo, pseudo-classe:</strong> 10 pontos</li>
+                    <li><strong>Elemento, pseudo-elemento:</strong> 1 ponto</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Cálculo de Especificidade</h3>
+                <div class="code-block">
+                    <pre><code>/* Especificidade: 1 ponto (elemento) */
+p { color: blue; }
+
+/* Especificidade: 10 pontos (classe) */
+.destaque { color: red; }
+
+/* Especificidade: 11 pontos (elemento + classe) */
+p.destaque { color: green; }
+
+/* Especificidade: 100 pontos (ID) */
+#cabecalho { color: purple; }
+
+/* Especificidade: 110 pontos (ID + classe) */
+#cabecalho .destaque { color: orange; }
+
+/* Especificidade: 111 pontos (ID + classe + elemento) */
+#cabecalho p.destaque { color: yellow; }</code></pre>
+                </div>
+                
+                <h3>📊 Tabela de Especificidade</h3>
+                <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                    <tr style="background: #E2E8F0;">
+                        <th style="padding: 10px; border: 1px solid #CBD5E0;">Seletor</th>
+                        <th style="padding: 10px; border: 1px solid #CBD5E0;">Pontos</th>
+                        <th style="padding: 10px; border: 1px solid #CBD5E0;">Exemplo</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Elemento</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">1</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">p, div, h1</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Classe</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">10</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">.destaque</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">ID</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">100</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">#cabecalho</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Inline</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">1000</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">style="..."</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

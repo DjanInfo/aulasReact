@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-022: Formulários e Controles de Entrada - Slide 03</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-wpforms"></i> FER-022: Formulários e Controles de Entrada</h1>
+            <p>Desenvolver formulários interativos e acessíveis</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide3">
+                <h2><i class="fas fa-keyboard"></i> Inputs e Tipos</h2>
+                
+                <h3>📝 Elemento &lt;input&gt;</h3>
+                <p>O elemento <strong>&lt;input&gt;</strong> é usado para criar diferentes tipos de campos de entrada, dependendo do atributo <code>type</code>.</p>
+                
+                <h3>🔑 Tipos de Input Comuns</h3>
+                <ul>
+                    <li><strong>text:</strong> Texto simples</li>
+                    <li><strong>email:</strong> Email (validação automática)</li>
+                    <li><strong>password:</strong> Senha (oculto)</li>
+                    <li><strong>number:</strong> Números</li>
+                    <li><strong>date:</strong> Data</li>
+                    <li><strong>checkbox:</strong> Caixa de seleção</li>
+                    <li><strong>radio:</strong> Botão de opção</li>
+                    <li><strong>file:</strong> Upload de arquivo</li>
+                    <li><strong>submit:</strong> Botão de envio</li>
+                    <li><strong>button:</strong> Botão genérico</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Diferentes Tipos</h3>
+                <div class="code-block">
+                    <pre><code>&lt;input type="text" name="nome" placeholder="Seu nome"&gt;
+&lt;input type="email" name="email" placeholder="seu@email.com"&gt;
+&lt;input type="password" name="senha" placeholder="Sua senha"&gt;
+&lt;input type="number" name="idade" min="0" max="150"&gt;
+&lt;input type="date" name="nascimento"&gt;
+&lt;input type="checkbox" name="aceito" id="aceito"&gt;
+&lt;input type="radio" name="genero" value="M" id="masculino"&gt;
+&lt;input type="file" name="foto" accept="image/*"&gt;
+&lt;input type="submit" value="Enviar"&gt;</code></pre>
+                </div>
+                
+                <h3>🔑 Atributos Importantes</h3>
+                <ul>
+                    <li><strong>name:</strong> Nome do campo (enviado no formulário)</li>
+                    <li><strong>id:</strong> Identificador único</li>
+                    <li><strong>placeholder:</strong> Texto de exemplo</li>
+                    <li><strong>required:</strong> Campo obrigatório</li>
+                    <li><strong>value:</strong> Valor padrão</li>
+                    <li><strong>disabled:</strong> Campo desabilitado</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

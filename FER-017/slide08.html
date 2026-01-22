@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-017: Encapsulamento e Métodos de Instância - Slide 08</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-lock"></i> FER-017: Encapsulamento e Métodos de Instância</h1>
+            <p>Ensinar o conceito de encapsulamento e a criação de métodos de instância para manipulação de dados dentro de objetos em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide8">
+                <h2><i class="fas fa-exchange-alt"></i> Getters e Setters</h2>
+                
+                <h3>📝 O que são Getters e Setters?</h3>
+                <p><strong>Getters</strong> e <strong>Setters</strong> são métodos especiais que permitem ler (get) e escrever (set) valores de atributos de forma controlada, simulando propriedades.</p>
+                
+                <div class="code-block">
+Getter = Método para ler valor (get)
+Setter = Método para escrever valor (set)
+
+Sintaxe: get nome() { } e set nome(valor) { }
+                </div>
+                
+                <h3>💻 Exemplo: Getters e Setters</h3>
+                <div class="code-block">
+                    <pre><code>class Pessoa {
+    constructor(nome, idade) {
+        this._nome = nome;
+        this._idade = idade;
+    }
+    
+    // Getter para nome
+    get nome() {
+        return this._nome;
+    }
+    
+    // Setter para nome
+    set nome(novoNome) {
+        if (novoNome && novoNome.trim().length > 0) {
+            this._nome = novoNome;
+        } else {
+            throw new Error("Nome inválido!");
+        }
+    }
+    
+    // Getter para idade
+    get idade() {
+        return this._idade;
+    }
+    
+    // Setter para idade com validação
+    set idade(novaIdade) {
+        if (typeof novaIdade === 'number' && novaIdade >= 0 && novaIdade <= 150) {
+            this._idade = novaIdade;
+        } else {
+            throw new Error("Idade inválida!");
+        }
+    }
+}
+
+let pessoa = new Pessoa("Ana", 25);
+
+// Uso como propriedade (não como método)
+console.log(pessoa.nome);   // "Ana" (chama getter)
+pessoa.nome = "Maria";      // Chama setter
+pessoa.idade = 30;          // Chama setter com validação
+// pessoa.idade = -5;       // ❌ Erro: Idade inválida!</code></pre>
+                </div>
+                
+                <h3>✅ Vantagens dos Getters e Setters</h3>
+                <ul>
+                    <li><strong>Sintaxe Natural:</strong> Usa-se como propriedade, não como método</li>
+                    <li><strong>Validação:</strong> Pode validar antes de atribuir</li>
+                    <li><strong>Controle:</strong> Pode calcular ou transformar valores</li>
+                    <li><strong>Compatibilidade:</strong> Pode mudar implementação sem quebrar código</li>
+                </ul>
+                
+                <div class="example">
+                    <h5>💡 Exemplo: Getter Calculado</h5>
+                    <pre><code>class Retangulo {
+    constructor(largura, altura) {
+        this._largura = largura;
+        this._altura = altura;
+    }
+    
+    get area() {
+        return this._largura * this._altura;  // Calculado
+    }
+    
+    get perimetro() {
+        return 2 * (this._largura + this._altura);  // Calculado
+    }
+}
+
+let ret = new Retangulo(5, 3);
+console.log(ret.area);      // 15 (calculado automaticamente)
+console.log(ret.perimetro); // 16 (calculado automaticamente)</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

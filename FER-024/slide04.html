@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-024: Layouts com Flexbox - Slide 04</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-th"></i> FER-024: Layouts com Flexbox</h1>
+            <p>Ensinar a criar layouts responsivos com Flexbox</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide4">
+                <h2><i class="fas fa-arrows-alt"></i> Propriedades do Container: display e flex-direction</h2>
+                
+                <h3>📝 display: flex</h3>
+                <p>Ativa o Flexbox no container. Pode ser <code>flex</code> (bloco) ou <code>inline-flex</code> (inline).</p>
+                
+                <h3>📝 flex-direction</h3>
+                <p>Define a direção principal dos itens flex.</p>
+                
+                <h3>🔑 Valores de flex-direction</h3>
+                <ul>
+                    <li><strong>row:</strong> Linha (padrão, da esquerda para direita)</li>
+                    <li><strong>row-reverse:</strong> Linha reversa (da direita para esquerda)</li>
+                    <li><strong>column:</strong> Coluna (de cima para baixo)</li>
+                    <li><strong>column-reverse:</strong> Coluna reversa (de baixo para cima)</li>
+                </ul>
+                
+                <h3>💻 Exemplo: Diferentes Direções</h3>
+                <div class="code-block">
+                    <pre><code>/* Linha (padrão) */
+.container {
+    display: flex;
+    flex-direction: row;  /* → → → */
+}
+
+/* Linha reversa */
+.container {
+    display: flex;
+    flex-direction: row-reverse;  /* ← ← ← */
+}
+
+/* Coluna */
+.container {
+    display: flex;
+    flex-direction: column;  /* ↓ ↓ ↓ */
+}
+
+/* Coluna reversa */
+.container {
+    display: flex;
+    flex-direction: column-reverse;  /* ↑ ↑ ↑ */
+}</code></pre>
+                </div>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>A direção principal é definida por <code>flex-direction</code>. A direção perpendicular é chamada de eixo cruzado (cross axis)!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

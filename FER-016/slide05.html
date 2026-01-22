@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-016: Criando e Instanciando Classes - Slide 05</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-016: Criando e Instanciando Classes</h1>
+            <p>Implementar e utilizar classes em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide5">
+                <h2><i class="fas fa-cog"></i> Constructor em JavaScript</h2>
+                
+                <h3>🔧 Detalhes do Constructor</h3>
+                
+                <div class="info">
+                    <h4>1. Constructor Padrão</h4>
+                    <p>Se não definir, JavaScript cria um vazio:</p>
+                    <pre><code>class MinhaClasse {
+    // Sem constructor explícito
+    // JavaScript cria: constructor() {}
+}</code></pre>
+                </div>
+                
+                <div class="example">
+                    <h4>2. Constructor com Parâmetros</h4>
+                    <pre><code>class Pessoa {
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+}</code></pre>
+                </div>
+                
+                <div class="info">
+                    <h4>3. Constructor com Valores Padrão</h4>
+                    <pre><code>class Produto {
+    constructor(nome, preco = 0, estoque = 0) {
+        this.nome = nome;
+        this.preco = preco;
+        this.estoque = estoque;
+    }
+}
+
+// Pode criar sem passar todos os parâmetros
+let p1 = new Produto("Notebook");  // preco=0, estoque=0
+let p2 = new Produto("Mouse", 50); // estoque=0</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo Completo</h3>
+                <div class="code-block">
+                    <pre><code>class Aluno {
+    constructor(nome, matricula, curso) {
+        // Inicialização de atributos
+        this.nome = nome;
+        this.matricula = matricula;
+        this.curso = curso;
+        this.notas = [];  // Array vazio inicial
+        this.ativo = true;  // Valor padrão
+    }
+    
+    adicionarNota(nota) {
+        this.notas.push(nota);
+    }
+}
+
+// Criando objetos
+let aluno1 = new Aluno("Maria", "2024001", "Informática");
+let aluno2 = new Aluno("João", "2024002", "Design");
+
+// Constructor foi executado para ambos!</code></pre>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-info-circle"></i> Boa Prática</h4>
+                    <p>Use o constructor apenas para inicialização. Lógica complexa deve ficar em métodos separados!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

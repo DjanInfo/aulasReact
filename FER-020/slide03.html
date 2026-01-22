@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-020: Tratamento de Exceções em POO - Slide 03</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-exclamation-triangle"></i> FER-020: Tratamento de Exceções em Programação Orientada a Objetos</h1>
+            <p>Melhorar a segurança e robustez do código através do tratamento de exceções</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide3">
+                <h2><i class="fas fa-star"></i> Importância do Tratamento de Exceções</h2>
+                
+                <h3>✅ Benefícios Principais</h3>
+                
+                <div class="info">
+                    <h4>1. Previne Quebra do Programa</h4>
+                    <ul>
+                        <li>Erros não interrompem a execução completamente</li>
+                        <li>Programa continua funcionando mesmo com erros</li>
+                        <li>Melhor experiência do usuário</li>
+                    </ul>
+                </div>
+                
+                <div class="example">
+                    <h4>2. Facilita Debugging</h4>
+                    <ul>
+                        <li>Mensagens de erro claras e específicas</li>
+                        <li>Identifica exatamente onde ocorreu o problema</li>
+                        <li>Informações úteis para correção</li>
+                    </ul>
+                </div>
+                
+                <div class="info">
+                    <h4>3. Código Mais Robusto</h4>
+                    <ul>
+                        <li>Lida com situações inesperadas</li>
+                        <li>Valida entradas antes de processar</li>
+                        <li>Recupera de erros quando possível</li>
+                    </ul>
+                </div>
+                
+                <h3>💻 Exemplo: Sem Tratamento (Problema)</h3>
+                <div class="code-block">
+                    <pre><code>function dividir(a, b) {
+    return a / b;  // ❌ Quebra se b = 0
+}
+
+let resultado = dividir(10, 0);  // Infinity ou erro</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Com Tratamento (Solução)</h3>
+                <div class="code-block">
+                    <pre><code>function dividir(a, b) {
+    if (b === 0) {
+        throw new Error("Divisão por zero não permitida!");
+    }
+    return a / b;
+}
+
+try {
+    let resultado = dividir(10, 0);
+} catch (erro) {
+    console.log("Erro:", erro.message);  // ✅ Tratado adequadamente
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

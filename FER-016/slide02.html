@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-016: Criando e Instanciando Classes - Slide 02</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-016: Criando e Instanciando Classes</h1>
+            <p>Implementar e utilizar classes em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide2">
+                <h2><i class="fas fa-file-code"></i> Definição de Classes</h2>
+                
+                <h3>📝 O que é uma Classe?</h3>
+                <p>Uma <strong>classe</strong> é uma estrutura que define atributos e métodos que os objetos terão. É o "projeto" ou "molde" para criar objetos.</p>
+                
+                <div class="code-block">
+Classe = Template/Molde
+
+Define: Atributos (dados) e Métodos (comportamentos)
+                </div>
+                
+                <h3>💻 Sintaxe Básica</h3>
+                <div class="code-block">
+                    <pre><code>class NomeDaClasse {
+    // Atributos e métodos aqui
+}</code></pre>
+                </div>
+                
+                <h3>📋 Regras para Nomes de Classes</h3>
+                <ul>
+                    <li>Começa com letra maiúscula (convenção PascalCase)</li>
+                    <li>Nomes descritivos e no singular</li>
+                    <li>Sem espaços ou caracteres especiais</li>
+                    <li>Exemplos: <code>Pessoa</code>, <code>Carro</code>, <code>ContaBancaria</code></li>
+                </ul>
+                
+                <div class="example">
+                    <h5>💡 Exemplo: Classe Simples</h5>
+                    <pre><code>class Pessoa {
+    // Esta classe ainda não faz nada,
+    // mas já está definida!
+}
+
+// Agora podemos criar objetos
+let pessoa1 = new Pessoa();
+let pessoa2 = new Pessoa();</code></pre>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-info-circle"></i> Importante</h4>
+                    <p>Definir uma classe não cria objetos automaticamente. Você precisa usar <code>new</code> para criar instâncias!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

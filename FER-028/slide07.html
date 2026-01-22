@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-028: Estilização em Componentes React - Slide 07</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-react"></i> FER-028: Estilização em Componentes React</h1>
+            <p>Aplicar técnicas modernas de estilização em projetos React</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide7">
+                <h2><i class="fas fa-sliders-h"></i> Props e Temas em Styled Components</h2>
+                
+                <h3>💻 Exemplo: Estilos Baseados em Props</h3>
+                <div class="code-block">
+                    <pre><code>const Button = styled.button`
+    background-color: ${props => 
+        props.primary ? '#007bff' : '#6c757d'};
+    color: white;
+    padding: ${props => props.large ? '15px 30px' : '10px 20px'};
+    font-size: ${props => props.large ? '18px' : '16px'};
+    border: none;
+    border-radius: 5px;
+`;
+
+// Uso
+&lt;Button primary&gt;Primário&lt;/Button&gt;
+&lt;Button large&gt;Grande&lt;/Button&gt;
+&lt;Button primary large&gt;Primário Grande&lt;/Button&gt;</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Tema Global</h3>
+                <div class="code-block">
+                    <pre><code>import { ThemeProvider } from 'styled-components';
+
+const theme = {
+    colors: {
+        primary: '#007bff',
+        secondary: '#6c757d',
+        success: '#28a745'
+    },
+    spacing: {
+        sm: '10px',
+        md: '20px',
+        lg: '40px'
+    }
+};
+
+const Button = styled.button`
+    background-color: ${props => props.theme.colors.primary};
+    padding: ${props => props.theme.spacing.md};
+`;
+
+function App() {
+    return (
+        &lt;ThemeProvider theme={theme}&gt;
+            &lt;Button&gt;Botão&lt;/Button&gt;
+        &lt;/ThemeProvider&gt;
+    );
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

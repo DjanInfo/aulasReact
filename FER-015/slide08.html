@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-015: Fundamentos de Programação Orientada a Objetos (POO) - Slide 08</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-cube"></i> FER-015: Fundamentos de Programação Orientada a Objetos (POO)</h1>
+            <p>Introduzir os conceitos básicos de POO para alunos iniciantes e mostrar sua importância na organização de código</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide8">
+                <h2><i class="fas fa-star"></i> Vantagens da POO</h2>
+                
+                <h3>✅ Principais Benefícios</h3>
+                
+                <div class="info">
+                    <h4>1. Organização do Código</h4>
+                    <ul>
+                        <li>Código agrupado logicamente em classes</li>
+                        <li>Fácil localizar funcionalidades relacionadas</li>
+                        <li>Estrutura clara e intuitiva</li>
+                    </ul>
+                </div>
+                
+                <div class="example">
+                    <h4>2. Reutilização de Código</h4>
+                    <ul>
+                        <li>Classes podem ser usadas em múltiplos projetos</li>
+                        <li>Evita duplicação de código</li>
+                        <li>Bibliotecas e frameworks baseados em POO</li>
+                    </ul>
+                </div>
+                
+                <div class="info">
+                    <h4>3. Facilidade de Manutenção</h4>
+                    <ul>
+                        <li>Mudanças isoladas em uma classe</li>
+                        <li>Menos efeitos colaterais</li>
+                        <li>Debugging mais simples</li>
+                    </ul>
+                </div>
+                
+                <div class="example">
+                    <h4>4. Escalabilidade</h4>
+                    <ul>
+                        <li>Fácil adicionar novas funcionalidades</li>
+                        <li>Extensão através de herança</li>
+                        <li>Crescimento controlado do projeto</li>
+                    </ul>
+                </div>
+                
+                <h3>💻 Exemplo Prático: Sistema de E-commerce</h3>
+                <div class="code-block">
+                    <pre><code>// Sem POO: Código espalhado
+let produtos = [];
+let carrinho = [];
+let usuarios = [];
+
+function adicionarProduto(nome, preco) { /* ... */ }
+function adicionarAoCarrinho(id) { /* ... */ }
+function calcularTotal() { /* ... */ }
+
+// Com POO: Organizado em classes
+class Produto { /* ... */ }
+class Carrinho { /* ... */ }
+class Usuario { /* ... */ }
+class Pedido { /* ... */ }
+
+// Cada classe tem responsabilidade clara!</code></pre>
+                </div>
+                
+                <h3>📊 Comparação: Antes e Depois</h3>
+                <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                    <tr style="background: #E2E8F0;">
+                        <th style="padding: 10px; border: 1px solid #CBD5E0;">Sem POO</th>
+                        <th style="padding: 10px; border: 1px solid #CBD5E0;">Com POO</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Funções soltas</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Métodos organizados</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Variáveis globais</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Atributos encapsulados</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Difícil reutilizar</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Fácil reutilizar</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Manutenção complexa</td>
+                        <td style="padding: 10px; border: 1px solid #CBD5E0;">Manutenção simples</td>
+                    </tr>
+                </table>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Importante</h4>
+                    <p>POO não é uma solução mágica! Use quando fizer sentido. Para scripts pequenos, programação procedural pode ser mais simples.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-027: Pré-processadores CSS: SASS - Slide 10</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-sass"></i> FER-027: Pré-processadores CSS: SASS</h1>
+            <p>Aprender a utilizar pré-processadores para otimizar a escrita de CSS</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide10">
+                <h2><i class="fas fa-laptop-code"></i> Exemplos Práticos</h2>
+                
+                <h3>💻 Exemplo 1: Sistema de Cores</h3>
+                <div class="code-block">
+                    <pre><code>// _variables.scss
+$colors: (
+    primary: #007bff,
+    secondary: #6c757d,
+    success: #28a745,
+    danger: #dc3545
+);
+
+// Função para obter cor
+@function color($key) {
+    @return map-get($colors, $key);
+}
+
+// Uso
+.button {
+    background-color: color(primary);
+}</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo 2: Mixin de Botão</h3>
+                <div class="code-block">
+                    <pre><code>@mixin button($color) {
+    background-color: $color;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    
+    &:hover {
+        background-color: darken($color, 10%);
+    }
+}
+
+.btn-primary {
+    @include button(#007bff);
+}
+
+.btn-danger {
+    @include button(#dc3545);
+}</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo 3: Grid Responsivo</h3>
+                <div class="code-block">
+                    <pre><code>@mixin grid($cols) {
+    display: grid;
+    grid-template-columns: repeat($cols, 1fr);
+    gap: 20px;
+}
+
+.container {
+    @include grid(3);
+    
+    @media (max-width: 768px) {
+        @include grid(1);
+    }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

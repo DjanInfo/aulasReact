@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-015: Fundamentos de Programação Orientada a Objetos (POO) - Slide 03</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-cube"></i> FER-015: Fundamentos de Programação Orientada a Objetos (POO)</h1>
+            <p>Introduzir os conceitos básicos de POO para alunos iniciantes e mostrar sua importância na organização de código</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide3">
+                <h2><i class="fas fa-balance-scale"></i> Programação Procedural vs POO</h2>
+                
+                <h3>📊 Comparação</h3>
+                <div class="info">
+                    <h4>Programação Procedural</h4>
+                    <ul>
+                        <li>Organiza código em funções e procedimentos</li>
+                        <li>Dados e funções são separados</li>
+                        <li>Foco em "o que fazer" (passos sequenciais)</li>
+                        <li>Dados podem ser modificados por qualquer função</li>
+                    </ul>
+                </div>
+                
+                <div class="example">
+                    <h4>Programação Orientada a Objetos</h4>
+                    <ul>
+                        <li>Organiza código em classes e objetos</li>
+                        <li>Dados e métodos estão juntos no objeto</li>
+                        <li>Foco em "quem faz o quê" (objetos interagindo)</li>
+                        <li>Dados são protegidos e acessados via métodos</li>
+                    </ul>
+                </div>
+                
+                <h3>💻 Exemplo: Calculadora</h3>
+                <div class="code-block">
+                    <h5>Abordagem Procedural:</h5>
+                    <pre><code>let resultado = 0;
+
+function somar(a, b) {
+    return a + b;
+}
+
+function subtrair(a, b) {
+    return a - b;
+}
+
+resultado = somar(5, 3);
+resultado = subtrair(resultado, 2);</code></pre>
+                </div>
+                
+                <div class="code-block">
+                    <h5>Abordagem POO:</h5>
+                    <pre><code>class Calculadora {
+    constructor() {
+        this.resultado = 0;
+    }
+    
+    somar(a, b) {
+        this.resultado = a + b;
+        return this.resultado;
+    }
+    
+    subtrair(valor) {
+        this.resultado -= valor;
+        return this.resultado;
+    }
+}
+
+let calc = new Calculadora();
+calc.somar(5, 3);
+calc.subtrair(2);</code></pre>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-info-circle"></i> Quando Usar Cada Abordagem?</h4>
+                    <ul>
+                        <li><strong>Procedural:</strong> Programas pequenos, scripts simples, processamento linear</li>
+                        <li><strong>POO:</strong> Projetos grandes, sistemas complexos, necessidade de reutilização</li>
+                    </ul>
+                </div>
+                
+                <h3>✅ Vantagens da POO</h3>
+                <ul>
+                    <li><strong>Organização:</strong> Código mais organizado e fácil de entender</li>
+                    <li><strong>Reutilização:</strong> Classes podem ser reutilizadas em diferentes contextos</li>
+                    <li><strong>Manutenção:</strong> Mudanças em uma classe não afetam outras</li>
+                    <li><strong>Escalabilidade:</strong> Fácil adicionar novas funcionalidades</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

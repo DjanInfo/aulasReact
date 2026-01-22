@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-027: Pré-processadores CSS: SASS - Slide 09</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-sass"></i> FER-027: Pré-processadores CSS: SASS</h1>
+            <p>Aprender a utilizar pré-processadores para otimizar a escrita de CSS</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide9">
+                <h2><i class="fas fa-folder-tree"></i> Organização de Projetos</h2>
+                
+                <h3>📁 Estrutura Recomendada</h3>
+                <div class="code-block">
+                    <pre><code>styles/
+├── abstracts/
+│   ├── _variables.scss
+│   ├── _mixins.scss
+│   └── _functions.scss
+├── base/
+│   ├── _reset.scss
+│   ├── _typography.scss
+│   └── _utilities.scss
+├── components/
+│   ├── _buttons.scss
+│   ├── _cards.scss
+│   └── _forms.scss
+├── layout/
+│   ├── _header.scss
+│   ├── _footer.scss
+│   └── _grid.scss
+├── pages/
+│   ├── _home.scss
+│   └── _about.scss
+└── main.scss</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: main.scss</h3>
+                <div class="code-block">
+                    <pre><code>// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// Base
+@import 'base/reset';
+@import 'base/typography';
+
+// Components
+@import 'components/buttons';
+@import 'components/cards';
+
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+
+// Pages
+@import 'pages/home';</code></pre>
+                </div>
+                
+                <h3>✅ Boas Práticas</h3>
+                <ul>
+                    <li>Use partials para organizar código</li>
+                    <li>Mantenha estrutura consistente</li>
+                    <li>Separe por funcionalidade (components, layout, etc.)</li>
+                    <li>Use nomes descritivos</li>
+                    <li>Documente estrutura em README</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

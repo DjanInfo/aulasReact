@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-015: Fundamentos de Programação Orientada a Objetos (POO) - Slide 11</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-cube"></i> FER-015: Fundamentos de Programação Orientada a Objetos (POO)</h1>
+            <p>Introduzir os conceitos básicos de POO para alunos iniciantes e mostrar sua importância na organização de código</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide11">
+                <h2><i class="fas fa-dumbbell"></i> Exercícios Práticos</h2>
+                
+                <h3>📝 Exercício 1: Classe Livro</h3>
+                <div class="code-block">
+                    <p><strong>Crie uma classe Livro com:</strong></p>
+                    <ul>
+                        <li>Atributos: titulo, autor, anoPublicacao, disponivel</li>
+                        <li>Método: emprestar() - marca como não disponível</li>
+                        <li>Método: devolver() - marca como disponível</li>
+                        <li>Método: informacoes() - retorna string com todos os dados</li>
+                    </ul>
+                </div>
+                
+                <div class="example">
+                    <h5>💡 Solução:</h5>
+                    <pre><code>class Livro {
+    constructor(titulo, autor, anoPublicacao) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.anoPublicacao = anoPublicacao;
+        this.disponivel = true;
+    }
+    
+    emprestar() {
+        if (this.disponivel) {
+            this.disponivel = false;
+            return "Livro emprestado com sucesso!";
+        } else {
+            return "Livro já está emprestado!";
+        }
+    }
+    
+    devolver() {
+        this.disponivel = true;
+        return "Livro devolvido!";
+    }
+    
+    informacoes() {
+        return `${this.titulo} - ${this.autor} (${this.anoPublicacao}) - ${this.disponivel ? 'Disponível' : 'Emprestado'}`;
+    }
+}</code></pre>
+                </div>
+                
+                <h3>📝 Exercício 2: Classe Calculadora Científica</h3>
+                <div class="code-block">
+                    <p><strong>Crie uma classe CalculadoraCientifica com:</strong></p>
+                    <ul>
+                        <li>Método: potencia(base, expoente)</li>
+                        <li>Método: raizQuadrada(numero)</li>
+                        <li>Método: fatorial(numero)</li>
+                        <li>Método: seno(angulo) - use Math.sin()</li>
+                    </ul>
+                </div>
+                
+                <h3>📝 Exercício 3: Classe Conta Corrente</h3>
+                <div class="code-block">
+                    <p><strong>Crie uma classe ContaCorrente com:</strong></p>
+                    <ul>
+                        <li>Atributos: numeroConta, titular, saldo, limite</li>
+                        <li>Método: depositar(valor)</li>
+                        <li>Método: sacar(valor) - verificar saldo + limite</li>
+                        <li>Método: consultarExtrato() - retorna informações</li>
+                    </ul>
+                </div>
+                
+                <h3>📝 Exercício 4: Classe Agenda de Contatos</h3>
+                <div class="code-block">
+                    <p><strong>Crie uma classe Agenda com:</strong></p>
+                    <ul>
+                        <li>Atributo: contatos (array)</li>
+                        <li>Método: adicionarContato(nome, telefone, email)</li>
+                        <li>Método: buscarContato(nome)</li>
+                        <li>Método: listarContatos()</li>
+                        <li>Método: removerContato(nome)</li>
+                    </ul>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-lightbulb"></i> Dicas para Resolver</h4>
+                    <ul>
+                        <li>Comece definindo a classe e o constructor</li>
+                        <li>Adicione os atributos necessários</li>
+                        <li>Implemente os métodos um por um</li>
+                        <li>Teste cada método criando objetos e chamando os métodos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

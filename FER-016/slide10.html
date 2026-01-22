@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-016: Criando e Instanciando Classes - Slide 10</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-code"></i> FER-016: Criando e Instanciando Classes</h1>
+            <p>Implementar e utilizar classes em JavaScript</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide10">
+                <h2><i class="fas fa-check-double"></i> Boas Práticas</h2>
+                
+                <h3>✅ Convenções de Nomenclatura</h3>
+                <ul>
+                    <li><strong>Classes:</strong> PascalCase (primeira letra maiúscula)</li>
+                    <li><strong>Métodos:</strong> camelCase (primeira letra minúscula)</li>
+                    <li><strong>Atributos:</strong> camelCase</li>
+                    <li><strong>Nomes descritivos:</strong> Evite abreviações</li>
+                </ul>
+                
+                <div class="code-block">
+                    <pre><code>// ✅ BOM
+class ContaBancaria {
+    constructor(titular) {
+        this.titular = titular;
+    }
+    
+    depositar(valor) { }
+}
+
+// ❌ RUIM
+class cb {
+    constructor(t) {
+        this.t = t;
+    }
+    
+    dep(v) { }
+}</code></pre>
+                </div>
+                
+                <h3>✅ Organização do Código</h3>
+                <ul>
+                    <li>Constructor sempre no início</li>
+                    <li>Atributos inicializados no constructor</li>
+                    <li>Métodos organizados logicamente</li>
+                    <li>Um método, uma responsabilidade</li>
+                </ul>
+                
+                <h3>✅ Validação no Constructor</h3>
+                <div class="code-block">
+                    <pre><code>class Produto {
+    constructor(nome, preco) {
+        // Validação
+        if (!nome || nome.trim() === "") {
+            throw new Error("Nome é obrigatório!");
+        }
+        if (preco < 0) {
+            throw new Error("Preço não pode ser negativo!");
+        }
+        
+        // Inicialização
+        this.nome = nome;
+        this.preco = preco;
+    }
+}</code></pre>
+                </div>
+                
+                <h3>✅ Comentários e Documentação</h3>
+                <div class="code-block">
+                    <pre><code>/**
+ * Classe que representa uma conta bancária
+ */
+class ContaBancaria {
+    /**
+     * Cria uma nova conta bancária
+     * @param {string} titular - Nome do titular
+     * @param {number} saldoInicial - Saldo inicial da conta
+     */
+    constructor(titular, saldoInicial = 0) {
+        this.titular = titular;
+        this.saldo = saldoInicial;
+    }
+}</code></pre>
+                </div>
+                
+                <div class="warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Evite</h4>
+                    <ul>
+                        <li>Classes muito grandes (muitas responsabilidades)</li>
+                        <li>Métodos muito longos</li>
+                        <li>Atributos públicos desnecessários</li>
+                        <li>Lógica complexa no constructor</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

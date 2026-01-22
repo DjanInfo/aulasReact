@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-020: Tratamento de Exceções em POO - Slide 09</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-exclamation-triangle"></i> FER-020: Tratamento de Exceções em Programação Orientada a Objetos</h1>
+            <p>Melhorar a segurança e robustez do código através do tratamento de exceções</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide9">
+                <h2><i class="fas fa-check-double"></i> Finally</h2>
+                
+                <h3>📝 O que é Finally?</h3>
+                <p><strong>finally</strong> é um bloco opcional que sempre executa, independentemente de ocorrer exceção ou não. É útil para código de limpeza.</p>
+                
+                <div class="code-block">
+                    <pre><code>try {
+    // Código que pode gerar exceção
+} catch (erro) {
+    // Tratamento do erro
+} finally {
+    // Sempre executa
+}</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Finally para Limpeza</h3>
+                <div class="code-block">
+                    <pre><code>class Arquivo {
+    abrir(nomeArquivo) {
+        try {
+            // Simula abertura de arquivo
+            console.log(`Abrindo arquivo: ${nomeArquivo}`);
+            // Código que pode gerar erro
+            if (nomeArquivo === "") {
+                throw new Error("Nome de arquivo vazio!");
+            }
+            return "Arquivo aberto";
+        } catch (erro) {
+            console.log("Erro:", erro.message);
+            throw erro;
+        } finally {
+            // Sempre executa, mesmo se houver erro
+            console.log("Limpeza: Fechando recursos");
+        }
+    }
+}
+
+let arquivo = new Arquivo();
+try {
+    arquivo.abrir("dados.txt");
+} catch (erro) {
+    console.log("Erro capturado externamente");
+}</code></pre>
+                </div>
+                
+                <h3>🔑 Quando Usar Finally</h3>
+                <ul>
+                    <li>Fechar arquivos ou conexões</li>
+                    <li>Liberar recursos</li>
+                    <li>Fazer limpeza necessária</li>
+                    <li>Garantir que código sempre execute</li>
+                </ul>
+                
+                <div class="info">
+                    <h4><i class="fas fa-lightbulb"></i> Dica</h4>
+                    <p>O bloco <code>finally</code> é executado mesmo se houver <code>return</code> no <code>try</code> ou <code>catch</code>!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FER-022: Formulários e Controles de Entrada - Slide 08</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-wpforms"></i> FER-022: Formulários e Controles de Entrada</h1>
+            <p>Desenvolver formulários interativos e acessíveis</p>
+        </div>
+        
+        <div class="nav"></div>
+        <div class="content">
+            <div class="slide active" id="slide8">
+                <h2><i class="fas fa-code"></i> Validação com JavaScript</h2>
+                
+                <h3>📝 Por que Validação JavaScript?</h3>
+                <p>Validação JavaScript permite validações mais complexas, mensagens personalizadas e feedback em tempo real.</p>
+                
+                <h3>💻 Exemplo: Validação Customizada</h3>
+                <div class="code-block">
+                    <pre><code>function validarFormulario(event) {
+    event.preventDefault();
+    
+    let nome = document.getElementById('nome').value.trim();
+    let email = document.getElementById('email').value.trim();
+    let senha = document.getElementById('senha').value;
+    
+    // Limpar erros anteriores
+    limparErros();
+    
+    let valido = true;
+    
+    // Validar nome
+    if (nome.length < 3) {
+        mostrarErro('nome', 'Nome deve ter pelo menos 3 caracteres');
+        valido = false;
+    }
+    
+    // Validar email
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        mostrarErro('email', 'Email inválido');
+        valido = false;
+    }
+    
+    // Validar senha
+    if (senha.length < 8) {
+        mostrarErro('senha', 'Senha deve ter pelo menos 8 caracteres');
+        valido = false;
+    }
+    
+    if (valido) {
+        // Enviar formulário
+        document.getElementById('formCadastro').submit();
+    }
+    
+    return false;
+}</code></pre>
+                </div>
+                
+                <h3>💻 Exemplo: Validação em Tempo Real</h3>
+                <div class="code-block">
+                    <pre><code>document.getElementById('email').addEventListener('blur', function() {
+    let email = this.value;
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (email && !emailRegex.test(email)) {
+        this.classList.add('erro');
+        mostrarMensagem('email', 'Email inválido');
+    } else {
+        this.classList.remove('erro');
+        ocultarMensagem('email');
+    }
+});</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav"></div>
+        <div class="footer">
+            <img src="../Rodape.png" alt="Rodapé">
+        </div>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
